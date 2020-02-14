@@ -4,6 +4,177 @@ body {
     padding: 0 0 0 0;
     word-spacing: 0;
     width: 100%;
-    color: #ffffff;
-    background-color: black;
+    color: black;
+    background-color: white;
+    margin: 0;
+    font-family: Calibri, sans-serif;
+}
+* {
+    box-sizing: border-box;
+} 
+/*--------------------------------------------
+        LAYOUT CSS
+---------------------------------------------*/
+.wrapper 
+{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 17% auto;
+    border:1px solid green;
+    height: 5em;
+}
+.wrapper > div
+{
+    border:1px solid red;
+}
+.header-left
+{
+    text-align: center;
+    padding-top: 1em;
+}
+.header-right  
+{
+    border:1px solid blue;
+    text-align: right;
+}
+.header-right table tr
+{
+ 
+    width: 5em;
+    float: right;
+}
+.header-right table tr td
+{
+    border:1px solid green;
+    width: 5em;
+    text-align: center;
+}
+.header-right table tr td:hover
+{
+    color: green;
+    cursor: pointer;
+}
+/*------------------------------------------------
+        MEDIA QUERIES
+------------------------------------------------*/
+@media (min-width: 1445px) 
+{
+    .mycontainer 
+    {
+        width: 1430px;
+        margin-left: auto;
+        margin-right: auto;
+        border:0px solid red;
+    }
+}
+@media (max-width: 1445px) 
+{
+    .mycontainer 
+    {
+        width: 1330px;
+        margin-left: auto;
+        margin-right: auto;
+        border:0px solid green;
+    }
+}
+@media (max-width: 1345px) 
+{
+    .mycontainer 
+    {
+        width: 1230px;
+        margin-left: auto;
+        margin-right: auto;
+        border:0px solid blue;
+    }
+}
+@media (max-width: 1245px) 
+{
+    .mycontainer {
+        width: 1130px;
+        margin-left: auto;
+        margin-right: auto;
+        border:1px solid red;
+    }
+}
+@media (max-width: 1145px) 
+{
+    .mycontainer 
+    {
+        width: 1030px;
+        margin-left: auto;
+        margin-right: auto;
+        border:0px solid blue;
+    }
+}
+@media (max-width: 1045px) 
+{
+    .mycontainer 
+    {
+        width: 930px;
+        margin-left: auto;
+        margin-right: auto;
+        border:1px solid red;
+    }
+}
+@media (max-width: 945px) 
+{
+    .mycontainer 
+    {
+        width: 830px;
+        margin-left: auto;
+        margin-right: auto;
+        border:0px solid blue;
+    }
+}
+@media (max-width: 845px) 
+{
+    .mycontainer 
+    {
+        width: 730px;
+        margin-left: auto;
+        margin-right: auto;
+        border:0px solid red;
+    }
+}
+@media (max-width: 745px) 
+{
+    .mycontainer 
+    {
+        width: 630px;
+        margin-left: auto;
+        margin-right: auto;
+        border:0px solid blue;
+    }
+}
+@media (max-width: 645px) 
+{
+    .mycontainer 
+    {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        border:0px solid blue;
+    }
+}
+@media only screen and (max-width: 500px) 
+{
+    .mycontainer 
+    {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        border:0px solid red;
+    }
+    .wrapper 
+    {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 20% auto;
+        border:1px solid green;
+        height: 5em;
+    }
+    .wrapper > div
+    {
+        border:1px solid green;
+    }
 }
