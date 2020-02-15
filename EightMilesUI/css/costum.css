@@ -15,17 +15,13 @@ body {
 /*--------------------------------------------
         LAYOUT CSS
 ---------------------------------------------*/
-.wrapper 
+.header-wrapper 
 {
     height: 100%;
     display: grid;
     grid-template-columns: 17% auto;
-    border:1px solid green;
+    border:0px solid green;
     height: 5em;
-}
-.wrapper > div
-{
-    border:1px solid red;
 }
 .header-left
 {
@@ -34,19 +30,18 @@ body {
 }
 .header-right  
 {
-    border:1px solid blue;
+    border:0px solid blue;
     text-align: right;
 }
-.header-right table tr
-{
- 
-    width: 5em;
+.header-right table {
     float: right;
+    margin-top: 1.5em;
+    margin-right: 10em;
 }
 .header-right table tr td
 {
-    border:1px solid green;
-    width: 5em;
+    border:0px solid green;
+    width: 7em;
     text-align: center;
 }
 .header-right table tr td:hover
@@ -54,28 +49,25 @@ body {
     color: green;
     cursor: pointer;
 }
+.header-right .header-navigation{
+    display: none;
+}
+
 /*------------------------------------------------
         MEDIA QUERIES
 ------------------------------------------------*/
+@media only screen and (orientation: landscape) {
+  
+  }
 /* Start */
 @media (min-width: 1445px) 
 {
-    .mycontainer 
+    .mycontainer
     {
         width: 1430px;
         margin-left: auto;
         margin-right: auto;
         border:0px solid red;
-    }
-}
-@media (max-width: 1445px) 
-{
-    .mycontainer 
-    {
-        width: 1330px;
-        margin-left: auto;
-        margin-right: auto;
-        border:0px solid green;
     }
 }
 @media (max-width: 1345px) 
@@ -94,7 +86,7 @@ body {
         width: 1130px;
         margin-left: auto;
         margin-right: auto;
-        border:1px solid red;
+        border:0px solid red;
     }
 }
 @media (max-width: 1145px) 
@@ -107,15 +99,75 @@ body {
         border:0px solid blue;
     }
 }
+/* Start */
 @media (max-width: 1045px) 
 {
+    .navigationheight{
+        height: 5em !important;
+        top: 4.5em;
+    }
     .mycontainer 
     {
         width: 930px;
         margin-left: auto;
         margin-right: auto;
-        border:1px solid red;
+        border:0px solid red;
     }
+    .header-left{
+        text-align: left;
+    }
+    .header-wrapper 
+    {
+        height: 100%;
+        display: grid;
+        grid-template-columns:auto;
+        border:0px solid green;
+        height: 5em;
+    }
+    .header-right .header-navigation
+    {
+        text-align: center;
+        display: block;
+        border:2px solid white;
+        background-color: #495057;
+        padding-top:1.5em;
+        height: 4.9em;
+        width: 5em;
+        float: right;
+        cursor: pointer;
+        position: absolute;
+        right:0;
+        margin-top: -4.5em !important;
+    }
+    .header-right .header-navigation:hover
+    {
+        background-color: rgb(233, 224, 224);
+    }
+  
+    .header-right table 
+    {
+        margin-top: 0.5em;
+        width: 100%;
+        border:0px solid red;
+        display: none;
+        position: fixed;
+        float: center;
+        left: 0;
+    }
+    .header-right table tr td 
+    {
+        display: block;
+        background-color: #888;
+        height: 2em ;
+        width:100%;
+        text-align: center;
+    }
+    .header-right table tr td:hover
+    {
+        background-color: rgb(218, 212, 212);
+    }
+    
+   
 }
 @media (max-width: 945px) 
 {
@@ -126,6 +178,7 @@ body {
         margin-right: auto;
         border:0px solid blue;
     }
+    
 }
 @media (max-width: 845px) 
 {
@@ -136,6 +189,7 @@ body {
         margin-right: auto;
         border:0px solid red;
     }
+    
 }
 @media (max-width: 745px) 
 {
@@ -146,6 +200,7 @@ body {
         margin-right: auto;
         border:0px solid blue;
     }
+   
 }
 @media (max-width: 645px) 
 {
@@ -156,6 +211,7 @@ body {
         margin-right: auto;
         border:0px solid blue;
     }
+    
 }
 @media only screen and (max-width: 500px) 
 {
@@ -166,16 +222,14 @@ body {
         margin-right: auto;
         border:0px solid red;
     }
-    .wrapper 
+    .header-right table 
     {
-        height: 100%;
-        display: grid;
-        grid-template-columns: 20% auto;
-        border:1px solid green;
-        height: 5em;
+        margin-top: 0.5em;
+        width: 100%;
+        border:0px solid red;
+        display: none;
+        position: fixed;
+        float: center;
     }
-    .wrapper > div
-    {
-        border:1px solid green;
-    }
+    
 }
