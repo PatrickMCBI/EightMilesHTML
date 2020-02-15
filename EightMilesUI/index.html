@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="css/all.min.css">
     <script src="js/jquery-3.4.min.js"></script>
 </head>
-
 <body>
-    <div style="box-shadow: 3px 0px 4px 1px rgb(24, 23, 23); margin-bottom: 0.1em;">
+
+
+
+    <!----------------   Navbar   --------------->
+    <div class="header_shadow">
         <div class="mycontainer">
                 <div class="header-wrapper">
                         <div class="header-left"><img src="/img/8mileslogo.png" alt="" width="160"></div>
@@ -31,29 +34,76 @@
                 </div>
         </div>
     </div>
+
+
+    <!----------------   Cover Image   --------------->
    <div style="text-align:center;">
     <img src="/img/headerimg.png" class="img_cover">
    </div>
-        
+
+
+   <!----------------   Top Destination   --------------->
+   <div class="destination">
+        Top Destination
+   </div>
+   <div class="destination_details">
+    Choose Your Next Destination
+   </div>
+   <div class="mycontainer">
+        <div class="destination_gallery">
+        </div>  
+   </div>
+      
    
 </body>
 <script>
          //-------------------   Mounted   --------------------------
-            $(window).resize(function() 
-            {
-                    var windowsize = $(window).width();
-                    console.log(windowsize);
-                    if(windowsize == "1030")
+            destination_gallery();
+                
+                // windows size
+                $(window).resize(function() 
+                {
+                        var windowsize = $(window).width();
+                        console.log(windowsize);
+                        if(windowsize > "1030")
+                        {
+                            document.getElementById("table").style.display = "table";
+                            console.log("windows: " + windowsize);
+                        }
+                        else
+                        {
+                            document.getElementById("table").style.display = "none";
+                        }
+                });
+                
+                // scroll nav
+                window.addEventListener("scroll", function() 
                     {
-                        document.getElementById("table").style.display = "table";
-                       
-                        console.log("windows: " + windowsize);
-                    }
-            });
+                        if (document.documentElement.scrollTop > 100) 
+                        {
+                              $('.header_shadow').addClass('sticky-top');
+                        }
+                        else
+                        {
+                            $('.header_shadow').removeClass('sticky-top');
+                        }
+                    });
+            
+           
+            
          //-------------------   methods   --------------------------
+         function destination_gallery()
+        {
+            for(var i=1; i <= 6 ; i++)
+            {
+                var imageLink = ("/img/TopDestination/" + i +".jpg");
+                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"></div>';
+                $('.destination_gallery').append(imgEL)
+            }
+        }
         function navigation()
         {
-            $(".header-right table").slideToggle("slow");
+                $(".header-right table").slideToggle("slow");
 
         }
  </script>
