@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div style="box-shadow: 3px 0px 4px 1px rgb(24, 23, 23);">
+    <div style="box-shadow: 3px 0px 4px 1px rgb(24, 23, 23); margin-bottom: 0.1em;">
         <div class="mycontainer">
                 <div class="header-wrapper">
                         <div class="header-left"><img src="/img/8mileslogo.png" alt="" width="160"></div>
@@ -31,6 +31,11 @@
                 </div>
         </div>
     </div>
+   <div style="text-align:center;">
+    <img src="/img/headerimg.png" class="img_cover">
+   </div>
+        
+   
 </body>
 <script>
          //-------------------   Mounted   --------------------------
@@ -38,16 +43,16 @@
             {
                     var windowsize = $(window).width();
                     console.log(windowsize);
-                    if(windowsize == "1536")
+                    if(windowsize == "1030")
                     {
-                        document.getElementById("table").style.display = "block";
-                        alert('windowsize: ' + windowsize);
+                        document.getElementById("table").style.display = "table";
+                       
+                        console.log("windows: " + windowsize);
                     }
             });
          //-------------------   methods   --------------------------
         function navigation()
         {
-            // $( ".header-right .header-navigation" ).toggleClass( 'navigationheight');
             $(".header-right table").slideToggle("slow");
 
         }
