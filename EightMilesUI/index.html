@@ -14,12 +14,10 @@
     <div style="box-shadow: 3px 0px 4px 1px rgb(24, 23, 23);">
         <div class="mycontainer">
                 <div class="header-wrapper">
-                        
                         <div class="header-left"><img src="/img/8mileslogo.png" alt="" width="160"></div>
-                        
                         <div class="header-right">
                             <div class="header-navigation" onclick="navigation()"> <i class="fas fa-bars" style="font-size: 2em; color:white "></i></div>
-                            <table>
+                            <table id="table">
                                  <tr>
                                     <td>HOME</td>
                                     <td>DESTINATION</td>
@@ -33,21 +31,25 @@
                 </div>
         </div>
     </div>
-   
 </body>
 <script>
          //-------------------   Mounted   --------------------------
-
+            $(window).resize(function() 
+            {
+                    var windowsize = $(window).width();
+                    console.log(windowsize);
+                    if(windowsize == "1536")
+                    {
+                        document.getElementById("table").style.display = "block";
+                        alert('windowsize: ' + windowsize);
+                    }
+            });
          //-------------------   methods   --------------------------
         function navigation()
         {
-            // $(".header-right .header-navigation").css("height","5.5em");
-            // $(".header-right .header-navigation").classlist.add(".navigationheight");
-            // $(".header-right .header-navigation").toggleClass("height","5.5em");
-            $( ".header-right .header-navigation" ).toggleClass( 'navigationheight');
-           
+            // $( ".header-right .header-navigation" ).toggleClass( 'navigationheight');
             $(".header-right table").slideToggle("slow");
-           
+
         }
  </script>
 

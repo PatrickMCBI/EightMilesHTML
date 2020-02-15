@@ -11,9 +11,9 @@ body {
 }
 * {
     box-sizing: border-box;
-} 
+}
 /*--------------------------------------------
-        LAYOUT CSS
+        HEADER
 ---------------------------------------------*/
 .header-wrapper 
 {
@@ -53,13 +53,17 @@ body {
     display: none;
 }
 
+
+
+/*--------------------------------------------
+        HEADER
+---------------------------------------------*/
+
+
+
 /*------------------------------------------------
         MEDIA QUERIES
 ------------------------------------------------*/
-@media only screen and (orientation: landscape) {
-  
-  }
-/* Start */
 @media (min-width: 1445px) 
 {
     .mycontainer
@@ -99,13 +103,12 @@ body {
         border:0px solid blue;
     }
 }
-/* Start */
 @media (max-width: 1045px) 
 {
-    .navigationheight{
+    /* .navigationheight{
         height: 5em !important;
         top: 4.5em;
-    }
+    } */
     .mycontainer 
     {
         width: 930px;
@@ -166,8 +169,6 @@ body {
     {
         background-color: rgb(218, 212, 212);
     }
-    
-   
 }
 @media (max-width: 945px) 
 {
