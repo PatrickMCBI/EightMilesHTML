@@ -1,5 +1,4 @@
-body 
-{
+body {
     box-sizing: border-box;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
@@ -10,15 +9,17 @@ body
     margin: 0;
     font-family: Calibri, sans-serif;
 }
-*
-{
+
+* {
     box-sizing: border-box;
 }
-.img-fluid{
+
+.img-fluid {
     max-width: 100%;
     height: auto;
 }
-.sticky-top{
+
+.sticky-top {
     position: fixed;
     height: 5em !important;
     width: 100%;
@@ -40,43 +41,43 @@ body
 /*--------------------------------------------
         Header
 ---------------------------------------------*/
-.header-wrapper 
-{
+
+.header-wrapper {
     height: 100%;
     display: grid;
     grid-template-columns: 17% auto;
-    border:0px solid green;
+    border: 0px solid green;
     height: 5em;
 }
-.header-left
-{
+
+.header-left {
     text-align: center;
     padding-top: 1em;
 }
-.header-right  
-{
-    border:0px solid blue;
+
+.header-right {
+    border: 0px solid blue;
     text-align: right;
 }
-.header-right table 
-{
+
+.header-right table {
     float: right;
     margin-top: 1.5em;
     margin-right: 10em;
 }
-.header-right table tr td
-{
-    border:0px solid green;
+
+.header-right table tr td {
+    border: 0px solid green;
     width: 7em;
     text-align: center;
 }
-.header-right table tr td:hover
-{
+
+.header-right table tr td:hover {
     color: green;
     cursor: pointer;
 }
-.header-right .header-navigation
-{
+
+.header-right .header-navigation {
     display: none;
 }
 .header_boxshadow{
@@ -91,27 +92,27 @@ body
 /*--------------------------------------------
         Cover
 ---------------------------------------------*/
+
 .img_cover {
-    width:100%; 
+    width: 100%;
     max-height: 30em;
-   /* max-width:100%; 
+    /* max-width:100%; 
     max-height: auto; */
 }
-
 
 
 /*--------------------------------------------
         Destination
 ---------------------------------------------*/
-.destination 
-{
-   text-align: center;
-   font-weight: 300!important;
-   margin-top: 1em !important;
-   font-size: 2.5rem;
+
+.destination {
+    text-align: center;
+    font-weight: 300!important;
+    margin-top: 1em !important;
+    font-size: 2.5rem;
 }
-.destination_details
-{
+
+.destination_details {
     text-align: center;
     opacity: 0.5;
     margin-top: 0.5em;
@@ -390,107 +391,94 @@ body
 /*------------------------------------------------
         MEDIA QUERIES
 ------------------------------------------------*/
-@media (min-width: 1445px) 
-{
-    .mycontainer
-    {
+
+@media (min-width: 1445px) {
+    .mycontainer {
         width: 1430px;
         margin-left: auto;
         margin-right: auto;
-        border:0px solid red;
+        border: 0px solid red;
     }
-  
 }
-@media (max-width: 1345px) 
-{
-    .mycontainer 
-    {
+
+@media (max-width: 1345px) {
+    .mycontainer {
         width: 1230px;
         margin-left: auto;
         margin-right: auto;
-        border:0px solid blue;
+        border: 0px solid blue;
     }
 }
-@media (max-width: 1245px) 
-{
-    .mycontainer 
-    {
+
+@media (max-width: 1245px) {
+    .mycontainer {
         width: 1130px;
         margin-left: auto;
         margin-right: auto;
-        border:0px solid red;
+        border: 0px solid red;
     }
 }
-@media (max-width: 1145px) 
-{
-    .mycontainer 
-    {
+
+@media (max-width: 1145px) {
+    .mycontainer {
         width: 1030px;
         margin-left: auto;
         margin-right: auto;
-        border:0px solid blue;
+        border: 0px solid blue;
     }
 }
-@media (max-width: 1045px) 
-{
-    .mycontainer 
-    {
+
+@media (max-width: 1045px) {
+    .mycontainer {
         width: 930px;
         margin-left: auto;
         margin-right: auto;
-        border:0px solid red;
+        border: 0px solid red;
     }
-    .header-left{
+    .header-left {
         text-align: left;
     }
-    .header-wrapper 
-    {
+    .header-wrapper {
         height: 100%;
         display: grid;
-        grid-template-columns:auto;
-        border:0px solid green;
+        grid-template-columns: auto;
+        border: 0px solid green;
         height: 5em;
     }
-    .header-right .header-navigation
-    {
+    .header-right .header-navigation {
         text-align: center;
         display: block;
-        border:2px solid white;
+        border: 2px solid white;
         background-color: #495057;
-        padding-top:1.5em;
+        padding-top: 1.5em;
         height: 4.9em;
         width: 5em;
         float: right;
         cursor: pointer;
         position: absolute;
-        right:0;
+        right: 0;
         margin-top: -4.5em !important;
     }
-    .header-right .header-navigation:hover
-    {
+    .header-right .header-navigation:hover {
         background-color: rgb(233, 224, 224);
     }
-  
-    .header-right table 
-    {
+    .header-right table {
         margin-top: 0.5em;
         width: 100%;
-        border:0px solid red;
+        border: 0px solid red;
         display: none;
         position: fixed;
         float: center;
         left: 0;
     }
-    .header-right table tr td 
-    {
+    .header-right table tr td {
         display: block;
         background-color: #888;
-        height: 2em ;
-        width:100%;
+        height: 2em;
+        width: 100%;
         text-align: center;
     }
-    .header-right table tr td:hover
-    {
+    .header-right table tr td:hover {
         background-color: rgb(218, 212, 212);
     }
     .destination_image 
@@ -585,49 +573,41 @@ body
         text-align: center;
     }
 }
-@media (max-width: 945px) 
-{
-    .mycontainer 
-    {
+
+@media (max-width: 945px) {
+    .mycontainer {
         width: 830px;
         margin-left: auto;
         margin-right: auto;
-        border:0px solid blue;
+        border: 0px solid blue;
     }
-    
 }
-@media (max-width: 845px) 
-{
-    .mycontainer 
-    {
+
+@media (max-width: 845px) {
+    .mycontainer {
         width: 730px;
         margin-left: auto;
         margin-right: auto;
-        border:0px solid red;
+        border: 0px solid red;
     }
-    
 }
-@media (max-width: 745px) 
-{
-    .mycontainer 
-    {
+
+@media (max-width: 745px) {
+    .mycontainer {
         width: 630px;
         margin-left: auto;
         margin-right: auto;
-        border:0px solid blue;
+        border: 0px solid blue;
     }
-   
 }
-@media (max-width: 645px) 
-{
-    .mycontainer 
-    {
+
+@media (max-width: 645px) {
+    .mycontainer {
         width: 500px;
         margin-left: auto;
         margin-right: auto;
-        border:0px solid blue;
+        border: 0px solid blue;
     }
-    
 }
 @media only screen and (max-width: 500px) 
 {
@@ -636,13 +616,12 @@ body
         width: 450px;
         margin-left: auto;
         margin-right: auto;
-        border:0px solid red;
+        border: 0px solid red;
     }
-    .header-right table 
-    {
+    .header-right table {
         margin-top: 0.5em;
         width: 100%;
-        border:0px solid red;
+        border: 0px solid red;
         display: none;
         position: fixed;
         float: center;
