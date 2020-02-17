@@ -2,30 +2,94 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8Miles-Travel</title>
-    <link rel="stylesheet" href="css/costum.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <section> Header </section>
-        <section> Main Body </section>
-        <section> Footer </section>
-    </div>
-    <button onclick="alertMe()">alert me!</button>
-</body>
-<script src="js/jquery-3.4.min.js"></script>
-<script>
-    // $(document).ready(function() {
-    //     $("button").click(function() {
-    //         alert("hello world");
-    //     });
-    // });
 
-    function alertMe() {
-        alert("function alert");
+
+
+    <!----------------   Navbar   --------------->
+    <div class="header_shadow">
+        <div class="mycontainer">
+            <div class="header-wrapper">
+                <div class="header-left"><img src="/img/8mileslogo.png" alt="" width="160"></div>
+                <div class="header-right">
+                    <div class="header-navigation" onclick="navigation()"> <i class="fas fa-bars" style="font-size: 2em; color:white "></i></div>
+                    <table id="table">
+                        <tr>
+                            <td>HOME</td>
+                            <td>DESTINATION</td>
+                            <td>PARTNERS</td>
+                            <td>SERVICES</td>
+                            <td>ABOUT</td>
+                            <td>CONTACT</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!----------------   Cover Image   --------------->
+    <div style="text-align:center;">
+        <img src="/img/headerimg.png" class="img_cover">
+    </div>
+
+
+    <!----------------   Top Destination   --------------->
+    <div class="destination">
+        Top Destination
+    </div>
+    <div class="destination_details">
+        Choose Your Next Destination
+    </div>
+    <div class="mycontainer">
+        <div class="destination_gallery">
+        </div>
+    </div>
+
+
+</body>
+<script>
+    //-------------------   Mounted   --------------------------
+    destination_gallery();
+
+    // windows size
+    $(window).resize(function() {
+        var windowsize = $(window).width();
+        console.log(windowsize);
+        if (windowsize > "1030") {
+            document.getElementById("table").style.display = "table";
+            console.log("windows: " + windowsize);
+        } else {
+            document.getElementById("table").style.display = "none";
+        }
+    });
+
+    // scroll nav
+    window.addEventListener("scroll", function() {
+        if (document.documentElement.scrollTop > 100) {
+            $('.header_shadow').addClass('sticky-top');
+        } else {
+            $('.header_shadow').removeClass('sticky-top');
+        }
+    });
+
+
+
+    //-------------------   methods   --------------------------
+    function destination_gallery() {
+        for (var i = 1; i <= 6; i++) {
+            var imageLink = ("/img/TopDestination/" + i + ".jpg");
+            var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"></div>';
+            $('.destination_gallery').append(imgEL)
+        }
+    }
+
+    function navigation() {
+        $(".header-right table").slideToggle("slow");
+
     }
 </script>
 
