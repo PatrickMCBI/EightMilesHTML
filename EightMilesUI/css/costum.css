@@ -20,7 +20,7 @@ body
 }
 .sticky-top{
     position: fixed;
-    height: 4em !important;
+    height: 5em !important;
     width: 100%;
     top: -70px;
     left: 0;
@@ -38,7 +38,7 @@ body
 
 
 /*--------------------------------------------
-        HEADER
+        Header
 ---------------------------------------------*/
 .header-wrapper 
 {
@@ -79,10 +79,15 @@ body
 {
     display: none;
 }
-.header_shadow{
+.header_boxshadow{
     box-shadow: 3px 0px 4px 1px rgb(24, 23, 23);
     margin-bottom: 0.1em;
 }
+.header-right i{
+    font-size: 2em; color:white
+}
+
+
 /*--------------------------------------------
         Cover
 ---------------------------------------------*/
@@ -111,24 +116,276 @@ body
     opacity: 0.5;
     margin-top: 0.5em;
 }
-.destination_gallery 
+.destination_image 
 {
     margin-top:2em;
     height: 100%;
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
     border:0px solid green;
-    height: 5em;
     text-align: center;
     row-gap: 0.5em;
     column-gap: 1em;
     margin-left: 15%;
     margin-right: 16%;
     cursor: pointer;
+ 
 }
-.destination_gallery div:hover{
+.destination_image div:hover{
     opacity: 0.8;
 }
+
+
+/*------------------------------------------------
+        Partners
+------------------------------------------------*/
+.partners{
+    text-align: center;
+    font-weight: 300!important;
+    margin-top: 3em !important;
+    font-size: 2.5rem;
+}
+.partners_image 
+{
+    margin-top:2em;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    border:0px solid green;
+    height: 100%;
+    text-align: center;
+    row-gap: 0.5em;
+    column-gap: 2em;
+    margin-left: 18%;
+    margin-right: 21%;
+    cursor: pointer;
+}
+.partners_image div:hover{
+    opacity: 0.8;
+}
+
+
+/*------------------------------------------------
+        Services Offered
+------------------------------------------------*/
+.services{
+    text-align: center;
+    font-weight: 300!important;
+    margin-top: 3em !important;
+    font-size: 2rem;
+    color: #0b464c;
+    height: 0.5em;
+    border:0px solid red;
+}
+.servicesdetails 
+{
+    margin-top:3em;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    border:0px solid green;
+    height: 100%;
+    text-align: center;
+    row-gap: 0.5em;
+    column-gap: 2em;
+    margin-left: 9%;
+    margin-right: 12%;
+    cursor: pointer;
+}
+.servicesdetails div{
+    font-size: 0.9em;
+}
+.servicesdetails div h2{
+    color: #0b464c;
+    border:0px solid red;
+    height:0.5em;
+    font-weight: 600;
+}
+.servicesimage 
+{
+    margin-top:3em;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    border:0px solid green;
+    height: 100%;
+    text-align: center;
+    row-gap: 0.5em;
+    column-gap: 2em;
+    margin-left: 18%;
+    margin-right: 21%;
+    cursor: pointer;
+}
+.servicesimage div img{
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+}
+.servicesimage div p{
+   font-size: 14px;
+   border:0px solid red;
+   width:16em;
+   text-align: center;
+}
+.servicesimage_airlines{
+    margin-top:2em;
+    display: grid;
+    grid-template-columns: 11.1% 11.1% 11.1% 11.1% 11.1% 11.1% 11.1% 11.1% 11.1%;
+    border:0px solid green;
+    height: 100%;
+    text-align: center;
+    row-gap: 0em;
+    column-gap: 0em;
+    margin-left: 20%;
+    margin-right: 18%;
+    cursor: pointer;
+}
+.servicesimage_airlines div img{
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    border:1px solid green;
+}
+
+
+/*------------------------------------------------
+        About Us
+------------------------------------------------*/
+.aboutus{
+    text-align: center;
+    font-weight: 300!important;
+    margin-top: 2em !important;
+    font-size: 2rem;
+    color: #0b464c;
+    height: 0.5em;
+    border:0px solid red;
+}
+.aboutusdetails 
+{
+    margin-top:2em;
+    display: grid;
+    grid-template-columns: 100%;
+    border:0px solid green;
+    height: 100%;
+    text-align: center;
+    row-gap: 0.5em;
+    column-gap: 2em;
+    margin-left: 12%;
+    margin-right: 12%;
+    cursor: pointer;
+}
+.aboutusdetails div
+{
+    text-align: left;
+    margin:0em;
+    color: #888;
+}
+.aboutusdetails div h3
+{
+    text-align: left;
+    border: 0px solid red;
+    height: 0.5em;
+    text-decoration: underline;
+    text-decoration-color: #a1cd45;
+    font-weight: 100;
+    color: black;
+    font-size: 1.2em;
+}
+
+
+/*------------------------------------------------
+        Get In Touch
+------------------------------------------------*/
+.getintouch{
+    text-align: center;
+    font-weight: 300!important;
+    margin-top: 3em !important;
+    font-size: 2rem;
+    color: #0b464c;
+    height: 0.5em;
+    border:0px solid red;
+}
+.getintouchdetails 
+{
+    margin-top:4em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border:0px solid green;
+    height: 100%;
+    text-align: center;
+    row-gap: 0.5em;
+    column-gap: 2em;
+    margin-left: 10%;
+    margin-right: 12%;
+    cursor: pointer;
+}
+.getintouchdetails div
+{
+    border:0px solid red;
+    text-align:left;
+    font-weight: 700 !important;
+}
+.getintouchdetails div iframe
+{
+   width: 100%;
+   height: 30em;
+}
+.getintouchdetails div p
+{
+    color: #888;
+}
+.getintouchdetails div .text-success{
+    color: #a1cd45 !important;
+ }
+
+
+ /*------------------------------------------------
+        Footer
+------------------------------------------------*/
+.footer{
+    width:100%;
+    height: 10em;
+    background-color: #333333;
+    margin-top: 2em;
+}
+.footerpartnersdetails 
+{
+   text-align: center;
+   height: 3em;
+   padding-top: 1em;
+   font-size:90%; 
+   font-weight:500;
+ 
+}
+.footerpartnersdetails a
+{
+    color: black;
+    
+}
+/*------------------------------------------------
+        Return To Top
+------------------------------------------------*/
+.returntotop {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    font-size: 18px;
+    cursor: pointer;
+    border-width: 2px;
+    background-color: #e9ecef;
+    box-shadow: 0px 0px 8px 0px rgb(169, 167, 167);
+    width: 2.3em;
+    height: 2.2em;
+    text-align: center;
+}
+.returntotop:hover {
+    color: #d9534f;
+    cursor: pointer;
+}
+.returntotop i{
+    font-size: 1.5em;
+    padding-top: 0.2em;
+}
+
 
 /*------------------------------------------------
         MEDIA QUERIES
@@ -236,6 +493,97 @@ body
     {
         background-color: rgb(218, 212, 212);
     }
+    .destination_image 
+    {
+        margin-top:2em;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        border:0px solid green;
+        text-align: center;
+        row-gap: 0.5em;
+        column-gap: 1em;
+        margin-left: 15%;
+        margin-right: 16%;
+        cursor: pointer;
+    }
+    .partners_image 
+    {
+        margin-top:2em;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        border:0px solid green;
+        text-align: center;
+        row-gap: 0.5em;
+        column-gap: 1em;
+        margin-left: 15%;
+        margin-right: 16%;
+        cursor: pointer;
+    }
+    .servicesdetails 
+    {
+        margin-top:2em;
+        display: grid;
+        grid-template-columns: 100%;
+        border:0px solid green;
+        height: 100%;
+        text-align: center;
+        row-gap: 0.5em;
+        column-gap: 2em;
+        cursor: pointer;
+    }
+    .servicesimage 
+    {
+        margin-top:2em;
+        display: grid;
+        grid-template-columns: 100%;
+        border:0px solid green;
+        height: 100%;
+        text-align: center;
+        row-gap: 0.5em;
+        column-gap: 2em;
+        margin-left: 18%;
+        margin-right: 21%;
+        cursor: pointer;
+    }
+    .servicesimage div p{
+        font-size: 14px;
+        border:0px solid red;
+        width:100%;
+        text-align: center;
+     }
+     .servicesimage_airlines{
+        margin-top:2em;
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        border:0px solid green;
+        height: 100%;
+        text-align: center;
+        row-gap: 0em;
+        column-gap: 0em;
+        margin-left: 20%;
+        margin-right: 18%;
+        cursor: pointer;
+    }
+    .getintouchdetails 
+    {
+        margin-top:2em;
+        display: grid;
+        grid-template-columns: 100%;
+        border:0px solid green;
+        height: 100%;
+        text-align: center;
+        row-gap: 0.5em;
+        column-gap: 2em;
+        margin-left: 10%;
+        margin-right: 12%;
+        cursor: pointer;
+    }
+    .getintouchdetails div
+    {
+        text-align: center;
+    }
 }
 @media (max-width: 945px) 
 {
@@ -285,7 +633,7 @@ body
 {
     .mycontainer 
     {
-        width: 500px;
+        width: 450px;
         margin-left: auto;
         margin-right: auto;
         border:0px solid red;
