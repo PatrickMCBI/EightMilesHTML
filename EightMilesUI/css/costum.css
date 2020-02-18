@@ -36,6 +36,21 @@
         -webkit-transition: transform 1500ms ease, background 1500ms ease;
         box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.1);
     }
+
+    .loginmenu{
+        border: 0px solid red;
+        width: 0em;
+        height: 5em;
+        transition: all ease 2s;
+        float: right;
+    }
+    .slidewidth{
+        border: 0px solid red;
+        width: 100%;
+        height: 5em;
+        transition: all ease 2s;
+    }
+
     /*--------------------------------------------
         Header
 ---------------------------------------------*/
@@ -43,11 +58,19 @@
     .header-wrapper {
         height: 100%;
         display: grid;
-        grid-template-columns: 17% auto;
+        grid-template-columns: 17% auto 17%;
         border: 0px solid green;
         height: 5em;
     }
-    
+ 
+    .header-wrapper .loginbutton{
+        padding-top: 25px;
+    }
+    .header-wrapper .loginbutton label{
+        cursor: pointer;
+        font-size: 14px;
+        margin-left: 1em;
+    }
     .header-left {
         text-align: center;
         padding-top: 1em;
@@ -61,13 +84,14 @@
     .header-right table {
         float: right;
         margin-top: 1.5em;
-        margin-right: 10em;
+       
     }
     
     .header-right table tr td {
         border: 0px solid green;
-        width: 5em;
+        width: 6em;
         text-align: center;
+        font-size: 14px;
     }
     
     .header-right table tr td:hover {

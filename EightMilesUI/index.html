@@ -23,7 +23,10 @@
             <div class="header-wrapper">
                 <div class="header-left"><img src="/img/8mileslogo.png" alt="" width="160"></div>
                 <div class="header-right">
+                  
                     <div class="header-navigation" onclick="navigation()"> <i class="fas fa-bars"></i></div>
+                    <div class="loginmenu">
+                    </div> 
                     <table id="table">
                         <tr>
                             <td onclick="tab_home()">HOME</td>
@@ -32,20 +35,26 @@
                             <td onclick="tab_services()">SERVICES</td>
                             <td onclick="tab_about()">ABOUT</td>
                             <td onclick="tab_contact()">CONTACT</td>
-                            <td onclick="tab_contact()">LOGIN</td>
                         </tr>
+                        
                     </table>
+                   
+                   
+                </div>
+                <div class="loginbutton">
+                    <label onclick="btnlogin()">LOGIN</label>
                 </div>
             </div>
         </div>
     </div>
-
+    
 
     <!----------------   Cover Image   --------------->
     <div style="text-align:center;">
         <img src="/img/headerimg.png" class="img_cover">
     </div>
-
+ 
+    
 
     <!----------------   Top Destination   --------------->
     <div class="destination">
@@ -359,6 +368,9 @@
         document.querySelector('.getintouch').scrollIntoView({
             behavior: 'smooth'
         });
+    }
+    function btnlogin(){
+        $('.loginmenu').toggleClass('slidewidth');
     }
 </script>
 
