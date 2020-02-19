@@ -36,6 +36,9 @@
         -webkit-transition: transform 1500ms ease, background 1500ms ease;
         box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.1);
     }
+
+
+
     /*--------------------------------------------
         Header
 ---------------------------------------------*/
@@ -43,11 +46,19 @@
     .header-wrapper {
         height: 100%;
         display: grid;
-        grid-template-columns: 17% auto;
+        grid-template-columns: 17% auto 17%;
         border: 0px solid green;
         height: 5em;
     }
-    
+ 
+    .header-wrapper .loginbutton{
+        padding-top: 25px;
+    }
+    .header-wrapper .loginbutton label{
+        cursor: pointer;
+        font-size: 14px;
+        margin-left: 1em;
+    }
     .header-left {
         text-align: center;
         padding-top: 1em;
@@ -57,17 +68,19 @@
         border: 0px solid blue;
         text-align: right;
     }
-    
+    #table{
+        transition: all ease 2s;
+    }
     .header-right table {
         float: right;
         margin-top: 1.5em;
-        margin-right: 10em;
     }
     
     .header-right table tr td {
         border: 0px solid green;
-        width: 5em;
+        width: 6em;
         text-align: center;
+        font-size: 14px;
     }
     
     .header-right table tr td:hover {
@@ -88,6 +101,52 @@
         font-size: 2em;
         color: white
     }
+    .loginmenu{
+        border: 0px solid red;
+        width: 0em;
+        height: 5em;
+        transition: all ease 1s;
+        float: right;
+    }
+    .loginsss{
+        display: block !important;
+
+    }
+    .loginslide{
+        border: 0px solid red;
+        width: 100%;
+        height: 5em;
+
+    }
+    .loginmenu div {
+        display: none;
+        padding-top: 0.8em;
+      
+    }
+    .loginmenu div div{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-left: 60%;
+        padding-right: 0.5em;
+        gap: 0.1em;
+    }
+
+    .loginmenu div div label a{
+        font-size: 12px;
+        color: red;
+    }
+    .loginmenu div div label .pword{
+        font-size: 12px;
+        color: blue;
+        float: left;
+        margin-top: 5px;
+    }
+    .loginmenu div div input{
+        width: 13.5em;
+    }
+  
+
+
     /*--------------------------------------------
         Cover
 ---------------------------------------------*/
