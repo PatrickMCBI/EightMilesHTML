@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8Miles-Travel</title>
+    <title>8MilesTravel</title>
     <link rel="stylesheet" href="css/costum.css">
-    <link rel="stylesheet" href="css/all.min.css">
     <script src="js/jquery-3.4.min.js"></script>
 
+    <!----------------  FontAwesome   --------------->
+    <link rel="stylesheet" href="css/all.min.css">
     <!----------------  Magnetic Popup   --------------->
     <script src="js/magnificPopup.js"></script>
     <link rel="stylesheet" href="css/magnificPopup.css">
@@ -23,10 +24,17 @@
             <div class="header-wrapper">
                 <div class="header-left"><img src="/img/8mileslogo.png" alt="" width="160"></div>
                 <div class="header-right">
-                  
                     <div class="header-navigation" onclick="navigation()"> <i class="fas fa-bars"></i></div>
-                    <div class="loginmenu">
-                    </div> 
+                    <div class="loginmenu" >
+                        <div class="menu" style="display: none;">
+                            <div >
+                                <input type="text" placeholder="USERNAME">
+                                <input type="text" placeholder="PASSWORD">
+                                <label><a class="pword" href="newuser.html" target="_blank">Forgot Password?</a></label>
+                                <label> <a href="newuser.html" target="_blank">New User?</a> </label>
+                            </div>
+                        </div>
+                    </div>
                     <table id="table">
                         <tr>
                             <td onclick="tab_home()">HOME</td>
@@ -36,10 +44,7 @@
                             <td onclick="tab_about()">ABOUT</td>
                             <td onclick="tab_contact()">CONTACT</td>
                         </tr>
-                        
                     </table>
-                   
-                   
                 </div>
                 <div class="loginbutton">
                     <label onclick="btnlogin()">LOGIN</label>
@@ -47,14 +52,14 @@
             </div>
         </div>
     </div>
-    
+
 
     <!----------------   Cover Image   --------------->
     <div style="text-align:center;">
         <img src="/img/headerimg.png" class="img_cover">
     </div>
- 
-    
+
+
 
     <!----------------   Top Destination   --------------->
     <div class="destination">
@@ -87,11 +92,13 @@
         <div class="servicesdetails">
             <div>
                 <h2>Reservations</h2>
-                Airline Ticketing (Domestic & International). Shipping Lines Ticketing. Hotel Reservation. Car Reservations
+                Airline Ticketing (Domestic & International). Shipping Lines Ticketing. Hotel Reservation. Car
+                Reservations
             </div>
             <div>
                 <h2>Tour Packages</h2>
-                City Tours. Adventure Tours. Aquatic Tours. Educational Tours. Group Tours/ Cruise Tours. Land Arrangement
+                City Tours. Adventure Tours. Aquatic Tours. Educational Tours. Group Tours/ Cruise Tours. Land
+                Arrangement
             </div>
             <div>
                 <h2>Documentation</h2>
@@ -122,7 +129,9 @@
     <div class="mycontainer">
         <div class="getintouchdetails">
             <div>
-                <iframe class="container" id="gmap_canvas" src="https://maps.google.com/maps?q=8%20miles%20travel%20corp&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <iframe class="container" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=8%20miles%20travel%20corp&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
             </div>
             <div>
                 Address
@@ -141,7 +150,9 @@
         <div class="mycontainer">
             <div class="footerdetails">
                 <div>
-                    <h3>About 8 miles Travel Corp. 8-Miles Travel Corp.</h3> 8-Miles Travel Corp. is a legit Travel Company that caters all Airline ticketing (Domestic & International flights), Tour Packages, Car Rental Services, Passporting, Tourist Visas
+                    <h3>About 8 miles Travel Corp. 8-Miles Travel Corp.</h3> 8-Miles Travel Corp. is a legit Travel
+                    Company that caters all Airline ticketing (Domestic & International flights), Tour Packages, Car
+                    Rental Services, Passporting, Tourist Visas
                     etc.
                 </div>
                 <div>
@@ -166,17 +177,21 @@
             </div>
         </div>
     </div>
+
+
     <!----------------   Footer Partners   --------------->
     <div class="footerpartners">
         <div class="mycontainer">
             <div class="footerpartnersdetails">
-                <a href="https://x-mediagraphicsinc.com/" target="_blank">X-Media Graphics Inc.</a> | MCBI-Trade Corporation | MCBI-Land Corporation |
+                <a href="https://x-mediagraphicsinc.com/" target="_blank">X-Media Graphics Inc.</a> | MCBI-Trade
+                Corporation | MCBI-Land Corporation |
                 <a href="https://mcbi-equipments.com/" target="_blank">MCBI-Equipments Inc.</a>
                 <div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!----------------   Return To Top   --------------->
     <div onclick="returntotop()" class="returntotop">
@@ -185,7 +200,11 @@
 
 
 </body>
+
+
 <script>
+
+
     //-------------------   Mounted   --------------------------
     destination();
     Partners();
@@ -193,7 +212,7 @@
     Services_Airlines();
 
     // windows size
-    $(window).resize(function() {
+    $(window).resize(function () {
         var windowsize = $(window).width();
         console.log(windowsize);
         if (windowsize > "1030") {
@@ -205,7 +224,7 @@
     });
 
     // scroll show nav
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", function () {
         if (document.documentElement.scrollTop > 100) {
             $('.header_boxshadow').addClass('sticky-top');
             $('.returntotop').css('display', 'block');
@@ -223,6 +242,7 @@
             enabled: true
         }
     });
+
 
     //-------------------   methods   --------------------------
     function destination() {
@@ -324,7 +344,7 @@
     }
 
     function navigation() {
-        $(".header-right table").slideToggle("slow");
+        $(".header-right #table").slideToggle('slow');
 
     }
 
@@ -369,8 +389,27 @@
             behavior: 'smooth'
         });
     }
-    function btnlogin(){
-        $('.loginmenu').toggleClass('slidewidth');
+    function btnlogin() {
+        $('.loginmenu').toggleClass('loginslide');
+            //  $('.header-wrapper .header-right .loginmenu div').css("display", "block");
+            $('.loginmenu div').slideDown("display", "block");
+
+            // $('.header-wrapper .header-right .loginmenu div').slideToggle("display", "block");
+            //  $('.header-wrapper .header-right .loginmenu div').toggleClass('loginsss');
+
+        // var x = $(".header-wrapper .header-right .loginmenu div").attr('style');
+        // if (x === "display: none;") 
+        // {
+        //     $('.header-wrapper .header-right .loginmenu div').css("display", "block");
+        //     $('.header-wrapper .header-right .loginmenu div').css({ "display":"block"},"slow")
+           
+        // } 
+        // else
+        // {
+           
+        //     $('.header-wrapper .header-right .loginmenu div').css({ "display":"none"},"slow")
+        // }
+        // console.log(x);
     }
 </script>
 
