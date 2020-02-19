@@ -26,6 +26,13 @@
                   
                     <div class="header-navigation" onclick="navigation()"> <i class="fas fa-bars"></i></div>
                     <div class="loginmenu">
+                        <div  style="display: none;">
+                            <input type="text" placeholder="Username">
+                            <input type="text" placeholder="Password">
+                            <label class="forgotpwd"><a  href="facebook.com" target="_blank">Forgot Password?</a> </label>
+                            <label><a href="newuser.html" target="_blank">New User?</a> </label>
+                        </div>
+                       
                     </div> 
                     <table id="table">
                         <tr>
@@ -36,7 +43,7 @@
                             <td onclick="tab_about()">ABOUT</td>
                             <td onclick="tab_contact()">CONTACT</td>
                         </tr>
-                        
+
                     </table>
                    
                    
@@ -324,8 +331,7 @@
     }
 
     function navigation() {
-        $(".header-right table").slideToggle("slow");
-
+        $('#table').slideToggle('slow');
     }
 
     function returntotop() {
@@ -370,7 +376,9 @@
         });
     }
     function btnlogin(){
-        $('.loginmenu').toggleClass('slidewidth');
+         $('.loginmenu').toggleClass('slidewidth');
+        $('#table').slideToggle('slow');
+        $('.loginmenu div').slideToggle('slow')
     }
 </script>
 
