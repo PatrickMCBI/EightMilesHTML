@@ -34,7 +34,7 @@
                         </div>
                        
                     </div> 
-                    <table id="table">
+                    <table id="table" style="display: table;">
                         <tr>
                             <td onclick="tab_home()">HOME</td>
                             <td onclick="tab_destination()">DESTINATION</td>
@@ -215,12 +215,24 @@
         var windowsize = $(window).width();
         console.log(windowsize);
         if (windowsize > "1030") {
-            document.getElementById("table").style.display = "table";
+            // document.getElementById("table").style.display = "table";
+            
             console.log("windows: " + windowsize);
         } else {
-            document.getElementById("table").style.display = "none";
+            // document.getElementById("table").style.display = "none";
         }
     });
+
+    // var x= $('#table').attr('style');  
+    //         console.log(x); 
+    //         if(x === "display: none;")
+    //         {
+    //             document.getElementById("table").slideToggle();
+    //         }
+    //         else
+    //         {
+    //             document.getElementById("table").style.display = "table";
+    //         }
 
     // scroll show nav
     window.addEventListener("scroll", function () {
@@ -343,7 +355,10 @@
     }
 
     function navigation() {
+        // $('#table').slideToggle('slow');
+        $('.loginmenu').toggleClass('slidewidth');
         $('#table').slideToggle('slow');
+        $('.loginmenu div').slideToggle('slow')
     }
 
     function returntotop() {
