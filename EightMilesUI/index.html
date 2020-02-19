@@ -198,6 +198,17 @@
     </div>
 
 
+    <!----------------   Chat   --------------->
+    <div id="fb-widget" class="fb-widget">
+        <div class="ctrlq fb-close" onclick="chat()" style="transition: all ease 4s;">X</div>
+        <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/eightmilestravel/" data-tabs="messages" data-width="360" data-height="400" data-small-header="true" data-hide-cover="true" data-show-facepile="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;height=400&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Feightmilestravel%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=messages&amp;width=360"><span style="vertical-align: bottom; width: 360px; height: 400px;"><iframe name="f37bbcb1982089c" width="360px" height="400px" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.12/plugins/page.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D45%23cb%3Df311e6ef6f7c6d4%26domain%3Deightmilestravel.com%26origin%3Dhttp%253A%252F%252Feightmilestravel.com%252Ff134bcd73988%26relation%3Dparent.parent&amp;container_width=0&amp;height=400&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Feightmilestravel%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=messages&amp;width=360" style="border: none; visibility: visible; width: 360px; height: 400px;" class=""></iframe></span></div>
+
+        <div id="fb-root"></div>
+    </div>
+    <div onclick="chat()" class="chat">
+        <i class="fab fa-facebook-messenger"></i>
+    </div>
+
 </body>
 
 
@@ -215,34 +226,26 @@
         var windowsize = $(window).width();
         console.log(windowsize);
         if (windowsize > "1030") {
-            // document.getElementById("table").style.display = "table";
-            
             console.log("windows: " + windowsize);
         } else {
-            // document.getElementById("table").style.display = "none";
         }
     });
-
-    // var x= $('#table').attr('style');  
-    //         console.log(x); 
-    //         if(x === "display: none;")
-    //         {
-    //             document.getElementById("table").slideToggle();
-    //         }
-    //         else
-    //         {
-    //             document.getElementById("table").style.display = "table";
-    //         }
 
     // scroll show nav
     window.addEventListener("scroll", function () {
         if (document.documentElement.scrollTop > 100) {
             $('.header_boxshadow').addClass('sticky-top');
             $('.returntotop').css('display', 'block');
+            $('.chat').css('margin-right', '2.3em');
+            $('.fb-widget').css('margin-right', '3em');
+            
+            
 
         } else {
             $('.header_boxshadow').removeClass('sticky-top');
             $('.returntotop').css('display', 'none');
+            $('.chat').css('margin-right', '0em');
+            $('.fb-widget').css('margin-right', '0em');
         }
     });
 
@@ -407,6 +410,12 @@
         $('#table').slideToggle('slow');
         $('.loginmenu div').slideToggle('slow')
     }
+    function chat(){
+    //    $('.fb-widget').css('display','block');
+    $('.fb-widget').slideToggle();
+
+    }
+    
 </script>
 
 </html>
