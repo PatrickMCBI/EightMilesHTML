@@ -68,11 +68,12 @@
         border: 0px solid blue;
         text-align: right;
     }
-    
+    #table{
+        transition: all ease 2s;
+    }
     .header-right table {
         float: right;
         margin-top: 1.5em;
-       
     }
     
     .header-right table tr td {
