@@ -105,6 +105,9 @@
     font-size: 14px;
     margin-left: 1em;
 }
+.header-wrapper .loginbutton label:hover {
+    color: green;
+}
 .header-wrapper .loginbutton i {
   
     margin-left: 0.5em;
