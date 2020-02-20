@@ -241,7 +241,8 @@
             </div>
         </div>
 
-        <!----------------  Jquery Modal  --------------->
+
+        <!----------------  jquery UI  --------------->
         <div id="ex1" class="modal" >
             <p>Thanks for clicking. That felt good.</p>
             <a href="#" rel="modal:close">Close</a>
@@ -471,7 +472,11 @@
             }
             $(".loginbutton label").text(Uname);
         }
-    
+        function myFunction() {
+           $(".dropdown-content").toggleClass("show");
+           $(".dropdown i").toggleClass('rotate')
+        }
+      
     </script>
 </body>
 
