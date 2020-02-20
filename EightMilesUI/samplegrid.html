@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-wrapper">
+            <div class="grid">
+                    <div class="col-1">a</div>
+                    <div class="col-2">b</div>
+            </div>
+          
+    </div>
+</body>
+</html>
+<style>
+    body {
+        box-sizing: border-box;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        word-spacing: 0;
+        width: 100%;
+        color: black;
+        background-color: white;
+        margin: 0;
+        font-family: Calibri, sans-serif;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    
+    .grid{
+        display: grid;
+        grid-template-columns: 50%;
+        grid-template-areas: "col-1" "col-2";
+        grid-template-rows: 50vh 50vh;
+    }
+    .col-1{
+       grid-area: col-1;
+       background-color: rgb(47, 47, 47);
+    }
+    .col-2{
+       grid-area: col-2;
+       background-color: rgb(134, 236, 134);
+    }
+</style>

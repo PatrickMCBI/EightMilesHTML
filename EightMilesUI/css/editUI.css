@@ -40,105 +40,219 @@
 
 
     /*--------------------------------------------
-        Header
+        Wrapper
 ---------------------------------------------*/
-    
-    .header-wrapper {
-        height: 100%;
-        display: grid;
-        grid-template-columns: 17% auto 17%;
-        border: 0px solid green;
-        height: 5em;
-    }
- 
-    .header-wrapper .loginbutton{
-        padding-top: 25px;
-    }
-    .header-wrapper .loginbutton label{
-        cursor: pointer;
-        font-size: 14px;
-        margin-left: 1em;
-    }
-    .header-left {
-        text-align: center;
-        padding-top: 1em;
-    }
-    
-    .header-right {
-        border: 0px solid blue;
-        text-align: right;
-    }
-    #table{
-        transition: all ease 2s;
-    }
-    .header-right table {
-        float: right;
-        margin-top: 1.5em;
-    }
-    
-    .header-right table tr td {
-        border: 0px solid green;
-        width: 6em;
-        text-align: center;
-        font-size: 14px;
-    }
-    
-    .header-right table tr td:hover {
-        color: green;
-        cursor: pointer;
-    }
-    
-    .header-right .header-navigation {
-        display: none;
-    }
-    
-    .header_boxshadow {
-        box-shadow: 3px 0px 4px 1px rgb(24, 23, 23);
-        margin-bottom: 0.1em;
-    }
-    
-    .header-right i {
-        font-size: 2em;
-        color: white
-    }
-    .loginmenu div{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        padding-top: 1.6em;
-        padding-left: 25%;
-       font-size: 12px;
-    }
-    .loginmenu div input{
+.wrapper {
+    height: 100%;
+    /* display: grid; */
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(70px, max-content);
+    grid-template-areas: "header""main";
+}
+
+.header {
+    grid-area: header;
+    background-color: #fff;
+    box-shadow: 0px 0px 8px 0px rgb(169, 167, 167);
+
+}
+
+​ .main {
+    grid-area: main;
+    background-color: rgb(124, 235, 140);
+}
+
+
+/*------------------------------------------------
+    Left Header
+------------------------------------------------*/
+.leftheader {
+    float: left;
+    padding-left: 10%;
+    padding-top: 1em;
+}
+
+.leftheader img {
+    width: 10em;
+}
+
+
+/*------------------------------------------------
+    Right Header
+------------------------------------------------*/
+.header-wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 17% auto 17%;
+    border: 0px solid green;
+    height: 5em;
+}
+
+.header-left {
+    text-align: center;
+    padding-top: 1em;
+}
+   /*--------------------------------------------
+        Login Button
+---------------------------------------------*/
+.header-wrapper .loginbutton {
+    padding-top: 25px;
+    cursor: pointer;
+}
+
+.header-wrapper .loginbutton label {
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 1em;
+}
+.header-wrapper .loginbutton i {
+  
+    margin-left: 0.5em;
+}
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+    background-color: red;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .show {
+    display: block;
+  }
+.rotate{
+    transform: rotate(180deg);
+}
+
+   /*--------------------------------------------
+        Header Right
+---------------------------------------------*/
+.header-right {
+    border: 0px solid blue;
+    text-align: right;
+}
+
+table {
+    transition: all ease 2s;
+}
+
+.header-right table {
+    float: right;
+    margin-top: 1.5em;
+}
+
+.header-right table tr td {
+    border: 0px solid green;
+    width: 6em;
+    text-align: center;
+    font-size: 14px;
+}
+
+.header-right table tr td:hover {
+    color: green;
+    cursor: pointer;
+}
+
+.header-right .header-navigation {
+    display: none;
+}
+
+.header_boxshadow {
+    box-shadow: 3px 0px 4px 1px rgb(24, 23, 23);
+    margin-bottom: 0.1em;
+}
+
+.header-right i {
+    font-size: 2em;
+    color: white
+}
+
+.loginmenu div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 1.6em;
+    padding-left: 25%;
+    font-size: 12px;
+}
+
+.loginmenu div input {
     width: 12em;
-    }
-    .loginmenu div .forgotpwd{ 
-        color: red;
-        text-align: left;
-        padding-top:0.5em;
-        cursor: pointer;
-        float: left;
-    }
-    .loginmenu div .forgotpwd a{ color: red; }
-    .loginmenu div label{ 
-        color: blue;
-        text-align: right;
-        padding-right: 1.5em;
-        padding-top:0.5em;
-        cursor: pointer;
-    }
-    .loginmenu{
-        border: 0px solid red;
-        width: 0em;
-        height: 5em;
-        transition: all ease 2s;
-        float: right;
-    }
-    .slidewidth{
-        border: 0px solid red;
-        width: 50%;
-        height: 5em;
-        transition: all ease 2s;
-    }
+}
+
+.loginmenu div .forgotpwd {
+    color: red;
+    text-align: left;
+    padding-top: 0.5em;
+    cursor: pointer;
+    float: left;
+}
+
+.loginmenu div .forgotpwd a {
+    color: red;
+}
+
+.loginmenu div label {
+    color: blue;
+    text-align: right;
+    padding-right: 1.5em;
+    padding-top: 0.5em;
+    cursor: pointer;
+}
+
+.loginmenu {
+    border: 0px solid red;
+    width: 0em;
+    height: 5em;
+    transition: all ease 2s;
+    float: right;
+}
+
+.slidewidth {
+    border: 0px solid red;
+    width: 50%;
+    height: 5em;
+    transition: all ease 2s;
+}
+.rightheader {
+    float: right;
+    margin-right: 10%;
+
+}
 
     /*--------------------------------------------
         Cover
@@ -510,7 +624,7 @@
     transition: all ease 1s;
     border-radius: 50%;
     color: white;
-    padding-top: 2px;
+    padding-top: 1px;
 }
 
 .chat:hover {
@@ -625,14 +739,14 @@
             display: block;
             border: 2px solid white;
             background-color: #495057;
-            padding-top: 1.5em;
-            height: 4.9em;
-            width: 5em;
+            padding-top: 0.9em;
+            height: 4em;
+            width: 4em;
             float: right;
             cursor: pointer;
             position: absolute;
             right: 0;
-            margin-top: -4.5em !important;
+            margin-top: -3.5em !important;
             border-radius: 10px;
         }
         .header-right .header-navigation:hover {
@@ -814,5 +928,8 @@
             display: none;
             position: fixed;
             float: center;
+        }
+        .loginmenu div {
+            display:none;
         }
     }

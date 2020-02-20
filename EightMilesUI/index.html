@@ -4,418 +4,473 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8MilesTravel</title>
-    <link rel="stylesheet" href="css/costum.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery-3.4.min.js"></script>
 
-    <!----------------  FontAwesome   --------------->
+    <!----------------  Jquery Cookies  --------------->
+    <script src="js/jquery-cookies.js"></script>
+
+    <!----------------  FontAwesome  --------------->
     <link rel="stylesheet" href="css/all.min.css">
-    <!----------------  Magnetic Popup   --------------->
+
+    <!----------------  Magnetic Popup  --------------->
     <script src="js/magnificPopup.js"></script>
     <link rel="stylesheet" href="css/magnificPopup.css">
+
 </head>
 
 <body>
+    <!----------------  wrapper  --------------->
+    <div class="wrapper">
 
 
-    <!----------------   Header   --------------->
-    <div class="header_boxshadow">
-        <div class="mycontainer">
-            <div class="header-wrapper">
-                <div class="header-left"><img src="img/8mileslogo.png" alt="" width="160"></div>
-                <div class="header-right">
-                    <div class="header-navigation" onclick="navigation()"> <i class="fas fa-bars"></i></div>
-                    <div class="loginmenu">
-                        <div  style="display: none;">
-                            <input type="text" placeholder="Username">
-                            <input type="text" placeholder="Password">
-                            <label class="forgotpwd"><a  href="facebook.com" target="_blank">Forgot Password?</a> </label>
-                            <label><a href="newuser.html" target="_blank">New User?</a> </label>
+        <!----------------  header  --------------->
+        <div class="header">
+            <div class="mycontainer">
+                <div class="header-wrapper">
+                    <div class="header-left"><img src="img/8mileslogo.png" alt="" width="160"></div>
+                    <div class="header-right">
+                        <div class="header-navigation" onclick="navigation()"> <i class="fas fa-bars"></i></div>
+                        <div class="loginmenu">
+                            <div style="display:none;">
+                                <input class="input_uname" type="text" placeholder="Username">
+                                <input class="input_pwd" type="text" placeholder="Password">
+                                <label class="forgotpwd"><a href="facebook.com" target="_blank">Forgot Password?</a>
+                                </label>
+                                <label><a href="newuser.html" target="_blank">New User?</a> </label>
+                            </div>
                         </div>
-                       
-                    </div> 
-                    <table id="table" style="display: table;">
-                        <tr>
-                            <td onclick="tab_home()">HOME</td>
-                            <td onclick="tab_destination()">DESTINATION</td>
-                            <td onclick="tab_partners()">PARTNERS</td>
-                            <td onclick="tab_services()">SERVICES</td>
-                            <td onclick="tab_about()">ABOUT</td>
-                            <td onclick="tab_contact()">CONTACT</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="loginbutton">
-                    <label onclick="btnlogin()">LOGIN</label>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!----------------   Cover Image   --------------->
-    <div style="text-align:center;">
-        <img src="img/headerimg.png" class="img_cover">
-    </div>
-
-
-
-    <!----------------   Top Destination   --------------->
-    <div class="destination">
-        Top Destination
-    </div>
-    <div class="destination_details">
-        Choose Your Next Destination
-    </div>
-    <div class="mycontainer">
-        <div class="destination_image">
-        </div>
-    </div>
-
-
-    <!----------------   Partners   --------------->
-    <div class="partners">
-        PARTNERS
-    </div>
-    <div class="mycontainer">
-        <div class="partners_image">
-        </div>
-    </div>
-
-
-    <!----------------   Services Offered   --------------->
-    <div class="services">
-        SERVICES OFFERED
-    </div>
-    <div class="mycontainer">
-        <div class="servicesdetails">
-            <div>
-                <h2>Reservations</h2>
-                Airline Ticketing (Domestic & International). Shipping Lines Ticketing. Hotel Reservation. Car
-                Reservations
-            </div>
-            <div>
-                <h2>Tour Packages</h2>
-                City Tours. Adventure Tours. Aquatic Tours. Educational Tours. Group Tours/ Cruise Tours. Land
-                Arrangement
-            </div>
-            <div>
-                <h2>Documentation</h2>
-                Online Passport Reservation, Red Ribbon, NSO Online Application. Tourist Visa Application
-            </div>
-        </div>
-        <div class="servicesimage">
-        </div>
-        <div class="servicesimage_airlines">
-        </div>
-    </div>
-
-
-    <!----------------   About Us   --------------->
-    <div class="aboutus">
-        About Us
-    </div>
-    <div class="mycontainer">
-        <div class="aboutusdetails">
-        </div>
-    </div>
-
-
-    <!----------------   Get In Touch   --------------->
-    <div class="getintouch">
-        Get In Touch
-    </div>
-    <div class="mycontainer">
-        <div class="getintouchdetails">
-            <div>
-                <iframe class="container" id="gmap_canvas"
-                    src="https://maps.google.com/maps?q=8%20miles%20travel%20corp&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-            </div>
-            <div>
-                Address
-                <p>Rm 21 City Times Square, Basak Lapu-Lapu City, Cebu</p>
-                Phone
-                <p class="text-success">236-7827 / 0917 779 2500</p>
-                Email Address
-                <p class="text-success">8milestravel@gmail.com</p>
-            </div>
-        </div>
-    </div>
-
-
-    <!----------------   Footer   --------------->
-    <div class="footer">
-        <div class="mycontainer">
-            <div class="footerdetails">
-                <div>
-                    <h3>About 8 miles Travel Corp. 8-Miles Travel Corp.</h3> 8-Miles Travel Corp. is a legit Travel
-                    Company that caters all Airline ticketing (Domestic & International flights), Tour Packages, Car
-                    Rental Services, Passporting, Tourist Visas
-                    etc.
-                </div>
-                <div>
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li onclick="tab_home()">Home</li>
-                        <li onclick="tab_destination()">Destination</li>
-                        <li onclick="tab_services()">Services</li>
-                        <li onclick="tab_about()">About</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Follow Us</h3>
-                    <h5>Let us be social</h5>
-                    <ul class="footericon">
-                        <li><i class="fab fa-facebook-f"></i></li>
-                        <li><i class="fab fa-twitter"></i></li>
-                        <li><i class="fab fa-instagram"></i></li>
-                        <li><i class="fab fa-linkedin-in"></i></li>
-                    </ul>
+                        <table style="display: table;">
+                            <tr>
+                                <td onclick="tab_home(event)">HOME</td>
+                                <td onclick="tab_destination(event)">DESTINATION</td>
+                                <td onclick="tab_partners(event)">PARTNERS</td>
+                                <td onclick="tab_services(event)">SERVICES</td>
+                                <td onclick="tab_about(event)">ABOUT</td>
+                                <td onclick="tab_contact(event)">CONTACT</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="loginbutton">
+                        <label onclick="btnlogin()">LOGIN</label>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <!----------------   Footer Partners   --------------->
-    <div class="footerpartners">
-        <div class="mycontainer">
-            <div class="footerpartnersdetails">
-                <a href="https://x-mediagraphicsinc.com/" target="_blank">X-Media Graphics Inc.</a> | MCBI-Trade
-                Corporation | MCBI-Land Corporation |
-                <a href="https://mcbi-equipments.com/" target="_blank">MCBI-Equipments Inc.</a>
-                <div>
+        <!----------------  main  --------------->
+        <div class="main">
+            <!----------------  Cover   --------------->
+            <div style="text-align:center;">
+                <img src="img/headerimg.png" class="img_cover">
+            </div>
+
+
+            <!----------------   Top Destination   --------------->
+            <div class="destination">
+                Top Destination
+            </div>
+            <div class="destination_details">
+                Choose Your Next Destination
+            </div>
+            <div class="mycontainer">
+                <div class="destination_image">
                 </div>
             </div>
+
+            <!----------------   Partners   --------------->
+            <div class="partners">
+                PARTNERS
+            </div>
+            <div class="mycontainer">
+                <div class="partners_image">
+                </div>
+            </div>
+
+
+            <!----------------   Services Offered   --------------->
+            <div class="services">
+                SERVICES OFFERED
+            </div>
+            <div class="mycontainer">
+                <div class="servicesdetails">
+                    <div>
+                        <h2>Reservations</h2>
+                        Airline Ticketing (Domestic & International). Shipping Lines Ticketing. Hotel Reservation. Car
+                        Reservations
+                    </div>
+                    <div>
+                        <h2>Tour Packages</h2>
+                        City Tours. Adventure Tours. Aquatic Tours. Educational Tours. Group Tours/ Cruise Tours. Land
+                        Arrangement
+                    </div>
+                    <div>
+                        <h2>Documentation</h2>
+                        Online Passport Reservation, Red Ribbon, NSO Online Application. Tourist Visa Application
+                    </div>
+                </div>
+                <div class="servicesimage">
+                </div>
+                <div class="servicesimage_airlines">
+                </div>
+            </div>
+
+
+            <!----------------   About Us   --------------->
+            <div class="aboutus">
+                About Us
+            </div>
+            <div class="mycontainer">
+                <div class="aboutusdetails">
+                </div>
+            </div>
+
+
+            <!----------------   Get In Touch   --------------->
+            <div class="getintouch">
+                Get In Touch
+            </div>
+            <div class="mycontainer">
+                <div class="getintouchdetails">
+                    <div>
+                        <iframe class="container" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=8%20miles%20travel%20corp&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                    <div>
+                        Address
+                        <p>Rm 21 City Times Square, Basak Lapu-Lapu City, Cebu</p>
+                        Phone
+                        <p class="text-success">236-7827 / 0917 779 2500</p>
+                        Email Address
+                        <p class="text-success">8milestravel@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!----------------   Footer   --------------->
+            <div class="footer">
+                <div class="mycontainer">
+                    <div class="footerdetails">
+                        <div>
+                            <h3>About 8 miles Travel Corp. 8-Miles Travel Corp.</h3> 8-Miles Travel Corp. is a legit
+                            Travel
+                            Company that caters all Airline ticketing (Domestic & International flights), Tour Packages,
+                            Car
+                            Rental Services, Passporting, Tourist Visas
+                            etc.
+                        </div>
+                        <div>
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li onclick="tab_home()">Home</li>
+                                <li onclick="tab_destination()">Destination</li>
+                                <li onclick="tab_services()">Services</li>
+                                <li onclick="tab_about()">About</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Follow Us</h3>
+                            <h5>Let us be social</h5>
+                            <ul class="footericon">
+                                <li><i class="fab fa-facebook-f"></i></li>
+                                <li><i class="fab fa-twitter"></i></li>
+                                <li><i class="fab fa-instagram"></i></li>
+                                <li><i class="fab fa-linkedin-in"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!----------------   Footer Partners   --------------->
+            <div class="footerpartners">
+                <div class="mycontainer">
+                    <div class="footerpartnersdetails">
+                        <a href="https://x-mediagraphicsinc.com/" target="_blank">X-Media Graphics Inc.</a> | MCBI-Trade
+                        Corporation | MCBI-Land Corporation |
+                        <a href="https://mcbi-equipments.com/" target="_blank">MCBI-Equipments Inc.</a>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!----------------   Return To Top   --------------->
+            <div onclick="returntotop()" class="returntotop">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+
+
+            <!----------------   Chat   --------------->
+            <div id="fb-widget" class="fb-widget">
+                <div class="ctrlq fb-close" onclick="chat()" style="transition: all ease 4s;">X</div>
+                <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/eightmilestravel/"
+                    data-tabs="messages" data-width="360" data-height="400" data-small-header="true"
+                    data-hide-cover="true" data-show-facepile="false" fb-xfbml-state="rendered"
+                    fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;height=400&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Feightmilestravel%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=messages&amp;width=360">
+                    <span style="vertical-align: bottom; width: 360px; height: 400px;"><iframe name="f37bbcb1982089c"
+                            width="360px" height="400px" title="fb:page Facebook Social Plugin" frameborder="0"
+                            allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
+                            src="https://www.facebook.com/v2.12/plugins/page.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D45%23cb%3Df311e6ef6f7c6d4%26domain%3Deightmilestravel.com%26origin%3Dhttp%253A%252F%252Feightmilestravel.com%252Ff134bcd73988%26relation%3Dparent.parent&amp;container_width=0&amp;height=400&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Feightmilestravel%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=messages&amp;width=360"
+                            style="border: none; visibility: visible; width: 360px; height: 400px;"
+                            class=""></iframe></span>
+                </div>
+
+                <div id="fb-root"></div>
+            </div>
+            <div onclick="chat()" class="chat">
+                <i class="fab fa-facebook-messenger"></i>
+            </div>
         </div>
+
+
     </div>
+    <script>
+        //-------------------  mounted  --------------------------
+        destination();
+        partners();
+        services();
+        services_airlines();
+        aboutus();
+        logincookies();
 
-
-    <!----------------   Return To Top   --------------->
-    <div onclick="returntotop()" class="returntotop">
-        <i class="fas fa-chevron-up"></i>
-    </div>
-
-
-    <!----------------   Chat   --------------->
-    <div id="fb-widget" class="fb-widget">
-        <div class="ctrlq fb-close" onclick="chat()" style="transition: all ease 4s;">X</div>
-        <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/eightmilestravel/" data-tabs="messages" data-width="360" data-height="400" data-small-header="true" data-hide-cover="true" data-show-facepile="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;height=400&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Feightmilestravel%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=messages&amp;width=360"><span style="vertical-align: bottom; width: 360px; height: 400px;"><iframe name="f37bbcb1982089c" width="360px" height="400px" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.12/plugins/page.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D45%23cb%3Df311e6ef6f7c6d4%26domain%3Deightmilestravel.com%26origin%3Dhttp%253A%252F%252Feightmilestravel.com%252Ff134bcd73988%26relation%3Dparent.parent&amp;container_width=0&amp;height=400&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Feightmilestravel%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=messages&amp;width=360" style="border: none; visibility: visible; width: 360px; height: 400px;" class=""></iframe></span></div>
-
-        <div id="fb-root"></div>
-    </div>
-    <div onclick="chat()" class="chat">
-        <i class="fab fa-facebook-messenger"></i>
-    </div>
-
-</body>
-
-
-<script>
-
-
-    //-------------------   Mounted   --------------------------
-    destination();
-    Partners();
-    Services();
-    Services_Airlines();
-
-    // windows size
-    $(window).resize(function () {
-        var windowsize = $(window).width();
-        console.log(windowsize);
-        if (windowsize > "1030") {
-            console.log("windows: " + windowsize);
-        } else {
-        }
-    });
-
-    // scroll show nav
-    window.addEventListener("scroll", function () {
-        if (document.documentElement.scrollTop > 100) {
-            $('.header_boxshadow').addClass('sticky-top');
-            $('.returntotop').css('display', 'block');
-            $('.chat').css('margin-right', '2.3em');
-            $('.fb-widget').css('margin-right', '3em');
-            
-            
-
-        } else {
-            $('.header_boxshadow').removeClass('sticky-top');
-            $('.returntotop').css('display', 'none');
-            $('.chat').css('margin-right', '0em');
-            $('.fb-widget').css('margin-right', '0em');
-        }
-    });
-
-    // Magnefic Popup
-    $('.destination_image img').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true
-        }
-    });
-
-
-    //-------------------   methods   --------------------------
-    function destination() {
-        for (var i = 1; i <= 6; i++) {
-            var imageLink = ("img/TopDestination/" + i + ".jpg");
-            var imgEL = '<div><img src="' + imageLink + '" class="img-fluid" href="' + imageLink + '"></div>';
-            $('.destination_image').append(imgEL)
-        }
-    }
-
-    function Partners() {
-        for (var i = 1; i <= 4; i++) {
-            if (i == 1) {
-                var imageLink = ("img/Partners/" + i + ".png");
-                var imgEL = '<div><a href="https://mcbi-equipments.com/" target="_blank"><img src="' + imageLink + '" class="img-fluid" title="MCBI EQUIPMENT" style="margin-top:2.5em"></a></div>';
-                $('.partners_image').append(imgEL)
-            } else if (i == 2) {
-                var imageLink = ("img/Partners/" + i + ".png");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"></div>';
-                $('.partners_image').append(imgEL)
-            } else if (i == 3) {
-                var imageLink = ("img/Partners/" + i + ".png");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid" style="margin-top:2.5em"></div>';
-                $('.partners_image').append(imgEL)
-            } else if (i == 4) {
-                var imageLink = ("img/Partners/" + i + ".png");
-                var imgEL = '<div><a href="https://x-mediagraphicsinc.com/" target="_blank"><img src="' + imageLink + '" class="img-fluid"  title="X-MEDIA GRAPHICS INC." style="margin-top:2.5em"></a></div>';
-                $('.partners_image').append(imgEL)
+        // windows size
+        $(window).resize(function () {
+            var windowsize = $(window).width();
+            console.log(windowsize);
+            if (windowsize > "1030") {
+                console.log("windows: " + windowsize);
             } else {
-                var imageLink = ("img/Partners/" + i + ".png");
+            }
+        });
+
+        // scroll show nav
+        window.addEventListener("scroll", function () {
+            if (document.documentElement.scrollTop > 100) {
+                $('.header').addClass('sticky-top');
+                $('.returntotop').css('display', 'block');
+                $('.chat').css('margin-right', '2.3em');
+                $('.fb-widget').css('margin-right', '3em');
+
+
+                var x = $('table tr td').html();
+                console.log(x);
+                $('table tr td').css('color', 'violet !important')
+            }
+            else if (document.documentElement.scrollTop > 200) {
+
+            }
+            else {
+                $('.header').removeClass('sticky-top');
+                $('.returntotop').css('display', 'none');
+                $('.chat').css('margin-right', '0em');
+                $('.fb-widget').css('margin-right', '0em');
+            }
+        });
+
+        // Magnefic Popup
+        $('.destination_image img').magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
+        });
+
+        //-------------------   methods   --------------------------
+        function destination() {
+            for (var i = 1; i <= 6; i++) {
+                var imageLink = ("img/TopDestination/" + i + ".jpg");
+                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid" href="' + imageLink + '"></div>';
+                $('.destination_image').append(imgEL)
+            }
+        }
+
+        function partners() {
+            for (var i = 1; i <= 4; i++) {
+                if (i == 1) {
+                    var imageLink = ("img/Partners/" + i + ".png");
+                    var imgEL = '<div><a href="https://mcbi-equipments.com/" target="_blank"><img src="' + imageLink + '" class="img-fluid" title="MCBI EQUIPMENT" style="margin-top:2.5em"></a></div>';
+                    $('.partners_image').append(imgEL)
+                } else if (i == 2) {
+                    var imageLink = ("img/Partners/" + i + ".png");
+                    var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"></div>';
+                    $('.partners_image').append(imgEL)
+                } else if (i == 3) {
+                    var imageLink = ("img/Partners/" + i + ".png");
+                    var imgEL = '<div><img src="' + imageLink + '" class="img-fluid" style="margin-top:2.5em"></div>';
+                    $('.partners_image').append(imgEL)
+                } else if (i == 4) {
+                    var imageLink = ("img/Partners/" + i + ".png");
+                    var imgEL = '<div><a href="https://x-mediagraphicsinc.com/" target="_blank"><img src="' + imageLink + '" class="img-fluid"  title="X-MEDIA GRAPHICS INC." style="margin-top:2.5em"></a></div>';
+                    $('.partners_image').append(imgEL)
+                } else {
+                    var imageLink = ("img/Partners/" + i + ".png");
+                    var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"></div>';
+                    $('.partners_image').append(imgEL)
+                }
+
+            }
+        }
+
+        function services() {
+            for (var i = 1; i <= 8; i++) {
+                if (i == 1) {
+                    var imageLink = ("img/Services/" + i + ".jpg");
+                    var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Domestic International Ticket Issuance</p></div>';
+                    $('.servicesimage').append(imgEL)
+                } else if (i == 2) {
+                    var imageLink = ("img/Services/" + i + ".jpg");
+                    var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Accomodation</p></div>';
+                    $('.servicesimage').append(imgEL)
+                } else if (i == 3) {
+                    var imageLink = ("img/Services/" + i + ".jpg");
+                    var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>International Tour Packages</p></div>';
+                    $('.servicesimage').append(imgEL)
+                } else if (i == 4) {
+                    var imageLink = ("img/Services/" + i + ".jpg");
+                    var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Local Tour Packages</p></div>';
+                    $('.servicesimage').append(imgEL)
+                } else if (i == 5) {
+                    var imageLink = ("img/Services/" + i + ".jpg");
+                    var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Visa Assistance</p></div>';
+                    $('.servicesimage').append(imgEL)
+                } else if (i == 6) {
+                    var imageLink = ("img/Services/" + i + ".jpg");
+                    var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Car Rentals</p></div>';
+                    $('.servicesimage').append(imgEL)
+                } else if (i == 7) {
+                    var imageLink = ("img/Services/" + i + ".jpg");
+                    var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Shipping Ticket Issuance</p></div>';
+                    $('.servicesimage').append(imgEL)
+                } else if (i == 8) {
+                    var imageLink = ("img/Services/" + i + ".jpg");
+                    var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Travel Insurance</p></div>';
+                    $('.servicesimage').append(imgEL)
+                }
+
+            }
+        }
+
+        function services_airlines() {
+            for (var i = 1; i <= 9; i++) {
+
+                var imageLink = ("img/Services/" + i + ".png");
                 var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"></div>';
-                $('.partners_image').append(imgEL)
-            }
-
-        }
-    }
-
-    function Services() {
-        for (var i = 1; i <= 8; i++) {
-            if (i == 1) {
-                var imageLink = ("img/Services/" + i + ".jpg");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Domestic International Ticket Issuance</p></div>';
-                $('.servicesimage').append(imgEL)
-            } else if (i == 2) {
-                var imageLink = ("img/Services/" + i + ".jpg");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Accomodation</p></div>';
-                $('.servicesimage').append(imgEL)
-            } else if (i == 3) {
-                var imageLink = ("img/Services/" + i + ".jpg");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>International Tour Packages</p></div>';
-                $('.servicesimage').append(imgEL)
-            } else if (i == 4) {
-                var imageLink = ("img/Services/" + i + ".jpg");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Local Tour Packages</p></div>';
-                $('.servicesimage').append(imgEL)
-            } else if (i == 5) {
-                var imageLink = ("img/Services/" + i + ".jpg");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Visa Assistance</p></div>';
-                $('.servicesimage').append(imgEL)
-            } else if (i == 6) {
-                var imageLink = ("img/Services/" + i + ".jpg");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Car Rentals</p></div>';
-                $('.servicesimage').append(imgEL)
-            } else if (i == 7) {
-                var imageLink = ("img/Services/" + i + ".jpg");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Shipping Ticket Issuance</p></div>';
-                $('.servicesimage').append(imgEL)
-            } else if (i == 8) {
-                var imageLink = ("img/Services/" + i + ".jpg");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Travel Insurance</p></div>';
-                $('.servicesimage').append(imgEL)
-            }
-
-        }
-    }
-
-    function Services_Airlines() {
-        for (var i = 1; i <= 9; i++) {
-
-            var imageLink = ("img/Services/" + i + ".png");
-            var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"></div>';
-            $('.servicesimage_airlines').append(imgEL)
-        }
-    }
-
-    function Services_Airlines() {
-        for (var i = 1; i <= 3; i++) {
-            if (i == 1) {
-                var imgEL = '<div><h3>Who are We</h3> 8-Miles Travel Corp is newly formed travel company, duly-organized and registered corporation with the Securities & Exchange Commission (SEC) on May 16, 2019 with Registration No. CS20196195 to serve the growing needs of travel and hospitality industry in the Philippines with the goal to provide travelers, their passion to explore our local tourist destination in the Philippines and abroad.</div>';
-                $('.aboutusdetails').append(imgEL)
-            } else if (i == 2) {
-                var imgEL = '<div><h3>Mission</h3>To serve our clients with enchanced travel experience by providing quality services that address their travel needs, through the most efficient arrangements so that customer loyalty, superior financial results and excellent customer satisfaction can be achieved.</div>';
-                $('.aboutusdetails').append(imgEL)
-            } else if (i == 3) {
-                var imgEL = '<div><h3>Vission</h3>To be one of the most trusted and respected travel company recognized by our clients for delivering excellence. To become the leading provider of travel solutions across Philippines and to constinuously create new opportunities for growth in our strategic business.</div>';
-                $('.aboutusdetails').append(imgEL)
+                $('.servicesimage_airlines').append(imgEL)
             }
         }
-    }
 
-    function navigation() {
-        // $('#table').slideToggle('slow');
-        $('.loginmenu').toggleClass('slidewidth');
-        $('#table').slideToggle('slow');
-        $('.loginmenu div').slideToggle('slow')
-    }
+        function aboutus() {
+            for (var i = 1; i <= 3; i++) {
+                if (i == 1) {
+                    var imgEL = '<div><h3>Who are We</h3> 8-Miles Travel Corp is newly formed travel company, duly-organized and registered corporation with the Securities & Exchange Commission (SEC) on May 16, 2019 with Registration No. CS20196195 to serve the growing needs of travel and hospitality industry in the Philippines with the goal to provide travelers, their passion to explore our local tourist destination in the Philippines and abroad.</div>';
+                    $('.aboutusdetails').append(imgEL)
+                } else if (i == 2) {
+                    var imgEL = '<div><h3>Mission</h3>To serve our clients with enchanced travel experience by providing quality services that address their travel needs, through the most efficient arrangements so that customer loyalty, superior financial results and excellent customer satisfaction can be achieved.</div>';
+                    $('.aboutusdetails').append(imgEL)
+                } else if (i == 3) {
+                    var imgEL = '<div><h3>Vission</h3>To be one of the most trusted and respected travel company recognized by our clients for delivering excellence. To become the leading provider of travel solutions across Philippines and to constinuously create new opportunities for growth in our strategic business.</div>';
+                    $('.aboutusdetails').append(imgEL)
+                }
+            }
+        }
 
-    function returntotop() {
-        document.querySelector('body').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
+        function navigation() {
+            // $('#table').slideToggle('slow');
+            $('.loginmenu').toggleClass('slidewidth');
+            $('table').slideToggle('slow');
+            $('.loginmenu div').slideToggle('slow')
+        }
 
-    function tab_home() {
-        document.querySelector('body').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
+        function returntotop() {
+            document.querySelector('body').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
 
-    function tab_destination() {
-        document.querySelector('.destination').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
+        function tab_home(event) {
+            $(event.target).parents('tr').find('td').removeAttr('style');
+            $(event.target).css({ 'color': 'green' });
+            document.querySelector('body').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
 
-    function tab_partners() {
-        document.querySelector('.partners').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
+        function tab_destination(event) {
+            $(event.target).parents('tr').find('td').removeAttr('style');
+            $(event.target).css({ 'color': 'green' });
+            document.querySelector('.destination').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
 
-    function tab_services() {
-        document.querySelector('.services').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
+        function tab_partners(event) {
 
-    function tab_about() {
-        document.querySelector('.aboutus').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
+            $(event.target).parents('tr').find('td').removeAttr('style');
+            $(event.target).css({ 'color': 'green' });
+            document.querySelector('.partners').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
 
-    function tab_contact() {
-        document.querySelector('.getintouch').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-    function btnlogin(){
-         $('.loginmenu').toggleClass('slidewidth');
-        $('#table').slideToggle('slow');
-        $('.loginmenu div').slideToggle('slow')
-    }
-    function chat(){
-    //    $('.fb-widget').css('display','block');
-    $('.fb-widget').slideToggle();
+        function tab_services(event) {
+            $(event.target).parents('tr').find('td').removeAttr('style');
+            $(event.target).css({ 'color': 'green' });
+            document.querySelector('.services').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
 
-    }
-    
-</script>
+        function tab_about(event) {
+            $(event.target).parents('tr').find('td').removeAttr('style');
+            $(event.target).css({ 'color': 'green' });
+            document.querySelector('.aboutus').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function tab_contact(event) {
+
+            $(event.target).parents('tr').find('td').removeAttr('style');
+            $(event.target).css({ 'color': 'green' });
+            document.querySelector('.getintouch').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function btnlogin() {
+            var uname = $('.input_uname').val();
+            if (uname === '') {
+                $('.loginmenu').toggleClass('slidewidth');
+                $('table').slideToggle('slow');
+                $('.loginmenu div').slideToggle('slow')
+            }
+            else {
+                $.cookie("Uname", uname);
+                window.location.href = "editUI.html";
+            }
+        }
+
+        function chat() {
+            $('.fb-widget').slideToggle();
+        }
+
+        function logincookies() {
+            var Uname = $.cookie("Uname");
+            if (typeof Uname === "undefined") 
+            {
+                // window.location.href = "/samplegrid.html";
+            } else {
+                window.location.href = "editUI.html";
+            }
+        }
+    </script>
+</body>
 
 </html>
