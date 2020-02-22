@@ -3,13 +3,6 @@
 /* Slider */
 
 
-/* line 40, ../scss/slick-theme.scss */
-
-.slick-loading .slick-list {
-    background: #fff url('../images/ajax-loader.gif?1448797674') center center no-repeat;
-}
-
-
 /* Icons */
 
 @font-face {
