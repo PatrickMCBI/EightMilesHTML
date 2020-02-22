@@ -8,8 +8,8 @@
     grid-area: content;
     display: grid;
     grid-template-areas: "leftbar details rightbar";
-    grid-template-columns: 20% 50% 30%;
-    padding: 20px 0px 10px 20px;
+    grid-template-columns: 15% 65% 20%;
+    padding: 5px 0px 0px 0px;
 }
 
 .grid-leftbar {
@@ -22,6 +22,7 @@
 
 .grid-rightbar {
     grid-area: rightbar;
+    padding-left: 10px;
 }
 
 .input-text {
@@ -49,4 +50,172 @@
     list-style-type: none;
     border-bottom: 2px solid #f1f1f1;
     padding: 30px;
+}
+
+
+/* custom */
+
+a:focus {
+    outline: none;
+}
+
+.HomeSlider {
+    float: left;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.featureslider {
+    position: relative;
+}
+
+.featuredPostSlider {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.featuredPostSlider img {
+    width: 100%;
+}
+
+.featuredPostSlider h2 {
+    width: 65%;
+    position: absolute;
+    left: 5%;
+    color: #fff;
+    font-size: 36px;
+}
+
+#slick-pager {
+    /* position: absolute; */
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    float: left;
+    z-index: 9;
+}
+
+#slick-pager a {
+    padding: 10px 15px;
+    width: 100%;
+    float: left;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+    text-decoration: none;
+}
+
+#slick-pager a:hover {
+    text-decoration: none;
+}
+
+#slick-pager a.active {
+    background-color: #d95123;
+}
+
+#slick-pager a h3 {
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+#slick-pager a p {
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+#slick-pager a span.time {
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+}
+
+#slick-pager .slick-list .slick-track .slick-slide.slick-current {
+    background-color: #d95123;
+    width: 100% !important;
+}
+
+.slick-pager {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.pagerNavigation i {
+    float: left;
+    width: 100%;
+    margin-top: 0px;
+    background: #469191
+}
+
+.pagerNavigationTop {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 29px;
+    text-align: center;
+    position: relative;
+    right: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.pagerNavigationBottom {
+    /* bottom: -30px; */
+    /* position: absolute; */
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    left: 0;
+    height: 30px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 29px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.accordion {
+    background-color: #469191;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    border-bottom: #fff 1px solid;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.accordion:after {
+    content: '\002B';
+    /* color: #777; */
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.container {
+    position: relative;
 }

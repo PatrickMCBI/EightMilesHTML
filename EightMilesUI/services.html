@@ -11,7 +11,7 @@
     <!----------------  FontAwesome   --------------->
     <link rel="stylesheet" href="css/all.min.css">
     <!----------------  Magnetic Popup   --------------->
-    
+
     <script src="js/magnificPopup.js"></script>
     <link rel="stylesheet" href="css/magnificPopup.css">
     <link rel="stylesheet" href="css/services.css">
@@ -19,152 +19,6 @@
     <link rel="stylesheet" href="css/slick.css">
     <!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
     <style>
-        /* This is custom css genrator from Custom scss file. */
-        /* line 4, ../scss/custom.scss */
-        /* .draggable {
-            height: 235px !important;
-        } */
-        
-        a:focus {
-            outline: none;
-        }
-        /* line 8, ../scss/custom.scss */
-        
-        .HomeSlider {
-            float: left;
-            display: block;
-            width: 100%;
-            margin-top: 20px;
-        }
-        /* line 15, ../scss/custom.scss */
-        
-        .featureslider {
-            position: relative;
-        }
-        /* line 19, ../scss/custom.scss */
-        
-        .featuredPostSlider {
-            float: left;
-            width: 100%;
-            padding: 0;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-        /* line 25, ../scss/custom.scss */
-        
-        .featuredPostSlider img {
-            width: 100%;
-        }
-        /* line 28, ../scss/custom.scss */
-        
-        .featuredPostSlider h2 {
-            width: 65%;
-            position: absolute;
-            left: 5%;
-            color: #fff;
-            font-size: 36px;
-        }
-        /* line 37, ../scss/custom.scss */
-        
-        #slick-pager {
-            position: absolute;
-            right: 0;
-            width: 25%;
-            background-color: rgba(0, 0, 0, 0.5);
-            float: left;
-            z-index: 9;
-        }
-        /* line 44, ../scss/custom.scss */
-        
-        #slick-pager a {
-            padding: 10px 15px;
-            width: 100%;
-            float: left;
-            border-top: 1px solid rgba(255, 255, 255, 0.6);
-            color: #fff;
-            text-decoration: none;
-        }
-        /* line 51, ../scss/custom.scss */
-        
-        #slick-pager a:hover {
-            text-decoration: none;
-        }
-        /* line 54, ../scss/custom.scss */
-        
-        #slick-pager a.active {
-            background-color: #d95123;
-        }
-        /* line 57, ../scss/custom.scss */
-        
-        #slick-pager a h3 {
-            font-size: 16px;
-            font-family: "Lato", sans-serif;
-            font-weight: 700;
-            margin: 0 0 8px;
-        }
-        /* line 63, ../scss/custom.scss */
-        
-        #slick-pager a p {
-            font-family: "Lato", sans-serif;
-            font-size: 13px;
-            margin-bottom: 8px;
-        }
-        /* line 68, ../scss/custom.scss */
-        
-        #slick-pager a span.time {
-            font-family: "Lato", sans-serif;
-            font-size: 10px;
-        }
-        /* line 75, ../scss/custom.scss */
-        
-        #slick-pager .slick-list .slick-track .slick-slide.slick-current {
-            background-color: #d95123;
-        }
-        /* line 82, ../scss/custom.scss */
-        
-        .slick-pager {
-            margin-top: 30px;
-            margin-bottom: 0;
-        }
-        /* line 87, ../scss/custom.scss */
-        
-        .pagerNavigation i {
-            float: left;
-            width: 100%;
-            margin-top: 0px;
-        }
-        /* line 93, ../scss/custom.scss */
-        
-        .pagerNavigationTop {
-            color: #fff;
-            font-size: 29px;
-            text-align: center;
-            position: relative;
-            right: 0;
-            width: 100%;
-            cursor: pointer;
-        }
-        /* line 103, ../scss/custom.scss */
-        
-        .pagerNavigationBottom {
-            bottom: -30px;
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.5);
-            width: 100%;
-            left: 0;
-            height: 30px;
-            cursor: pointer;
-            color: #fff;
-            font-size: 29px;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.6);
-        }
-        /* line 116, ../scss/custom.scss */
-        
-        .container {
-            position: relative;
-        }
-        
         @media (min-width: 768px) {
             /* line 119, ../scss/custom.scss */
             .container {
@@ -223,8 +77,8 @@
 
 
     <!----------------   Header   --------------->
-   
-    <div class="header_boxshadow">
+
+    <div class="header_boxshadow" style="z-index: 99999;">
         <div class="mycontainer">
             <div class="header-wrapper">
                 <div class="header-left"><img src="img/8mileslogo.png" alt="" width="160"></div>
@@ -258,181 +112,181 @@
     </div>
 
     <div class="mycontainer">
-    <div class="content">
-        <div class="grid-leftbar">
-            <div>
-                <button>1</button>
-                <p>content 1</p>
-                <button>2</button>
-                <p>content 2</p>
-                <button>3</button>
-                <p>content 3</p>
-            </div>
-
-        </div>
-        <!-- slick-list draggable -->
-        <div class="grid-details">
-            <ul class="featuredPostSlider">
-                <li>
-                    <h2>Slide 1</h2>
-                    <img alt="" src="http://dummyimage.com/1200x550/696969/fff">
-                    <h3>Slide </h3>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p>
-                    <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                </li>
-
-                <li>
-                    <h2>Slide 2</h2>
-                    <img alt="" src="http://dummyimage.com/1200x550/3b3b3b/fff">
-                    <h3>Slide 2</h3>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p>
-                    <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                </li>
-
-                <li>
-                    <h2>Slide 3</h2>
-                    <img alt="" src="http://dummyimage.com/1200x550/9e9e9e/fff">
-                    <h3>Slide 3</h3>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p>
-                    <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                </li>
-
-                <li>
-                    <h2>Slide 4</h2>
-                    <img alt="" src="http://dummyimage.com/1200x550/000000/ffffff">
-                    <h3>Slide 4</h3>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p>
-                    <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                </li>
-
-
-                <li>
-                    <h2>Slide 5</h2>
-                    <img alt="" src="http://dummyimage.com/1200x550/696969/fff">
-                    <h3>Slide 5</h3>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p>
-                    <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                </li>
-
-                <li>
-                    <h2>Slide 6</h2>
-                    <img alt="" src="http://dummyimage.com/1200x550/3b3b3b/fff">
-                    <h3>Slide 6</h3>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p>
-                    <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                </li>
-
-                <li>
-                    <h2>Slide 7</h2>
-                    <img alt="" src="http://dummyimage.com/1200x550/9e9e9e/fff">
-                    <h3>Slide 7</h3>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p>
-                    <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                </li>
-
-                <li>
-                    <h2>Slide 8</h2>
-                    <img alt="" src="http://dummyimage.com/1200x550/000000/ffffff">
-                    <h3>Slide 8</h3>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p>
-                    <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                </li>
-            </ul>
-        </div>
-        <div class="grid-rightbar">
-            <div id="slick-pager">
-                <div class="pagerNavigation pagerNavigationTop">
-                    <span class="top"><i class="fa fa-angle-up"></i></span>
+        <div class="content">
+            <div class="grid-leftbar" style="padding: 0px 10px 0px 10px;">
+                <button class="accordion">Manila</button>
+                <div class="panel">
+                    <p>content 1</p>
                 </div>
-                <div class="slick-pager">
-                    <a data-slide-index="1" href="javascript:void(0)">
-                        <h3>Slide 1</h3>
+                <button class="accordion">Cebu</button>
+                <div class="panel">
+                    <p>content 2</p>
+                </div>
+                <button class="accordion">Palawan</button>
+                <div class="panel">
+                    <p>content 3</p>
+                </div>
+            </div>
+            <div class="grid-details">
+                <ul class="featuredPostSlider">
+                    <li>
+                        <h2>Slide 1</h2>
+                        <img alt="" src="img/Services/1.jpg" style="width: 100%; height: 500px;">
+                        <h3>Slide </h3>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>
                         <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                    </a>
+                    </li>
 
-                    <a data-slide-index="2" href="javascript:void(0)">
+                    <li>
+                        <h2>Slide 2</h2>
+                        <img alt="" src="img/Services/2.jpg" style="width: 100%; height: 500px;">
                         <h3>Slide 2</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>
                         <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                    </a>
+                    </li>
 
-                    <a data-slide-index="3" href="javascript:void(0)">
+                    <li>
+                        <h2>Slide 3</h2>
+                        <img alt="" src="img/Services/3.jpg" style="width: 100%; height: 500px;">
                         <h3>Slide 3</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>
                         <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                    </a>
+                    </li>
 
-                    <a data-slide-index="4" href="javascript:void(0)">
+                    <li>
+                        <h2>Slide 4</h2>
+                        <img alt="" src="img/Services/4.jpg" style="width: 100%; height: 500px;">
                         <h3>Slide 4</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>
                         <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                    </a>
-                    <a data-slide-index="5" href="javascript:void(0)">
+                    </li>
+
+
+                    <li>
+                        <h2>Slide 5</h2>
+                        <img alt="" src="img/Services/5.jpg" style="width: 100%; height: 500px;">
                         <h3>Slide 5</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>
                         <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                    </a>
+                    </li>
 
-                    <a data-slide-index="6" href="javascript:void(0)">
+                    <li>
+                        <h2>Slide 6</h2>
+                        <img alt="" src="img/Services/6.jpg" style="width: 100%; height: 500px;">
                         <h3>Slide 6</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>
                         <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                    </a>
+                    </li>
 
-                    <a data-slide-index="7" href="javascript:void(0)">
+                    <li>
+                        <h2>Slide 7</h2>
+                        <img alt="" src="img/Services/7.jpg" style="width: 100%; height: 500px;">
                         <h3>Slide 7</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>
                         <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                    </a>
+                    </li>
 
-                    <a data-slide-index="8" href="javascript:void(0)">
+                    <li>
+                        <h2>Slide 8</h2>
+                        <img alt="" src="img/Services/8.jpg" style="width: 100%; height: 500px;">
                         <h3>Slide 8</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>
                         <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                    </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="grid-rightbar">
+                <div id="slick-pager">
+                    <div class="pagerNavigation pagerNavigationTop">
+                        <span class="top"><i class="fa fa-angle-up"></i></span>
+                    </div>
+                    <div class="slick-pager">
+                        <a data-slide-index="1" href="javascript:void(0)">
+                            <h3>Slide 1</h3>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                            <span class="time"> Wednesday, 16 March 2016 05:31 </span>
+                        </a>
 
-                </div>
-                <div class="pagerNavigation pagerNavigationBottom">
-                    <span class="bottom"><i class="fa fa-angle-down"></i></span>
+                        <a data-slide-index="2" href="javascript:void(0)">
+                            <h3>Slide 2</h3>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                            <span class="time"> Wednesday, 16 March 2016 05:31 </span>
+                        </a>
+
+                        <a data-slide-index="3" href="javascript:void(0)">
+                            <h3>Slide 3</h3>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                            <span class="time"> Wednesday, 16 March 2016 05:31 </span>
+                        </a>
+
+                        <a data-slide-index="4" href="javascript:void(0)">
+                            <h3>Slide 4</h3>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                            <span class="time"> Wednesday, 16 March 2016 05:31 </span>
+                        </a>
+                        <a data-slide-index="5" href="javascript:void(0)">
+                            <h3>Slide 5</h3>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                            <span class="time"> Wednesday, 16 March 2016 05:31 </span>
+                        </a>
+
+                        <a data-slide-index="6" href="javascript:void(0)">
+                            <h3>Slide 6</h3>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                            <span class="time"> Wednesday, 16 March 2016 05:31 </span>
+                        </a>
+
+                        <a data-slide-index="7" href="javascript:void(0)">
+                            <h3>Slide 7</h3>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                            <span class="time"> Wednesday, 16 March 2016 05:31 </span>
+                        </a>
+
+                        <a data-slide-index="8" href="javascript:void(0)">
+                            <h3>Slide 8</h3>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                            <span class="time"> Wednesday, 16 March 2016 05:31 </span>
+                        </a>
+
+                    </div>
+                    <div class="pagerNavigation pagerNavigationBottom">
+                        <span class="bottom"><i class="fa fa-angle-down"></i></span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-
     </div>
     <!----------------   Footer   --------------->
     <div class="footer">
@@ -721,7 +575,7 @@
             slidesToScroll: 1,
             arrows: false,
             fade: true,
-            autoplay: true,
+            autoplay: false,
             adaptiveHeight: true,
             asNavFor: '.bx-pager'
         });
@@ -740,8 +594,23 @@
                 }
             }]
         });
-        slickHeight();
+        // slickHeight();
     });
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
 </script>
 
 </html>
