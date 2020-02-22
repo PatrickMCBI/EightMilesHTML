@@ -248,7 +248,7 @@ a:focus {
 }
 
 #slick-pager {
-    position: absolute;
+    position: sticky !important;
     right: 10%;
     width: 25%;
     background-color: rgba(0, 0, 0, 0.5);
