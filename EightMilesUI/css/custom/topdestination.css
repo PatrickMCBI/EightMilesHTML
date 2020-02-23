@@ -1,0 +1,151 @@
+
+/*------------------------------------------------
+        IMAGES
+------------------------------------------------*/
+
+.images{
+    display: grid;
+    grid-template-columns: 70% 30%; 
+}
+.images div{
+    border:0px solid red;
+    height: 40em;
+}
+.images div .pagerNavigation{  
+    height: 0em !important; 
+}
+#slick-pager {
+    margin-top: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+    float: right;
+}
+.featuredPostSlider {
+    text-align: center;
+    float: left;
+    width: 70% !important;
+    margin-left: 10%;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0; 
+}
+a:focus {
+    outline: none;
+}
+.HomeSlider {
+    float: left;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+.featureslider {
+    position: relative;
+}
+.featuredPostSlider {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.slick-slide img {
+    display: initial !important;
+}
+.featuredPostSlider img {
+    margin-top: 1em;
+    width: 60em;
+    height: 33em;
+    border:5px solid rgb(252, 251, 251);
+    box-shadow: rgb(24, 23, 23) 0px 0px 10px 0px;
+}
+.featuredPostSlider h2 {
+    color: black;
+}
+.featuredPostSlider p {
+    color: black;
+    background-color: white;
+    height: 5em;
+    box-shadow: rgb(132, 130, 130) 0px 0px 1px 0px;
+    width: 80%;
+    margin-left: 10%;
+    text-align: left;
+}
+#slick-pager {
+    position: sticky !important;
+    margin-left: 2%;
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.5);
+    float: left;
+    z-index: 9;
+    height: 38em;  
+    width: 15em;
+}
+#slick-pager a {
+    padding: 10px 15px;
+    width: 100%;
+    float: left;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+    text-decoration: none;
+}
+.slick-pager a img{
+    height: 6em;
+    width: 15em;
+}
+#slick-pager a:hover {
+    text-decoration: none;
+}
+#slick-pager a.active {
+    background-color: #d95123;
+}
+#slick-pager a h3 {
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+#slick-pager a span.time {
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+}
+#slick-pager .slick-list .slick-track .slick-slide.slick-current {
+    background-color: #d95123;
+}
+
+.slick-pager {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.pagerNavigation i {
+    float: left;
+    width: 100%;
+    margin-top: 0px;
+    background-color: #469191;
+}
+.pagerNavigationTop {
+    color: #fff;
+    font-size: 29px;
+    text-align: center;
+    position: relative;
+    right: 0;
+    width: 100%;
+    cursor: pointer;
+}
+.pagerNavigationBottom {
+    bottom: -30px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    left: 0;
+    height: 30px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 29px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+
+ /*------------------------------------------------
+        MEDIA QUERIES
+------------------------------------------------*/
+    

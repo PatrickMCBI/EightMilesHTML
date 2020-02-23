@@ -1,9 +1,33 @@
+
+   /*--------------------------------------------
+        Wrapper
+---------------------------------------------*/
 .wrapper {
+    height: 100%;
     display: grid;
-    grid-template-areas: "header" "content" "footer";
-    grid-template-rows: 20vh 60vh 20vh;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(0px, max-content);
+    grid-template-areas: "header""main";
 }
 
+.header {
+    grid-area: header;
+    background-color: #fff;
+    box-shadow: 0px 0px 8px 0px rgb(169, 167, 167);
+
+}
+
+​ .main {
+    grid-area: main;
+    background-color: rgb(124, 235, 140);
+}
+
+
+
+
+   /*--------------------------------------------
+        Services
+---------------------------------------------*/
 .content {
     grid-area: content;
     display: grid;
