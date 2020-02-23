@@ -25,7 +25,7 @@
 
 </head>
 
-<body>
+<body class="">
 
     <div class="wrapper">
 
@@ -62,198 +62,225 @@
                     </div>
                     <div class="header-navigation" onclick="navigation()"> <i class="fas fa-bars"></i></div>
                 </div>
-            </div>
-            <!----------------  Mobile Navbar  --------------->
-            <div class="mobile-nav">
-                <table>
-                    <tr>
-                        <td class="header-tab" onclick="tab_home(event)">HOME</td>
-                        <td class="header-tab" onclick="tab_destination(event)">DESTINATION</td>
-                        <td class="header-tab" onclick="tab_partners(event)">PARTNERS</td>
-                        <td class="header-tab" onclick="tab_services(event)">SERVICES</td>
-                        <td class="header-tab" onclick="tab_about(event)">ABOUT</td>
-                        <td class="header-tab" onclick="tab_contact(event)">CONTACT</td>
-                    </tr>
-                </table>
-            </div>
 
+                <!----------------  Mobile Navbar  --------------->
+                <div class="mobile-nav">
+                    <table>
+                        <tr>
+                            <td class="header-tab" onclick="tab_home(event)">HOME</td>
+                            <td class="header-tab" onclick="tab_destination(event)">DESTINATION</td>
+                            <td class="header-tab" onclick="tab_partners(event)">PARTNERS</td>
+                            <td class="header-tab" onclick="tab_services(event)">SERVICES</td>
+                            <td class="header-tab" onclick="tab_about(event)">ABOUT</td>
+                            <td class="header-tab" onclick="tab_contact(event)">CONTACT</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
 
 
 
         <div class="main">
+
             <div class="mycontainer">
-                <div class="content">
-                    <div class="grid-leftbar" style="padding: 0px 10px 0px 10px;">
-                        <button class="accordion">Manila</button>
-                        <div class="panel">
-                            <p>content 1</p>
-                        </div>
-                        <button class="accordion">Cebu</button>
-                        <div class="panel">
-                            <p>content 2</p>
-                        </div>
-                        <button class="accordion">Palawan</button>
-                        <div class="panel">
-                            <p>content 3</p>
-                        </div>
-                    </div>
-                    <div class="grid-details">
-                        <ul class="featuredPostSlider">
-                            <li>
-                                <h2>Slide 1</h2>
-                                <img alt="" src="img/Services/1.jpg" style="width: 100%; height: 500px;">
-                                <h3>Slide </h3>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </p>
-                                <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                            </li>
-
-                            <li>
-                                <h2>Slide 2</h2>
-                                <img alt="" src="img/Services/2.jpg" style="width: 100%; height: 500px;">
-                                <h3>Slide 2</h3>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </p>
-                                <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                            </li>
-
-                            <li>
-                                <h2>Slide 3</h2>
-                                <img alt="" src="img/Services/3.jpg" style="width: 100%; height: 500px;">
-                                <h3>Slide 3</h3>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </p>
-                                <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                            </li>
-
-                            <li>
-                                <h2>Slide 4</h2>
-                                <img alt="" src="img/Services/4.jpg" style="width: 100%; height: 500px;">
-                                <h3>Slide 4</h3>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </p>
-                                <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                            </li>
-
-
-                            <li>
-                                <h2>Slide 5</h2>
-                                <img alt="" src="img/Services/5.jpg" style="width: 100%; height: 500px;">
-                                <h3>Slide 5</h3>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </p>
-                                <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                            </li>
-
-                            <li>
-                                <h2>Slide 6</h2>
-                                <img alt="" src="img/Services/6.jpg" style="width: 100%; height: 500px;">
-                                <h3>Slide 6</h3>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </p>
-                                <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                            </li>
-
-                            <li>
-                                <h2>Slide 7</h2>
-                                <img alt="" src="img/Services/7.jpg" style="width: 100%; height: 500px;">
-                                <h3>Slide 7</h3>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </p>
-                                <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                            </li>
-
-                            <li>
-                                <h2>Slide 8</h2>
-                                <img alt="" src="img/Services/8.jpg" style="width: 100%; height: 500px;">
-                                <h3>Slide 8</h3>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </p>
-                                <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="grid-rightbar">
-                        <div id="slick-pager">
-                            <div class="pagerNavigation pagerNavigationTop">
-                                <span class="top"><i class="fa fa-angle-up"></i></span>
+                 <!-- services has 3 columns grid-template-columns: 15% 65% 20%; -->
+                <div class="services">
+                   <!-- 1 -->
+                    <div>
+                        <div class="grid-leftbar" style="padding: 0px 10px 0px 10px;">
+                           
+                            <button class="accordion">Manila</button>
+                            <div class="panel">
+                                <p><label >Manila Bay</label></p>
+                                <p><label >Manila Zoo</label></p>
+                                <p><label >Manila Bay</label></p>
                             </div>
-                            <div class="slick-pager">
-                                <a data-slide-index="1" href="javascript:void(0)">
-                                    <h3>Slide 1</h3>
+                            <button class="accordion">Cebu</button>
+                            <div class="panel">
+                                <p><label >Oslob</label></p>
+                                <p><label >Cebu Safari</label></p>
+                                <p><label >Mactan Newtown</label></p>
+                            </div>
+                            <button class="accordion">Palawan</button>
+                            <div class="panel">
+                                <p><label >Beach</label></p>
+                                <p><label >Malapasua</label></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div>
+                        <div class="grid-details" style="height: 5em !important;">
+                          
+                            <ul class="featuredPostSlider" >
+                                <li>
+                                    <h2>Slide 1</h2>
+                                    <img alt="" src="img/Services/1.jpg" style="width: 100%; height: 100%;">
+                                    <div class="pagenextprev">
+                                       
+                                        <div class="pagerNavigation pagerNavigationBottom" style="float: left; ">
+                                            <span class="bottom" style="font-size: 15px;">Prev</span>
+                                        </div>
+                                        <div class="pagerNavigation pagerNavigationTop" style="float: right; ">
+                                            <span class="top" style="font-size: 15px;">Next</span>
+                                        </div>
+                                    </div>
+                                    <h3>Slide </h3>
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     </p>
                                     <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                </a>
+                                </li>
 
-                                <a data-slide-index="2" href="javascript:void(0)">
+                                <li>
+                                    <h2>Slide 2</h2>
+                                    <img alt="" src="img/Services/2.jpg" style="width: 100%; height: 500px;">
                                     <h3>Slide 2</h3>
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     </p>
                                     <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                </a>
+                                </li>
 
-                                <a data-slide-index="3" href="javascript:void(0)">
+                                <li>
+                                    <h2>Slide 3</h2>
+                                    <img alt="" src="img/Services/3.jpg" style="width: 100%; height: 500px;">
                                     <h3>Slide 3</h3>
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     </p>
                                     <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                </a>
+                                </li>
 
-                                <a data-slide-index="4" href="javascript:void(0)">
+                                <li>
+                                    <h2>Slide 4</h2>
+                                    <img alt="" src="img/Services/4.jpg" style="width: 100%; height: 500px;">
                                     <h3>Slide 4</h3>
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     </p>
                                     <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                </a>
-                                <a data-slide-index="5" href="javascript:void(0)">
+                                </li>
+
+
+                                <li>
+                                    <h2>Slide 5</h2>
+                                    <img alt="" src="img/Services/5.jpg" style="width: 100%; height: 500px;">
                                     <h3>Slide 5</h3>
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     </p>
                                     <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                </a>
+                                </li>
 
-                                <a data-slide-index="6" href="javascript:void(0)">
+                                <li>
+                                    <h2>Slide 6</h2>
+                                    <img alt="" src="img/Services/6.jpg" style="width: 100%; height: 500px;">
                                     <h3>Slide 6</h3>
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     </p>
                                     <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                </a>
+                                </li>
 
-                                <a data-slide-index="7" href="javascript:void(0)">
+                                <li>
+                                    <h2>Slide 7</h2>
+                                    <img alt="" src="img/Services/7.jpg" style="width: 100%; height: 500px;">
                                     <h3>Slide 7</h3>
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     </p>
                                     <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                </a>
+                                </li>
 
-                                <a data-slide-index="8" href="javascript:void(0)">
+                                <li>
+                                    <h2>Slide 8</h2>
+                                    <img alt="" src="img/Services/8.jpg" style="width: 100%; height: 500px;">
                                     <h3>Slide 8</h3>
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                     </p>
                                     <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div>
+                        <div class="grid-rightbar" >
+                            <div id="slick-pager">
+                                <div class="pagerNavigation pagerNavigationTop">
+                                    <span class="top"><i class="fa fa-angle-up"></i></span>
+                                </div>
+                                <div class="slick-pager" >
+                                    <a data-slide-index="1" href="javascript:void(0)">
+                                        <h3>Slide 1</h3>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                        <span class="time"> Wednesday, 16 March 2016 05:31 </span>
+                                    </a>
 
-                            </div>
-                            <div class="pagerNavigation pagerNavigationBottom">
-                                <span class="bottom"><i class="fa fa-angle-down"></i></span>
+                                    <a data-slide-index="2" href="javascript:void(0)">
+                                        <h3>Slide 2</h3>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                        <span class="time"> Wednesday, 16 March 2016 05:31 </span>
+                                    </a>
+
+                                    <a data-slide-index="3" href="javascript:void(0)">
+                                        <h3>Slide 3</h3>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                        <span class="time"> Wednesday, 16 March 2016 05:31 </span>
+                                    </a>
+
+                                    <a data-slide-index="4" href="javascript:void(0)">
+                                        <h3>Slide 4</h3>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                        <span class="time"> Wednesday, 16 March 2016 05:31 </span>
+                                    </a>
+                                    <a data-slide-index="5" href="javascript:void(0)">
+                                        <h3>Slide 5</h3>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                        <span class="time"> Wednesday, 16 March 2016 05:31 </span>
+                                    </a>
+
+                                    <a data-slide-index="6" href="javascript:void(0)">
+                                        <h3>Slide 6</h3>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                        <span class="time"> Wednesday, 16 March 2016 05:31 </span>
+                                    </a>
+
+                                    <a data-slide-index="7" href="javascript:void(0)">
+                                        <h3>Slide 7</h3>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                        <span class="time"> Wednesday, 16 March 2016 05:31 </span>
+                                    </a>
+
+                                    <a data-slide-index="8" href="javascript:void(0)">
+                                        <h3>Slide 8</h3>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                        <span class="time"> Wednesday, 16 March 2016 05:31 </span>
+                                    </a>
+
+                                </div>
+                                <div class="pagerNavigation pagerNavigationBottom">
+                                    <span class="bottom"><i class="fa fa-angle-down"></i></span>
+                                </div>
                             </div>
                         </div>
                     </div>
