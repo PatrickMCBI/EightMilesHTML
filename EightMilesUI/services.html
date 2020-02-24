@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/template/header.css">
     <link rel="stylesheet" href="css/template/footer.css">
 
+      <!----------------  Jquery Cookies  --------------->
+      <script src="js/jquery-cookies.js"></script>
+
     <!----------------  FontAwesome   --------------->
     <link rel="stylesheet" href="css/all.min.css">
 
@@ -425,6 +428,31 @@
         }
     });
     //-------------------   Methods   --------------------------
+    function tab_destination()
+    {
+        $.cookie("tab", "tab_destination");
+        window.location.href = "/";
+    }
+    function tab_partners()
+    {
+        $.cookie("tab", "tab_partners");
+        window.location.href = "/";
+    }
+    function tab_services()
+    {
+        $.cookie("tab", "tab_services");
+        window.location.href = "/";
+    }
+    function tab_about()
+    {
+        $.cookie("tab", "tab_about");
+        window.location.href = "/";
+    }
+    function tab_contact()
+    {
+        $.cookie("tab", "tab_contact");
+        window.location.href = "/";
+    }
     function navigation() {
         $('.header-tab').toggleClass('header-tab-resizeheight');
     }

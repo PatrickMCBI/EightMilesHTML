@@ -43,12 +43,12 @@
                         </div>
                         <table>
                             <tr>
-                                <td onclick="tab_home(event)">HOME</td>
-                                <td onclick="tab_destination(event)">DESTINATION</td>
-                                <td onclick="tab_partners(event)">PARTNERS</td>
-                                <td onclick="tab_services(event)">SERVICES</td>
-                                <td onclick="tab_about(event)">ABOUT</td>
-                                <td onclick="tab_contact(event)">CONTACT</td>
+                                <td class="tab_home" onclick="tab_home(event)">HOME</td>
+                                <td class="tab_destination" onclick="tab_destination(event)">DESTINATION</td>
+                                <td class="tab_partners" onclick="tab_partners(event)">PARTNERS</td>
+                                <td class="tab_services" onclick="tab_services(event)">SERVICES</td>
+                                <td class="tab_about" onclick="tab_about(event)">ABOUT</td>
+                                <td class="tab_contact" onclick="tab_contact(event)">CONTACT</td>
                             </tr>
                         </table>
                     </div>
@@ -255,13 +255,15 @@
 </body>
 
 <script>
-    //-------------------   Mounted   --------------------------
+    //-------------------   mounted   --------------------------
     destination();
     partners();
     services();
     services_airlines();
     aboutus();
     logincookies();
+    tabs_option();
+    
     // windows size
     $(window).resize(function () {
         var windowsize = $(window).width();
@@ -271,7 +273,6 @@
             console.log("windows: " + windowsize);
         } else { }
     });
-
     // scroll show nav
     window.addEventListener("scroll", function () {
         if (document.documentElement.scrollTop > 100) {
@@ -297,6 +298,60 @@
 
 
     //-------------------   methods   --------------------------
+    function tabs_option()
+    {
+
+        var tabname = $.cookie("tab");
+        if(tabname == "tab_home")
+        {
+            $('.tab_home').css({ 'color': 'green' });
+            document.querySelector('body').scrollIntoView({
+            behavior: 'smooth'
+             });
+            $.removeCookie('tab');
+        }
+        else if(tabname == "tab_destination")
+        {
+            $('.tab_destination').css({ 'color': 'green' });
+            document.querySelector('.destination').scrollIntoView({
+            behavior: 'smooth'
+             });
+            $.removeCookie('tab');
+        }
+        else if(tabname == "tab_partners")
+        {
+            $('.tab_partners').css({ 'color': 'green' });
+            document.querySelector('.partners').scrollIntoView({
+            behavior: 'smooth'
+            });
+            $.removeCookie('tab');
+        }
+        else if(tabname == "tab_services")
+        {
+            $('.tab_services').css({ 'color': 'green' });
+            document.querySelector('.services').scrollIntoView({
+            behavior: 'smooth'});
+            $.removeCookie('tab');
+        }
+        else if(tabname == "tab_about")
+        {
+            $('.tab_about').css({ 'color': 'green' });
+            document.querySelector('.aboutus').scrollIntoView({
+            behavior: 'smooth'
+            });
+            $.removeCookie('tab');
+        }
+        else if(tabname == "tab_contact")
+        {
+            $('.tab_contact').css({ 'color': 'green' });
+            document.querySelector('.getintouch').scrollIntoView({
+            behavior: 'smooth'
+            });
+            $.removeCookie('tab');
+        }
+       
+         
+    }
     function destination() {
         for (var i = 1; i <= 6; i++) {
             var imageLink = ("img/TopDestination/" + i + ".jpg");
@@ -330,7 +385,6 @@
 
         }
     }
-
     function services() {
         for (var i = 1; i <= 8; i++) {
             if (i == 1) {
@@ -377,7 +431,6 @@
             $('.servicesimage_airlines').append(imgEL)
         }
     }
-
     function aboutus() {
         for (var i = 1; i <= 3; i++) {
             if (i == 1) {
@@ -401,7 +454,6 @@
             behavior: 'smooth'
         });
     }
-
     function tab_destination(event) {
         $(event.target).parents('tr').find('td').removeAttr('style');
         $(event.target).css({ 'color': 'green' });
@@ -409,7 +461,6 @@
             behavior: 'smooth'
         });
     }
-
     function tab_partners(event) {
 
         $(event.target).parents('tr').find('td').removeAttr('style');
@@ -418,7 +469,6 @@
             behavior: 'smooth'
         });
     }
-
     function tab_services(event) {
         $(event.target).parents('tr').find('td').removeAttr('style');
         $(event.target).css({ 'color': 'green' });
@@ -426,7 +476,6 @@
             behavior: 'smooth'
         });
     }
-
     function tab_about(event) {
         $(event.target).parents('tr').find('td').removeAttr('style');
         $(event.target).css({ 'color': 'green' });
@@ -434,7 +483,6 @@
             behavior: 'smooth'
         });
     }
-
     function tab_contact(event) {
 
         $(event.target).parents('tr').find('td').removeAttr('style');
@@ -443,6 +491,7 @@
             behavior: 'smooth'
         });
     }
+
     function navigation() {
         $('.header-tab').toggleClass('header-tab-resizeheight');
         // $('.mobile-nav').toggleClass('mobile-nav-block');
