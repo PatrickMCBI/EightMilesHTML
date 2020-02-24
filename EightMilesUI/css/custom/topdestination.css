@@ -28,34 +28,16 @@
    /*--------------------------------------------
         Top Destination
 ---------------------------------------------*/
-.topdestination{
+.destination{
     display: grid;
     grid-template-columns: 15% 65% 20%;
-        margin-top: 1em;
+    margin-top: 1em;
 }
-.topdestination div{
+.destination div{
     border:0px solid red;
     /* margin-top: 1em; */
 }
-
-.content {
-    grid-area: content;
-    display: grid;
-    grid-template-areas: "leftbar details rightbar";
-    grid-template-columns: 15% 65% 20%;
-    padding: 5px 0px 0px 0px;
-}
-
-.grid-leftbar {
-    grid-area: leftbar;
-}
-
-.grid-details {
-    grid-area: details;
-}
-
 .grid-rightbar {
-    grid-area: rightbar;
     padding-left: 10px;
 }
 
@@ -124,55 +106,6 @@ a:focus {
     font-size: 36px;
 }
 
-#slick-pager {
-    /* position: absolute; */
-    right: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    float: left;
-    z-index: 9;
-}
-
-#slick-pager a {
-    padding: 10px 15px;
-    width: 100%;
-    float: left;
-    border-top: 1px solid rgba(255, 255, 255, 0.6);
-    color: #fff;
-    text-decoration: none;
-}
-
-#slick-pager a:hover {
-    text-decoration: none;
-}
-
-#slick-pager a.active {
-    background-color: #d95123;
-}
-
-#slick-pager a h3 {
-    font-size: 16px;
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    margin: 0 0 8px;
-}
-
-#slick-pager a p {
-    font-family: "Lato", sans-serif;
-    font-size: 13px;
-    margin-bottom: 8px;
-}
-
-#slick-pager a span.time {
-    font-family: "Lato", sans-serif;
-    font-size: 10px;
-}
-
-#slick-pager .slick-list .slick-track .slick-slide.slick-current {
-    background-color: #d95123;
-    width: 100% !important;
-}
-
 .slick-pager {
     margin-top: 30px;
     margin-bottom: 0;
@@ -192,7 +125,7 @@ a:focus {
     text-align: center;
     position: relative;
     right: 0;
-    width: 100%;
+    width: 1;
     cursor: pointer;
 }
 
@@ -200,7 +133,7 @@ a:focus {
     /* bottom: -30px; */
     /* position: absolute; */
     background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
+    width: 1;
     left: 0;
     height: 30px;
     cursor: pointer;
@@ -249,7 +182,130 @@ a:focus {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+.pagenextprev{
+    display: none;
+}
+/*------------------------------------------------
+        Grid Left Bar
+------------------------------------------------*/
+.grid-leftbar .panel p:hover{
+    background-color: antiquewhite;
+}
+/*------------------------------------------------
+        Grid Details
+------------------------------------------------*/
+.img_griddetails{
+    width: 100% !important;
+    height: 33em !important;
+}
+/*------------------------------------------------
+        Grid Right Bar
+------------------------------------------------*/
 
-.container {
-    position: relative;
+#slick-pager {
+    /* position: absolute; */
+    right: 0;
+    width: 100%;
+    background-color: white;
+    float: left;
+    z-index: 9;
+    box-shadow: 1px 0px 4px 1px rgb(24, 23, 23);
+}
+
+#slick-pager a {
+    padding: 10px 15px;
+    width: 100%;
+    float: left;
+    border-top: 2px solid rgb(211, 208, 208);
+    color: #fff;
+    text-decoration: none;
+}
+
+#slick-pager a:hover {
+    text-decoration: none;
+}
+
+#slick-pager a.active {
+    background-color: #d95123;
+}
+
+#slick-pager a h3 {
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+#slick-pager a p {
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+#slick-pager a span.time {
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    color:rgb(44, 41, 41);
+}
+
+#slick-pager .slick-list .slick-track .slick-slide.slick-current {
+    background-color: #d95123;
+    width: 100% !important;
+}
+
+.grid-rightbar #slick-pager .slick-pager a img{
+    height: 5.5em;
+    width: 16em;
+}
+.grid-rightbar #slick-pager .slick-pager a:hover{
+   background-color:#d9502371;
+   cursor: pointer;
+}
+  /*------------------------------------------------
+        MEDIA QUERIES
+------------------------------------------------*/
+@media (max-width: 940px) {
+    .destination{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        
+            margin-top: 1em;
+            padding: 0.2em;
+    }
+    .grid-rightbar{
+        display: none;
+    }
+    .destination div .grid-leftbar button{
+        font-size: 15px;
+        text-align: center;
+    }
+    .accordion {
+        padding: 10px;
+    }
+    .accordion:after {
+        float: left;
+        margin-left: 20px;
+    }
+    .pagerNavigationTop {
+        background-color:white;
+               color: rgb(19, 18, 18);
+    }
+    .pagerNavigationBottom {
+        background-color:white;
+        color: rgb(19, 18, 18);
+    }
+   .pagenextprev{
+    height:2em;
+      color: black;
+       border:0px solid red;
+        width: 100%;
+        display: block;
+   }
+   .grid-details .featuredPostSlider h2{
+       font-size: 15px;
+   }
+   .img_griddetails{
+    width: 100% !important;
+    height: 80% !important;
+}
 }

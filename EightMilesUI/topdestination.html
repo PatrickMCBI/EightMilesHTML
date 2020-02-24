@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/template/header.css">
     <link rel="stylesheet" href="css/template/footer.css">
 
+    <!----------------  Jquery Cookies  --------------->
+    <script src="js/jquery-cookies.js"></script>
+
     <!----------------  FontAwesome   --------------->
     <link rel="stylesheet" href="css/all.min.css">
 
@@ -22,7 +25,7 @@
     <link rel="stylesheet" href="css/template/magnificPopup.css">
     <link rel="stylesheet" href="css/template/slick-theme.css">
     <link rel="stylesheet" href="css/template/slick.css">
-
+    <script src="js/slick.js"></script>
 </head>
 
 <body class="">
@@ -49,7 +52,7 @@
                         <table>
                             <tr>
                                 <td onclick="tab_home(event)">HOME</td>
-                                <td onclick="tab_destination(event)">DESTINATION</td>
+                                <td class="tab_destination">DESTINATION</td>
                                 <td onclick="tab_partners(event)">PARTNERS</td>
                                 <td onclick="tab_services(event)">SERVICES</td>
                                 <td onclick="tab_about(event)">ABOUT</td>
@@ -84,114 +87,34 @@
         <div class="main">
 
             <div class="mycontainer">
-                 <!-- top destination has 3 columns grid-template-columns: 15% 65% 20%; -->
-                <div class="topdestination">
-                   <!-- 1 -->
+                <!-- Top Destination has 3 columns grid-template-columns: 15% 65% 20%; -->
+                <div class="destination">
+                    <!-- 1 -->
                     <div>
                         <div class="grid-leftbar" style="padding: 0px 10px 0px 10px;">
                             <button class="accordion">Manila</button>
                             <div class="panel">
-                                <p><label >Manila Bay</label></p>
-                                <p><label >Manila Zoo</label></p>
-                                <p><label >Manila Bay</label></p>
+                                <p><label>Manila Bay</label></p>
+                                <p><label>Manila Zoo</label></p>
+                                <p><label>Manila Bay</label></p>
                             </div>
                             <button class="accordion">Cebu</button>
                             <div class="panel">
-                                <p><label >Oslob</label></p>
-                                <p><label >Cebu Safari</label></p>
-                                <p><label >Mactan Newtown</label></p>
+                                <p><label>Oslob</label></p>
+                                <p><label>Cebu Safari</label></p>
+                                <p><label>Mactan Newtown</label></p>
                             </div>
                             <button class="accordion">Palawan</button>
                             <div class="panel">
-                                <p><label >Beach</label></p>
-                                <p><label >Malapasua</label></p>
+                                <p><label>Beach</label></p>
+                                <p><label>Malapasua</label></p>
                             </div>
                         </div>
                     </div>
                     <!-- 2 -->
                     <div>
-                        <div class="grid-details">
+                        <div class="grid-details" style="height: 5em !important;">
                             <ul class="featuredPostSlider">
-                                <li>
-                                    <h2>Slide 1</h2>
-                                    <img alt="" src="img/Services/1.jpg" style="width: 100%; height: 500px;">
-                                    <h3>Slide </h3>
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                    <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                </li>
-
-                                <li>
-                                    <h2>Slide 2</h2>
-                                    <img alt="" src="img/Services/2.jpg" style="width: 100%; height: 500px;">
-                                    <h3>Slide 2</h3>
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                    <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                </li>
-
-                                <li>
-                                    <h2>Slide 3</h2>
-                                    <img alt="" src="img/Services/3.jpg" style="width: 100%; height: 500px;">
-                                    <h3>Slide 3</h3>
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                    <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                </li>
-
-                                <li>
-                                    <h2>Slide 4</h2>
-                                    <img alt="" src="img/Services/4.jpg" style="width: 100%; height: 500px;">
-                                    <h3>Slide 4</h3>
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                    <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                </li>
-
-
-                                <li>
-                                    <h2>Slide 5</h2>
-                                    <img alt="" src="img/Services/5.jpg" style="width: 100%; height: 500px;">
-                                    <h3>Slide 5</h3>
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                    <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                </li>
-
-                                <li>
-                                    <h2>Slide 6</h2>
-                                    <img alt="" src="img/Services/6.jpg" style="width: 100%; height: 500px;">
-                                    <h3>Slide 6</h3>
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                    <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                </li>
-
-                                <li>
-                                    <h2>Slide 7</h2>
-                                    <img alt="" src="img/Services/7.jpg" style="width: 100%; height: 500px;">
-                                    <h3>Slide 7</h3>
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                    <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                </li>
-
-                                <li>
-                                    <h2>Slide 8</h2>
-                                    <img alt="" src="img/Services/8.jpg" style="width: 100%; height: 500px;">
-                                    <h3>Slide 8</h3>
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    </p>
-                                    <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -202,69 +125,7 @@
                                 <div class="pagerNavigation pagerNavigationTop">
                                     <span class="top"><i class="fa fa-angle-up"></i></span>
                                 </div>
-                                <div class="slick-pager">
-                                    <a data-slide-index="1" href="javascript:void(0)">
-                                        <h3>Slide 1</h3>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </p>
-                                        <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                    </a>
-
-                                    <a data-slide-index="2" href="javascript:void(0)">
-                                        <h3>Slide 2</h3>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </p>
-                                        <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                    </a>
-
-                                    <a data-slide-index="3" href="javascript:void(0)">
-                                        <h3>Slide 3</h3>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </p>
-                                        <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                    </a>
-
-                                    <a data-slide-index="4" href="javascript:void(0)">
-                                        <h3>Slide 4</h3>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </p>
-                                        <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                    </a>
-                                    <a data-slide-index="5" href="javascript:void(0)">
-                                        <h3>Slide 5</h3>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </p>
-                                        <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                    </a>
-
-                                    <a data-slide-index="6" href="javascript:void(0)">
-                                        <h3>Slide 6</h3>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </p>
-                                        <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                    </a>
-
-                                    <a data-slide-index="7" href="javascript:void(0)">
-                                        <h3>Slide 7</h3>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </p>
-                                        <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                    </a>
-
-                                    <a data-slide-index="8" href="javascript:void(0)">
-                                        <h3>Slide 8</h3>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </p>
-                                        <span class="time"> Wednesday, 16 March 2016 05:31 </span>
-                                    </a>
+                                <div class="slick-pager" style="height: 30em !important;">
 
                                 </div>
                                 <div class="pagerNavigation pagerNavigationBottom">
@@ -353,10 +214,13 @@
         </div>
     </div>
 </body>
-<script src="js/slick.js"></script>
 
 <script>
     //-------------------   Mounted   --------------------------
+    $('.tab_destination').css({ 'color': 'green' });
+    griddetails();
+    gridrightbar();
+    Accordion();
     jQuery(document).ready(function ($) {
         $('.featuredPostSlider').slick({
             slidesToShow: 1,
@@ -383,22 +247,6 @@
             }]
         });
     });
-
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-        });
-    }
-
     // scroll show nav
     window.addEventListener("scroll", function () {
         if (document.documentElement.scrollTop > 100) {
@@ -414,6 +262,56 @@
         }
     });
     //-------------------   Methods   --------------------------
+    function Accordion() {
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    }
+
+    function gridrightbar() {
+        for (var i = 1; i <= 6; i++) {
+            var imageLink = ("img/TopDestination/" + i + ".jpg");
+            var imgEL = '<a><img src="' + imageLink + '" class="img-fluid" alt=""><span class="time"> Wednesday, 16 March 2016 05:31 </span></a>';
+            $('.grid-rightbar #slick-pager .slick-pager').append(imgEL);
+        }
+    }
+    function griddetails() {
+        for (var i = 1; i <= 6; i++) {
+            var imageLink = ("img/TopDestination/" + i + ".jpg");
+            var imgEL = '<li><h2>Slide ' + i + '</h2><img alt="" src="' + imageLink + '" style="width: 100%; height: 100%;" class="img_griddetails"><div class="pagenextprev"><div class="pagerNavigation pagerNavigationBottom" style="float: left; "><span class="bottom" style="font-size: 15px;">Prev</span></div><div class="pagerNavigation pagerNavigationTop" style="float: right; "><span class="top" style="font-size: 15px;">Next</span></div></div><h3>Slide ' + i + ' </h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><span class="time"> Wednesday, 16 March 2016 05:31 </span></li>';
+            $('.grid-details .featuredPostSlider').append(imgEL);
+        }
+    }
+   
+    function tab_home() {
+        $.cookie("tab", "tab_home");
+        window.location.href = "/";
+    }
+  
+    function tab_partners() {
+        $.cookie("tab", "tab_partners");
+        window.location.href = "/";
+    }
+    function tab_about() {
+        $.cookie("tab", "tab_about");
+        window.location.href = "/";
+    }
+    function tab_contact() {
+        $.cookie("tab", "tab_contact");
+        window.location.href = "/";
+    }
+    
     function navigation() {
         $('.header-tab').toggleClass('header-tab-resizeheight');
     }
