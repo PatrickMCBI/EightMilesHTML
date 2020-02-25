@@ -107,10 +107,6 @@
                             style="border:1px solid gray; width: 100%; box-shadow: 0px 0px 8px 0px rgb(169, 167, 167);">
                             <button id="nextBtn" onclick="prevBtn()"><i class="fas fa-chevron-up"></i></button>
                             <div class="container_carousel">
-                                <div
-                                    style=" height: 8.5em; width: 120em; background-color: pink; position: absolute; z-index: -1;">
-                                </div>
-
                                 <div class="myslide">
 
                                 </div>
@@ -248,7 +244,7 @@
     function BindRightImage() {
         for (var i = 1; i <= 6; i++) {
             var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
-            var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid">';
+            var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid imgrightimg">';
             $('.container_carousel .myslide').append(imgEL2)
         }
     }
@@ -287,9 +283,13 @@
     function click_img(event) {
         // console.log(event.target);
         $('.grid-details img').remove();
-        var target = event.target.getAttribute('src')
+        $('.myslide .imgrightimg').css('background-color','white');
+        var target = event.target.getAttribute('src');
+        var targetID = event.target.getAttribute('ID');
         var imgEL2 = '<img src="' + target + '"  class="img-fluid">';
         $('.grid-details').append(imgEL2)
+        $('.myslide #'+targetID+'').css('background-color','#333333');
+        
     }
   
     function panel_ManilaOceanPark() {
@@ -297,7 +297,7 @@
 
         for (var i = 1; i <= 6; i++) {
             var imageLink = ("img/TopDestination/Manila/Manila Ocean park/" + i + ".jpg");
-            var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid">';
+            var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid imgrightimg">';
             $('.container_carousel .myslide').append(imgEL2)
         }
     }
@@ -306,7 +306,7 @@
 
         for (var i = 1; i <= 6; i++) {
             var imageLink = ("img/TopDestination/Manila/Manila Zoo/" + i + ".jpg");
-            var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid">';
+            var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid imgrightimg">';
             $('.container_carousel .myslide').append(imgEL2)
         }
     }
@@ -315,7 +315,7 @@
 
         for (var i = 1; i <= 6; i++) {
             var imageLink = ("img/TopDestination/Manila/Manila Bay/" + i + ".jpg");
-            var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid">';
+            var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid imgrightimg">';
             $('.container_carousel .myslide').append(imgEL2)
         }
     }
