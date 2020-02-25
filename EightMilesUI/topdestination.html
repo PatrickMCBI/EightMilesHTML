@@ -1,31 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- BOGOA NAKU UYYYY -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8MilesTravel-Services</title>
+    <title>8MilesTravel-TopDestination</title>
     <link rel="stylesheet" href="css/custom/topdestination.css">
-    <script src="js/jquery-3.4.min.js"></script>
-
     <!----------------  Header And Footer  --------------->
     <link rel="stylesheet" href="css/template/header.css">
     <link rel="stylesheet" href="css/template/footer.css">
-
-    <!----------------  Jquery Cookies  --------------->
-    <script src="js/jquery-cookies.js"></script>
-
     <!----------------  FontAwesome   --------------->
     <link rel="stylesheet" href="css/all.min.css">
-
-    <!----------------  Magnetic Popup   --------------->
-    <script src="js/magnificPopup.js"></script>
-
-    <!----------------  Slick Jquery   --------------->
-    <link rel="stylesheet" href="css/template/magnificPopup.css">
-    <link rel="stylesheet" href="css/template/slick-theme.css">
-    <link rel="stylesheet" href="css/template/slick.css">
-    <script src="js/slick.js"></script>
 </head>
 
 <body class="">
@@ -87,16 +73,16 @@
         <div class="main">
 
             <div class="mycontainer">
-                <!-- Top Destination has 3 columns grid-template-columns: 15% 65% 20%; -->
-                <div class="destination">
+                <!-- top destination has 3 columns grid-template-columns: 15% 65% 20%; -->
+                <div class="topdestination">
                     <!-- 1 -->
                     <div>
                         <div class="grid-leftbar" style="padding: 0px 10px 0px 10px;">
                             <button class="accordion">Manila</button>
                             <div class="panel">
-                                <p><label>Manila Bay</label></p>
-                                <p><label>Manila Zoo</label></p>
-                                <p><label>Manila Bay</label></p>
+                                <p onclick="panel_ManilaOceanPark()">Manila Ocean Park</p>
+                                <p onclick="panel_ManilaZoo()"><label>Manila Zoo</label></p>
+                                <p onclick="panel_ManilaBay()"><label>Manila Bay</label></p>
                             </div>
                             <button class="accordion">Cebu</button>
                             <div class="panel">
@@ -112,26 +98,21 @@
                         </div>
                     </div>
                     <!-- 2 -->
-                    <div>
-                        <div class="grid-details" style="height: 5em !important;">
-                            <ul class="featuredPostSlider">
-                            </ul>
-                        </div>
+                    <div class="grid-details">
+
                     </div>
                     <!-- 3 -->
                     <div>
-                        <div class="grid-rightbar">
-                            <div id="slick-pager">
-                                <div class="pagerNavigation pagerNavigationTop">
-                                    <span class="top"><i class="fa fa-angle-up"></i></span>
-                                </div>
-                                <div class="slick-pager" style="height: 30em !important;">
+                        <div
+                            style="border:1px solid gray; width: 100%; box-shadow: 0px 0px 8px 0px rgb(169, 167, 167);">
+                            <button id="nextBtn" onclick="prevBtn()"><i class="fas fa-chevron-up"></i></button>
+                            <div class="container_carousel">
+                                <div class="myslide">
 
                                 </div>
-                                <div class="pagerNavigation pagerNavigationBottom">
-                                    <span class="bottom"><i class="fa fa-angle-down"></i></span>
-                                </div>
+
                             </div>
+                            <button id="prevBtn" onclick="nextBtn()"><i class="fas fa-chevron-down"></i></button>
                         </div>
                     </div>
                 </div>
@@ -215,38 +196,20 @@
     </div>
 </body>
 
+<script src="js/jquery-3.4.min.js"></script>
+<!----------------  Slick Jquery   --------------->
+<link rel="stylesheet" href="css/template/magnificPopup.css">
+<link rel="stylesheet" href="css/template/slick-theme.css">
+<link rel="stylesheet" href="css/template/slick.css">
+<!----------------  Magnetic Popup   --------------->
+<script src="js/magnificPopup.js"></script>
+<script src="js/slick.js"></script>
+
 <script>
     //-------------------   Mounted   --------------------------
-    $('.tab_destination').css({ 'color': 'green' });
-    griddetails();
-    gridrightbar();
+    BindRightImage();
     Accordion();
-    jQuery(document).ready(function ($) {
-        $('.featuredPostSlider').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            autoplay: false,
-            adaptiveHeight: true,
-            asNavFor: '.bx-pager'
-        });
-        $('.slick-pager').slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            nextArrow: $('.pagerNavigation .bottom'),
-            prevArrow: $('.pagerNavigation .top'),
-            asNavFor: '.featuredPostSlider',
-            focusOnSelect: true,
-            vertical: true,
-            responsive: [{
-                breakpoint: 767,
-                settings: {
-                    vertical: false
-                }
-            }]
-        });
-    });
+
     // scroll show nav
     window.addEventListener("scroll", function () {
         if (document.documentElement.scrollTop > 100) {
@@ -278,40 +241,84 @@
             });
         }
     }
+    function BindRightImage() {
+        for (var i = 1; i <= 6; i++) {
+            var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
+            var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid imgrightimg">';
+            $('.container_carousel .myslide').append(imgEL2)
+        }
+    }
 
-    function gridrightbar() {
-        for (var i = 1; i <= 6; i++) {
-            var imageLink = ("img/TopDestination/" + i + ".jpg");
-            var imgEL = '<a><img src="' + imageLink + '" class="img-fluid" alt=""><span class="time"> Wednesday, 16 March 2016 05:31 </span></a>';
-            $('.grid-rightbar #slick-pager .slick-pager').append(imgEL);
+    const carouselSlide = document.querySelector('.myslide');
+    const carouselImages = document.querySelectorAll('.myslide img');
+    //Counter
+    let counter = 0;
+    const size = "140";
+    carouselSlide.style.transform = 'translateY(' + (-size * counter) + 'px)';
+    // Button Listeners
+    function nextBtn() {
+        var imglength = carouselImages.length;
+
+        if (carouselImages[counter].id === imglength.toString()) {
+            carouselSlide.style.transition = "transition: all ease 0s;";
+            counter = -1;
+            carouselSlide.style.transform = 'translateY(' + (- size * counter) + 'px)';
         }
+        carouselSlide.style.transition = "transition: all ease 10s;";
+        counter++;
+        carouselSlide.style.transform = 'translateY(' + (-size * counter) + 'px)';
+
     }
-    function griddetails() {
-        for (var i = 1; i <= 6; i++) {
-            var imageLink = ("img/TopDestination/" + i + ".jpg");
-            var imgEL = '<li><h2>Slide ' + i + '</h2><img alt="" src="' + imageLink + '" style="width: 100%; height: 100%;" class="img_griddetails"><div class="pagenextprev"><div class="pagerNavigation pagerNavigationBottom" style="float: left; "><span class="bottom" style="font-size: 15px;">Prev</span></div><div class="pagerNavigation pagerNavigationTop" style="float: right; "><span class="top" style="font-size: 15px;">Next</span></div></div><h3>Slide ' + i + ' </h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><span class="time"> Wednesday, 16 March 2016 05:31 </span></li>';
-            $('.grid-details .featuredPostSlider').append(imgEL);
+    function prevBtn() {
+        if (carouselImages[counter].id === '1') {
+            carouselSlide.style.transition = "transition: all ease 0s;";
+            counter = carouselImages.length;
+            carouselSlide.style.transform = 'translateY(' + (- size * counter) + 'px)';
         }
+        carouselSlide.style.transition = "transition: all ease 10s;";
+        counter--;
+        carouselSlide.style.transform = 'translateY(' + (-size * counter) + 'px)';
+
     }
-   
-    function tab_home() {
-        $.cookie("tab", "tab_home");
-        window.location.href = "/";
+    function click_img(event) {
+        // console.log(event.target);
+        $('.grid-details img').remove();
+        $('.myslide .imgrightimg').css('background-color','white');
+        var target = event.target.getAttribute('src');
+        var targetID = event.target.getAttribute('ID');
+        var imgEL2 = '<img src="' + target + '"  class="img-fluid">';
+        $('.grid-details').append(imgEL2)
+        $('.myslide #'+targetID+'').css('background-color','#333333');
+        
     }
   
-    function tab_partners() {
-        $.cookie("tab", "tab_partners");
-        window.location.href = "/";
+    function panel_ManilaOceanPark() {
+        $('.container_carousel .myslide img').remove();
+
+        for (var i = 1; i <= 6; i++) {
+            var imageLink = ("img/TopDestination/Manila/Manila Ocean park/" + i + ".jpg");
+            var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid imgrightimg">';
+            $('.container_carousel .myslide').append(imgEL2)
+        }
     }
-    function tab_about() {
-        $.cookie("tab", "tab_about");
-        window.location.href = "/";
+    function panel_ManilaZoo() {
+        $('.container_carousel .myslide img').remove();
+
+        for (var i = 1; i <= 6; i++) {
+            var imageLink = ("img/TopDestination/Manila/Manila Zoo/" + i + ".jpg");
+            var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid imgrightimg">';
+            $('.container_carousel .myslide').append(imgEL2)
+        }
     }
-    function tab_contact() {
-        $.cookie("tab", "tab_contact");
-        window.location.href = "/";
+    function panel_ManilaBay() {
+        $('.container_carousel .myslide img').remove();
+
+        for (var i = 1; i <= 6; i++) {
+            var imageLink = ("img/TopDestination/Manila/Manila Bay/" + i + ".jpg");
+            var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid imgrightimg">';
+            $('.container_carousel .myslide').append(imgEL2)
+        }
     }
-    
     function navigation() {
         $('.header-tab').toggleClass('header-tab-resizeheight');
     }

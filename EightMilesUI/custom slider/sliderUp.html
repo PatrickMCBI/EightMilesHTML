@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!----------------  FontAwesome   --------------->
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+    
+    <button onclick="InsertImage()">Insert Image</button>
+   
+        
+                <div style="border:1px solid gray; width: 20em; box-shadow: 0px 0px 8px 0px rgb(169, 167, 167);">
+                    <button id="nextBtn"  onclick="prevBtn()"><i class="fas fa-arrow-left"></i></button>
+                    <div class="container_carousel">
+                    
+                        <div style=" height: 12em; width: 120em; background-color: pink; position: absolute; z-index: -1;"></div>
+                        <div class="myslide">
+                        </div>
+                    
+                    </div>
+                    <button id="prevBtn"  onclick="nextBtn()"><i class="fas fa-arrow-right"></i></button>
+            </div>
+
+
+</body>
+<script src="js/jquery-3.4.min.js"></script>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+   
+    .container_carousel {
+        width: 100%;
+        margin: auto;
+        border: 2px solid black;
+        position: relative;
+        overflow: hidden;
+        height: 42em;
+    }
+    .myslide {
+        height: 12em;
+        text-align: center;
+    }
+    .container_carousel .myslide img{
+        width: 100%;
+        height: 11.5em;
+        display: block;
+        padding:1em
+    }
+    .container_carousel .myslide img:hover{
+        opacity: 0.5;
+        cursor: pointer;
+    }
+    #prevBtn {
+     
+        z-index: 1;
+        margin-left: 50%;
+        font-size: 30px;
+        color: black;
+        cursor: pointer;
+        opacity: 0.5;
+        transform: rotate(90deg);
+    }
+    #prevBtn:hover { opacity: 1;}
+
+    #nextBtn {
+        margin-left: 50%;
+        z-index: 10;
+      
+        font-size: 30px;
+        color: black;
+        cursor: pointer;
+        opacity: 0.5;
+        transform: rotate(90deg);
+    }
+    #nextBtn:hover { opacity: 1;}
+</style>
+<script>
+    
+ViewImage();
+    const carouselSlide = document.querySelector('.myslide');
+    const carouselImages = document.querySelectorAll('.myslide img');
+
+    //Counter
+    let counter = 0;
+    const size = "185";
+    carouselSlide.style.transform = 'translateY(' + (-size * counter) + 'px)';
+
+    // Button Listeners
+    function nextBtn(){
+        var imglength = carouselImages.length;
+      
+                if (carouselImages[counter].id === imglength.toString()) {
+                    carouselSlide.style.transition = "none";
+                    counter = -1;
+                    carouselSlide.style.transform = 'translateY(' + (- size * counter) + 'px)';
+                }   
+        carouselSlide.style.transition = "transform 0.4ms ease-in-out";
+        counter++;
+        carouselSlide.style.transform = 'translateY(' + (-size * counter) + 'px)';
+      
+    }
+    function prevBtn() {
+        if (carouselImages[counter].id === '1') {
+            carouselSlide.style.transition = "none";
+            counter = carouselImages.length ;
+            carouselSlide.style.transform = 'translateY(' + (- size * counter) + 'px)';
+        }   
+        carouselSlide.style.transition = "transform 0.4ms ease-in-out";
+        counter--;
+        carouselSlide.style.transform = 'translateY(' + (-size * counter) + 'px)';
+        
+    }
+
+
+
+function InsertImage()
+{
+    $('.container_carousel .myslide img').remove();
+  
+    for (var i = 1; i <= 6; i++) {
+          var imageLink = ("img/TopDestination/" + 1 + ".jpg");
+          var imgEL2 = '<img src="'+imageLink+'" id="'+i+'" alt="">';
+          $('.container_carousel .myslide').append(imgEL2)
+      }
+}
+function ViewImage()
+{
+  
+    for (var i = 1; i <= 6; i++) {
+          var imageLink = ("img/TopDestination/" + i + ".jpg");
+          var imgEL2 = '<img src="'+imageLink+'" id="'+i+'" alt="">';
+          $('.container_carousel .myslide').append(imgEL2)
+      }
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

@@ -288,75 +288,79 @@
         }
     });
     // Magnefic Popup
-    $('.destination_image img').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true
-        }
-    });
+    // $('.destination_image img').magnificPopup({
+    //     type: 'image',
+    //     gallery: {
+    //         enabled: true
+    //     }
+    // });
 
 
 
     //-------------------   methods   --------------------------
-    function tabs_option()
+    
+    function destinationpage(event)
     {
-
-        var tabname = $.cookie("tab");
-        if(tabname == "tab_home")
-        {
-            $('.tab_home').css({ 'color': 'green' });
-            document.querySelector('body').scrollIntoView({
-            behavior: 'smooth'
-             });
-            $.removeCookie('tab');
-        }
-        else if(tabname == "tab_destination")
-        {
-            $('.tab_destination').css({ 'color': 'green' });
-            document.querySelector('.destination').scrollIntoView({
-            behavior: 'smooth'
-             });
-            $.removeCookie('tab');
-        }
-        else if(tabname == "tab_partners")
-        {
-            $('.tab_partners').css({ 'color': 'green' });
-            document.querySelector('.partners').scrollIntoView({
-            behavior: 'smooth'
-            });
-            $.removeCookie('tab');
-        }
-        else if(tabname == "tab_services")
-        {
-            $('.tab_services').css({ 'color': 'green' });
-            document.querySelector('.services').scrollIntoView({
-            behavior: 'smooth'});
-            $.removeCookie('tab');
-        }
-        else if(tabname == "tab_about")
-        {
-            $('.tab_about').css({ 'color': 'green' });
-            document.querySelector('.aboutus').scrollIntoView({
-            behavior: 'smooth'
-            });
-            $.removeCookie('tab');
-        }
-        else if(tabname == "tab_contact")
-        {
-            $('.tab_contact').css({ 'color': 'green' });
-            document.querySelector('.getintouch').scrollIntoView({
-            behavior: 'smooth'
-            });
-            $.removeCookie('tab');
-        }
-       
-         
+        var url = "/topdestination.html";
+        window.open(url, '_blank');
     }
+    function destination_mouseover(event)
+    {
+        var targetIMG = $(event.target).attr('ID');
+     
+        $('.destination_image #div'+targetIMG+'').css({"background-color":"black"});
+         $('.destination_image div #thumbnail'+targetIMG+'').css({"opacity":"1","color":"white","text-align":"center","transition":"all ease 1s"});
+        $('.destination_image div  #'+targetIMG+'').addClass('destination_mouseover');
+   
+    }
+    function destination_mouseout()
+    {
+        var targetIMG = $(event.target).attr('ID');
+        $('.destination_image #div'+targetIMG+'').css({"background-color":"white","transition":"all ease 1s"});
+        $('.destination_image div #thumbnail'+targetIMG+'').css({"opacity":"0","color":"white","transition":"all ease 1s"});
+        $('.destination_image div  #'+targetIMG+'').removeClass('destination_mouseover');
+     
+
+    }
+    
     function destination() {
         for (var i = 1; i <= 6; i++) {
-            var imageLink = ("img/TopDestination/" + i + ".jpg");
-            var imgEL = '<div><img src="' + imageLink + '" class="img-fluid" href="' + imageLink + '"></div>';
-            $('.destination_image').append(imgEL)
+            if (i == 1) {
+                var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
+                var imgEL = '<div ID="divimg'+ i +'"><div  id="thumbnailimg'+ i +'" class="thumbnail" >Manila</div><img id="img'+ i +'" src="' + imageLink + '" class="img-fluid" href="' + imageLink + '" onclick="destinationpage(event)" onmouseover="destination_mouseover(event)" onmouseout="destination_mouseout()"></div>';
+                $('.destination_image').append(imgEL)
+            }
+            else if (i == 2) {
+                var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
+                var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
+                var imgEL = '<div ID="divimg'+ i +'"><div  id="thumbnailimg'+ i +'" class="thumbnail" >Cebu</div><img id="img'+ i +'" src="' + imageLink + '" class="img-fluid" href="' + imageLink + '" onclick="destinationpage(event)" onmouseover="destination_mouseover(event)" onmouseout="destination_mouseout()"></div>';
+                $('.destination_image').append(imgEL)
+            }
+            else if (i == 3) {
+                var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
+                var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
+                var imgEL = '<div ID="divimg'+ i +'"><div  id="thumbnailimg'+ i +'" class="thumbnail" >Palawan</div><img id="img'+ i +'" src="' + imageLink + '" class="img-fluid" href="' + imageLink + '" onclick="destinationpage(event)" onmouseover="destination_mouseover(event)" onmouseout="destination_mouseout()"></div>';
+                $('.destination_image').append(imgEL)
+            }
+            else if (i == 4) {
+                var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
+                var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
+                var imgEL = '<div ID="divimg'+ i +'"><div  id="thumbnailimg'+ i +'" class="thumbnail" >Boracay</div><img id="img'+ i +'" src="' + imageLink + '" class="img-fluid" href="' + imageLink + '" onclick="destinationpage(event)" onmouseover="destination_mouseover(event)" onmouseout="destination_mouseout()"></div>';
+                $('.destination_image').append(imgEL)
+            }
+            else if (i == 5) {
+                var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
+                var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
+                var imgEL = '<div ID="divimg'+ i +'"><div  id="thumbnailimg'+ i +'" class="thumbnail" >Manila</div><img id="img'+ i +'" src="' + imageLink + '" class="img-fluid" href="' + imageLink + '" onclick="destinationpage(event)" onmouseover="destination_mouseover(event)" onmouseout="destination_mouseout()"></div>';
+                $('.destination_image').append(imgEL)
+            }
+            else if (i == 6) {
+                var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
+                var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
+                var imgEL = '<div ID="divimg'+ i +'"><div  id="thumbnailimg'+ i +'" class="thumbnail" >Cebu</div><img id="img'+ i +'" src="' + imageLink + '" class="img-fluid" href="' + imageLink + '" onclick="destinationpage(event)" onmouseover="destination_mouseover(event)" onmouseout="destination_mouseout()"></div>';
+                $('.destination_image').append(imgEL)
+            }
+            
         }
     }
     function partners() {

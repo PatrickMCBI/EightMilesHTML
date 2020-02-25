@@ -60,10 +60,32 @@
         margin-left: 15%;
         margin-right: 16%;
         cursor: pointer;
+     
     }
-    
-    .destination_image div:hover {
-        opacity: 0.8;
+    .destination_image div{
+        overflow: hidden;  
+    }
+    .destination_image div .thumbnail{
+        border: 0px solid red;
+        position: absolute; 
+        text-align: center;
+        margin-top: 3.5em;
+        transition: all ease 1s;  
+        font-size: 2em;
+        font-weight: 900;
+        opacity: 0;
+        width: 10.3em;
+      
+    }
+    .destination_image div img {
+        transition: all ease 0.5s;
+    }
+     .destination_mouseover{
+        opacity: 0.3;
+        background-color: black !important;
+        transform: scale(1.5);
+        transition: all ease 1.5s;
+        z-index: 101;
     }
     /*------------------------------------------------
         Partners
@@ -360,6 +382,18 @@
         .getintouchdetails div {
             text-align: center;
         }
+        /* .destination_image div #thumbnail{
+            border: 0px solid red;
+            position: absolute; 
+            width: 69%;
+            padding-top: 3.5em;
+            font-size: 2em;
+            font-weight: 900;
+            opacity: 1;
+            height: 50%;
+            opacity:0;
+            z-index: -1;
+        } */
       
     }
     

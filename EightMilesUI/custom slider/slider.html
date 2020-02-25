@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!----------------  FontAwesome   --------------->
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+    <div class="mycontainer">
+        <button id="prevBtn" onclick="prevBtn()"><i class="fas fa-arrow-left"></i></button>
+        <button id="nextBtn" onclick="nextBtn()"><i class="fas fa-arrow-right"></i></button>
+        <div class="myslide">
+           
+            <img src="/img/TopDestination/Cebu/1.jpg" id="1" alt="">
+            <img src="/img/TopDestination/Cebu/2.jpg" id="2" alt="">
+            <img src="/img/TopDestination/Cebu/3.jpg" id="3" alt="">
+            <img src="/img/TopDestination/Cebu/4.jpg" id="4" alt="">
+            <img src="/img/TopDestination/Cebu/5.jpg" id="5" alt="">
+            <img src="/img/TopDestination/Cebu/6.jpg" id="6" alt="">
+           
+        </div>
+    </div>
+
+</body>
+<script src="js/jquery-3.4.min.js"></script>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+    .mycontainer {
+        width: 42.5%;
+        margin: auto;
+        margin-top: 10%;
+        overflow: hidden;
+        border: 2px solid black;
+        position: relative;
+    }
+
+    .myslide {
+        display: flex;
+        height: 400px;
+        width: 100%;
+    }
+
+    #prevBtn {
+        position: absolute;
+        top: 40%;
+        z-index: 10;
+        left: 5%;
+        font-size: 30px;
+        color: black;
+        cursor: pointer;
+        opacity: 0.5;
+    }
+    #prevBtn:hover { opacity: 1;}
+
+    #nextBtn {
+        position: absolute;
+        top: 40%;
+        z-index: 10;
+        right: 5%;
+        font-size: 30px;
+        color: black;
+        cursor: pointer;
+        opacity: 0.5;
+    }
+    #nextBtn:hover { opacity: 1;}
+</style>
+<script>
+    const carouselSlide = document.querySelector('.myslide');
+    const carouselImages = document.querySelectorAll('.myslide img');
+
+    //Counter
+    let counter = 0;
+    const size = carouselImages[0].clientWidth;
+
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+    // Button Listeners
+    function nextBtn(){
+                if (carouselImages[counter].id === '6') {
+                    carouselSlide.style.transition = "none";
+                    counter = -1;
+                    carouselSlide.style.transform = 'translateX(' + (- size * counter) + 'px)';
+                }   
+        carouselSlide.style.transition = "transform 0.4ms ease-in-out";
+        counter++;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+      
+    }
+    function prevBtn() {
+        if (carouselImages[counter].id === '1') {
+            carouselSlide.style.transition = "none";
+            counter = carouselImages.length ;
+            carouselSlide.style.transform = 'translateX(' + (- size * counter) + 'px)';
+        }   
+        carouselSlide.style.transition = "transform 0.4ms ease-in-out";
+        counter--;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

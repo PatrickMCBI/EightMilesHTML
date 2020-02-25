@@ -26,7 +26,7 @@
 
 
    /*--------------------------------------------
-        Top Destination
+        Left Bar
 ---------------------------------------------*/
 .destination{
     display: grid;
@@ -35,112 +35,6 @@
 }
 .destination div{
     border:0px solid red;
-    /* margin-top: 1em; */
-}
-.grid-rightbar {
-    padding-left: 10px;
-}
-
-.input-text {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.input-submit-green {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.ul-cs {
-    list-style-type: none;
-    border-bottom: 2px solid #f1f1f1;
-    padding: 30px;
-}
-
-
-/* custom */
-
-a:focus {
-    outline: none;
-}
-
-.HomeSlider {
-    float: left;
-    display: block;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.featureslider {
-    position: relative;
-}
-
-.featuredPostSlider {
-    float: left;
-    width: 100%;
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.featuredPostSlider img {
-    width: 100%;
-}
-
-.featuredPostSlider h2 {
-    width: 65%;
-    position: absolute;
-    left: 5%;
-    color: #fff;
-    font-size: 36px;
-}
-
-.slick-pager {
-    margin-top: 30px;
-    margin-bottom: 0;
-}
-
-.pagerNavigation i {
-    float: left;
-    width: 100%;
-    margin-top: 0px;
-    background: #469191
-}
-
-.pagerNavigationTop {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    font-size: 29px;
-    text-align: center;
-    position: relative;
-    right: 0;
-    width: 1;
-    cursor: pointer;
-}
-
-.pagerNavigationBottom {
-    /* bottom: -30px; */
-    /* position: absolute; */
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 1;
-    left: 0;
-    height: 30px;
-    cursor: pointer;
-    color: #fff;
-    font-size: 29px;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .accordion {
@@ -165,7 +59,6 @@ a:focus {
 
 .accordion:after {
     content: '\002B';
-    /* color: #777; */
     font-weight: bold;
     float: right;
     margin-left: 5px;
@@ -176,136 +69,91 @@ a:focus {
 }
 
 .panel {
-    padding: 0 18px;
+    padding: 0 0px;
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
-.pagenextprev{
-    display: none;
-}
-/*------------------------------------------------
-        Grid Left Bar
-------------------------------------------------*/
+.grid-leftbar .panel p{
+    text-align: center;
+width: 100%;
+height: 2.5em;
+padding-top: 0.5em;
+    }
 .grid-leftbar .panel p:hover{
-    background-color: antiquewhite;
+background-color: gray;
+cursor: pointer;
 }
-/*------------------------------------------------
-        Grid Details
-------------------------------------------------*/
-.img_griddetails{
-    width: 100% !important;
-    height: 33em !important;
+p {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}  
+/*--------------------------------------------
+ Grid Details
+---------------------------------------------*/
+.grid-details{
+    box-shadow: 0px 0px 8px 0px rgb(169, 167, 167);
+    margin-right: 2%;
 }
-/*------------------------------------------------
-        Grid Right Bar
-------------------------------------------------*/
-
-#slick-pager {
-    /* position: absolute; */
-    right: 0;
+.grid-details img{
     width: 100%;
-    background-color: white;
-    float: left;
-    z-index: 9;
-    box-shadow: 1px 0px 4px 1px rgb(24, 23, 23);
+    height:30em;
 }
-
-#slick-pager a {
-    padding: 10px 15px;
+  /*--------------------------------------------
+        right Bar
+---------------------------------------------*/
+.container_carousel {
     width: 100%;
-    float: left;
-    border-top: 2px solid rgb(211, 208, 208);
-    color: #fff;
-    text-decoration: none;
+    margin: auto;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+    height: 28em;
+
 }
 
-#slick-pager a:hover {
-    text-decoration: none;
+.myslide {
+    height: 12em;
+    text-align: center;
+    transition: all ease 1s;
 }
+.container_carousel .myslide img{
+    width: 100%;
+    height: 8.5em;
+    display: block;
+    padding:1em;
+}
+.container_carousel .myslide img:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+#prevBtn {
+ 
+    z-index: 1;
+    /* margin-left: 45%; */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    border:0px solid red;
+    background-color: #469191;
+    /* transform: rotate(90deg); */
+}
+#prevBtn:hover {color: black;}
 
-#slick-pager a.active {
-    background-color: #d95123;
+#nextBtn {
+    /* margin-left: 45%; */
+    z-index: 10;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    border:0px solid red;
+    background-color: #469191;
+    /* transform: rotate(90deg); */
 }
-
-#slick-pager a h3 {
-    font-size: 16px;
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    margin: 0 0 8px;
-}
-
-#slick-pager a p {
-    font-family: "Lato", sans-serif;
-    font-size: 13px;
-    margin-bottom: 8px;
-}
-
-#slick-pager a span.time {
-    font-family: "Lato", sans-serif;
-    font-size: 10px;
-    color:rgb(44, 41, 41);
-}
-
-#slick-pager .slick-list .slick-track .slick-slide.slick-current {
-    background-color: #d95123;
-    width: 100% !important;
-}
-
-.grid-rightbar #slick-pager .slick-pager a img{
-    height: 5.5em;
-    width: 16em;
-}
-.grid-rightbar #slick-pager .slick-pager a:hover{
-   background-color:#d9502371;
-   cursor: pointer;
-}
-  /*------------------------------------------------
-        MEDIA QUERIES
-------------------------------------------------*/
-@media (max-width: 940px) {
-    .destination{
-        display: grid;
-        grid-template-columns: 20% 80%;
-        
-            margin-top: 1em;
-            padding: 0.2em;
-    }
-    .grid-rightbar{
-        display: none;
-    }
-    .destination div .grid-leftbar button{
-        font-size: 15px;
-        text-align: center;
-    }
-    .accordion {
-        padding: 10px;
-    }
-    .accordion:after {
-        float: left;
-        margin-left: 20px;
-    }
-    .pagerNavigationTop {
-        background-color:white;
-               color: rgb(19, 18, 18);
-    }
-    .pagerNavigationBottom {
-        background-color:white;
-        color: rgb(19, 18, 18);
-    }
-   .pagenextprev{
-    height:2em;
-      color: black;
-       border:0px solid red;
-        width: 100%;
-        display: block;
-   }
-   .grid-details .featuredPostSlider h2{
-       font-size: 15px;
-   }
-   .img_griddetails{
-    width: 100% !important;
-    height: 80% !important;
-}
-}
+#nextBtn:hover { color: black;}
