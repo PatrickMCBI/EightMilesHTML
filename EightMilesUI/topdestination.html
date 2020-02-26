@@ -68,7 +68,6 @@
 
 
         <div class="main">
-
             <div class="mycontainer">
                 <!-- top destination has 3 columns grid-template-columns: 15% 65% 20%; -->
                 <div class="topdestination">
@@ -87,7 +86,22 @@
                                 <p><label>Cebu Safari</label></p>
                                 <p><label>Mactan Newtown</label></p>
                             </div>
+                            <button class="accordion">Bohol</button>
+                            <div class="panel">
+                                <p><label>Beach</label></p>
+                                <p><label>Malapasua</label></p>
+                            </div>
                             <button class="accordion">Palawan</button>
+                            <div class="panel">
+                                <p><label>Beach</label></p>
+                                <p><label>Malapasua</label></p>
+                            </div>
+                            <button class="accordion">Boracay</button>
+                            <div class="panel">
+                                <p><label>Beach</label></p>
+                                <p><label>Malapasua</label></p>
+                            </div>
+                            <button class="accordion">Cordiller Region</button>
                             <div class="panel">
                                 <p><label>Beach</label></p>
                                 <p><label>Malapasua</label></p>
@@ -96,12 +110,15 @@
                     </div>
                     <!-- 2 -->
                     <div class="grid-details">
-
+                            <div class="mobileslider">
+                                    <div class="ImgSlides">
+                                        
+                                    </div>
+                            </div>
                     </div>
                     <!-- 3 -->
-                    <div>
-                        <div
-                            style="border:1px solid gray; width: 100%; box-shadow: 0px 0px 8px 0px rgb(169, 167, 167);">
+                    <div class="rightbar">
+                        <div class="grid-rightbar">
                             <button id="nextBtn" onclick="prevBtn()"><i class="fas fa-chevron-up"></i></button>
                             <div class="container_carousel">
                                 <div class="myslide">
@@ -206,30 +223,32 @@
 
 <script>
     //-------------------   Mounted   --------------------------
+    $('.tab_destination').css({ 'color': 'green' });
     BindRightImage();
     Accordion();
+    scrollwindowsAndNavbar();
 
-    // scroll show nav
-    window.addEventListener("scroll", function () {
-        if (document.documentElement.scrollTop > 100) {
-            $('.header').addClass('sticky-top');
-            $('.returntotop').css('display', 'block');
-            $('.chat').css('margin-right', '2.3em');
-            $('.fb-widget').css('margin-right', '3em');
-        } else {
-            $('.header').removeClass('sticky-top');
-            $('.returntotop').css('display', 'none');
-            $('.chat').css('margin-right', '0em');
-            $('.fb-widget').css('margin-right', '0em');
-        }
-    });
     //-------------------   Methods   --------------------------
-    $('.tab_destination').css({ 'color': 'green' });
+    function scrollwindowsAndNavbar() {
+        // scroll show nav
+        window.addEventListener("scroll", function () {
+            if (document.documentElement.scrollTop > 100) {
+                $('.header').addClass('sticky-top');
+                $('.returntotop').css('display', 'block');
+                $('.chat').css('margin-right', '2.3em');
+                $('.fb-widget').css('margin-right', '3em');
+            } else {
+                $('.header').removeClass('sticky-top');
+                $('.returntotop').css('display', 'none');
+                $('.chat').css('margin-right', '0em');
+                $('.fb-widget').css('margin-right', '0em');
+            }
+        });
+    }
     function tab_home() {
         $.cookie("tab", "tab_home");
         window.location.href = "/";
     }
-
     function tab_partners() {
         $.cookie("tab", "tab_partners");
         window.location.href = "/";
@@ -262,14 +281,7 @@
             });
         }
     }
-    function BindRightImage() {
-        for (var i = 1; i <= 6; i++) {
-            var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
-            var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid imgrightimg">';
-            $('.container_carousel .myslide').append(imgEL2)
-        }
-    }
-
+   
     const carouselSlide = document.querySelector('.myslide');
     const carouselImages = document.querySelectorAll('.myslide img');
     //Counter
@@ -312,7 +324,15 @@
         $('.myslide #' + targetID + '').css('background-color', '#333333');
 
     }
-
+    function BindRightImage() {
+        for (var i = 1; i <= 6; i++) {
+            var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
+            var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid imgrightimg">';
+            $('.container_carousel .myslide').append(imgEL2)
+            $('.grid-details .mobileslider').append(imgEL2)
+        }
+    }
+    
     function panel_ManilaOceanPark() {
         $('.container_carousel .myslide img').remove();
 

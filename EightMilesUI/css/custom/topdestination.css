@@ -32,6 +32,7 @@
     display: grid;
     grid-template-columns: 15% 65% 20%;
         margin-top: 1em;
+        padding-right: 1em;
 }
 .topdestination div{
     border:0px solid red;
@@ -99,14 +100,31 @@ p {
 .grid-details{
     box-shadow: 0px 0px 8px 0px rgb(169, 167, 167);
     margin-right: 2%;
+  
 }
 .grid-details img{
     width: 100%;
     height:30em;
 }
+   .mobileslider{
+     border:1px solid red !important; 
+     width:32.3%; 
+     height: 5em;
+     position: absolute;
+     bottom: 0;
+     display: none;
+     overflow: hidden;
+    }
+    .mobileslider img{
+        width: 10em;
+        height: 10em;
+    }
   /*--------------------------------------------
         right Bar
 ---------------------------------------------*/
+.grid-rightbar{
+    border:1px solid gray; width: 100%; box-shadow: 0px 0px 8px 0px rgb(169, 167, 167);
+}
 .container_carousel {
     width: 100%;
     margin: auto;
@@ -158,3 +176,38 @@ p {
     /* transform: rotate(90deg); */
 }
 #nextBtn:hover { color: black;}
+
+    /*------------------------------------------------
+        MEDIA QUERIES
+------------------------------------------------*/
+@media (max-width: 945px) {
+    .topdestination{
+        display: grid;
+        grid-template-columns: 25% 75%;
+            margin-top: 1em;
+    }
+    .topdestination div{
+        border:0px solid red;
+    }
+    .grid-details img{
+        height: 100%;
+    }
+    .rightbar{
+        display: none;
+    }
+    .mobileslider{
+       width:72.3%; 
+       display: flex;
+       bottom: 9.2em;
+       }
+}
+@media (max-width: 500px) {
+    .grid-details img{
+        height: 100%;
+    }
+    .mobileslider{
+       width:71%; 
+       bottom: 5.2em;
+       }
+}
+
