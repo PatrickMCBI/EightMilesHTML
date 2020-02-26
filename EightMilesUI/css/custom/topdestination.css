@@ -97,6 +97,7 @@ p {
 /*--------------------------------------------
  Grid Details
 ---------------------------------------------*/
+
 .grid-details{
     box-shadow: 0px 0px 8px 0px rgb(169, 167, 167);
     margin-right: 2%;
@@ -104,21 +105,47 @@ p {
 }
 .grid-details img{
     width: 100%;
-    height:30em;
+    height:33em;
 }
-   .mobileslider{
-     border:1px solid red !important; 
-     width:32.3%; 
-     height: 5em;
-     position: absolute;
+.grid{
+    display: grid;
+    grid-template-columns: 100%;
+     
+}
+.grid div{
+    border:0px solid red;
+}
+.grid .grid-footer{
+    height: 5em;
+}
+.grid-details .grid .grid-body{
+height: 23em;
+}
+.grid-details .grid .grid-footer .mobileslider{
+     border:0px solid gray !important; 
+     box-shadow: 0px 0px 8px 0px rgb(169, 167, 167);
+     width:100%; 
+     height: 100%;
      bottom: 0;
      display: none;
      overflow: hidden;
     }
     .mobileslider img{
-        width: 10em;
+        width: 4.7em;
         height: 10em;
     }
+    .grid-details .grid .grid-footer .mobileslider .ImgSlides img{
+        opacity: 0.5;
+
+    }
+    .grid-details .grid .grid-footer .mobileslider .ImgSlides img:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+   
+
+    
+    
   /*--------------------------------------------
         right Bar
 ---------------------------------------------*/
@@ -185,20 +212,24 @@ p {
         display: grid;
         grid-template-columns: 25% 75%;
             margin-top: 1em;
+         
     }
     .topdestination div{
         border:0px solid red;
+       
     }
+  
     .grid-details img{
         height: 100%;
     }
     .rightbar{
         display: none;
     }
-    .mobileslider{
-       width:72.3%; 
+    
+        .grid-details .grid .grid-footer .mobileslider{
+       width:100%; 
        display: flex;
-       bottom: 9.2em;
+     
        }
 }
 @media (max-width: 500px) {

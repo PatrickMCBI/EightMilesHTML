@@ -111,16 +111,13 @@
                     <!-- 2 -->
                     <div class="grid-details">
                         <div class="grid">
-                            <div class="grid-body"></div>
-                            <div class="grid-footer">
-                                <div class="mobileslider">
-                                    <div class="ImgSlides">
 
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-
+                            <div class="mobileslider">
+                                    <div class="ImgSlides">
+                                        
+                                    </div>
+                            </div>
                     </div>
                     <!-- 3 -->
                     <div class="rightbar">
@@ -287,7 +284,7 @@
             });
         }
     }
-
+   
     const carouselSlide = document.querySelector('.myslide');
     const carouselImages = document.querySelectorAll('.myslide img');
     //Counter
@@ -321,12 +318,12 @@
     }
     function click_img(event) {
         // console.log(event.target);
-        $('.grid-details .grid .grid-body img').remove();
+        $('.grid-details img').remove();
         $('.myslide .imgrightimg').css('background-color', 'white');
         var target = event.target.getAttribute('src');
         var targetID = event.target.getAttribute('ID');
         var imgEL2 = '<img src="' + target + '"  class="img-fluid">';
-        $('.grid-details .grid .grid-body').append(imgEL2)
+        $('.grid-details').append(imgEL2)
         $('.myslide #' + targetID + '').css('background-color', '#333333');
 
     }
@@ -335,38 +332,35 @@
             var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
             var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid imgrightimg">';
             $('.container_carousel .myslide').append(imgEL2)
-            $('.grid-details .grid .grid-footer .mobileslider .ImgSlides').append(imgEL2)
+            $('.grid-details .mobileslider').append(imgEL2)
         }
     }
-
+    
     function panel_ManilaOceanPark() {
         $('.container_carousel .myslide img').remove();
-        $('.grid-details .grid .grid-footer .mobileslider .ImgSlides img').remove()
+
         for (var i = 1; i <= 6; i++) {
             var imageLink = ("img/TopDestination/Manila/Manila Ocean park/" + i + ".jpg");
             var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid imgrightimg">';
             $('.container_carousel .myslide').append(imgEL2)
-            $('.grid-details .grid .grid-footer .mobileslider .ImgSlides').append(imgEL2)
         }
     }
     function panel_ManilaZoo() {
         $('.container_carousel .myslide img').remove();
-        $('.grid-details .grid .grid-footer .mobileslider .ImgSlides img').remove()
+
         for (var i = 1; i <= 6; i++) {
             var imageLink = ("img/TopDestination/Manila/Manila Zoo/" + i + ".jpg");
             var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid imgrightimg">';
             $('.container_carousel .myslide').append(imgEL2)
-            $('.grid-details .grid .grid-footer .mobileslider .ImgSlides').append(imgEL2)
         }
     }
     function panel_ManilaBay() {
         $('.container_carousel .myslide img').remove();
-        $('.grid-details .grid .grid-footer .mobileslider .ImgSlides img').remove()
+
         for (var i = 1; i <= 6; i++) {
             var imageLink = ("img/TopDestination/Manila/Manila Bay/" + i + ".jpg");
             var imgEL2 = '<img src="' + imageLink + '" id="' + i + '" onclick="click_img(event)" class="img-fluid imgrightimg">';
             $('.container_carousel .myslide').append(imgEL2)
-            $('.grid-details .grid .grid-footer .mobileslider .ImgSlides').append(imgEL2)
         }
     }
     function navigation() {
