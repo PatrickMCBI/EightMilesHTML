@@ -25,7 +25,6 @@
                 <div class="header-content">
                     <div class="header-left"><img src="img/8mileslogo.png" alt="" width="160"></div>
                     <div class="header-right">
-
                         <div class="loginmenu">
                             <div style="display:none;">
                                 <input class="input_uname" type="text" placeholder="Username">
@@ -67,7 +66,6 @@
                 </div>
             </div>
         </div>
-
 
 
         <div class="main">
@@ -204,6 +202,8 @@
 <!----------------  Magnetic Popup   --------------->
 <script src="js/magnificPopup.js"></script>
 <script src="js/slick.js"></script>
+<!----------------  Jquery Cookies  --------------->
+<script src="js/jquery-cookies.js"></script>
 
 <script>
     //-------------------   Mounted   --------------------------
@@ -225,6 +225,28 @@
         }
     });
     //-------------------   Methods   --------------------------
+    $('.tab_destination').css({ 'color': 'green' });
+    function tab_home() {
+        $.cookie("tab", "tab_home");
+        window.location.href = "/";
+    }
+
+    function tab_partners() {
+        $.cookie("tab", "tab_partners");
+        window.location.href = "/";
+    }
+    function tab_services() {
+        $.cookie("tab", "tab_services");
+        window.location.href = "/";
+    }
+    function tab_about() {
+        $.cookie("tab", "tab_about");
+        window.location.href = "/";
+    }
+    function tab_contact() {
+        $.cookie("tab", "tab_contact");
+        window.location.href = "/";
+    }
     function Accordion() {
         var acc = document.getElementsByClassName("accordion");
         var i;
@@ -283,15 +305,15 @@
     function click_img(event) {
         // console.log(event.target);
         $('.grid-details img').remove();
-        $('.myslide .imgrightimg').css('background-color','white');
+        $('.myslide .imgrightimg').css('background-color', 'white');
         var target = event.target.getAttribute('src');
         var targetID = event.target.getAttribute('ID');
         var imgEL2 = '<img src="' + target + '"  class="img-fluid">';
         $('.grid-details').append(imgEL2)
-        $('.myslide #'+targetID+'').css('background-color','#333333');
-        
+        $('.myslide #' + targetID + '').css('background-color', '#333333');
+
     }
-  
+
     function panel_ManilaOceanPark() {
         $('.container_carousel .myslide img').remove();
 

@@ -255,7 +255,7 @@
 </body>
 
 <script>
-    //-------------------   mounted   --------------------------
+    //-------------------   Mounted   --------------------------
     destination();
     partners();
     services();
@@ -263,7 +263,6 @@
     aboutus();
     logincookies();
     tabs_option();
-    
     // windows size
     $(window).resize(function () {
         var windowsize = $(window).width();
@@ -273,6 +272,7 @@
             console.log("windows: " + windowsize);
         } else { }
     });
+
     // scroll show nav
     window.addEventListener("scroll", function () {
         if (document.documentElement.scrollTop > 100) {
@@ -298,6 +298,59 @@
 
 
     //-------------------   methods   --------------------------
+    function tabs_option()
+    {
+
+        var tabname = $.cookie("tab");
+        if(tabname == "tab_home")
+        {
+            $('.tab_home').css({ 'color': 'green' });
+            document.querySelector('body').scrollIntoView({
+            behavior: 'smooth'
+             });
+            // $.removeCookie('tab');
+        }
+        else if(tabname == "tab_destination")
+        {
+            $('.tab_destination').css({ 'color': 'green' });
+            document.querySelector('.destination').scrollIntoView({
+            behavior: 'smooth'
+             });
+        }
+        else if(tabname == "tab_partners")
+        {
+            $('.tab_partners').css({ 'color': 'green' });
+            document.querySelector('.partners').scrollIntoView({
+            behavior: 'smooth'
+            });
+            $.removeCookie('tab');
+        }
+        else if(tabname == "tab_services")
+        {
+            $('.tab_services').css({ 'color': 'green' });
+            document.querySelector('.services').scrollIntoView({
+            behavior: 'smooth'});
+            $.removeCookie('tab');
+        }
+        else if(tabname == "tab_about")
+        {
+            $('.tab_about').css({ 'color': 'green' });
+            document.querySelector('.aboutus').scrollIntoView({
+            behavior: 'smooth'
+            });
+            $.removeCookie('tab');
+        }
+        else if(tabname == "tab_contact")
+        {
+            $('.tab_contact').css({ 'color': 'green' });
+            document.querySelector('.getintouch').scrollIntoView({
+            behavior: 'smooth'
+            });
+            $.removeCookie('tab');
+        }
+       
+         
+    }
     
     function destinationpage(event)
     {
@@ -389,6 +442,7 @@
 
         }
     }
+
     function services() {
         for (var i = 1; i <= 8; i++) {
             if (i == 1) {
@@ -435,6 +489,7 @@
             $('.servicesimage_airlines').append(imgEL)
         }
     }
+
     function aboutus() {
         for (var i = 1; i <= 3; i++) {
             if (i == 1) {
@@ -458,6 +513,7 @@
             behavior: 'smooth'
         });
     }
+
     function tab_destination(event) {
         $(event.target).parents('tr').find('td').removeAttr('style');
         $(event.target).css({ 'color': 'green' });
@@ -465,6 +521,7 @@
             behavior: 'smooth'
         });
     }
+
     function tab_partners(event) {
 
         $(event.target).parents('tr').find('td').removeAttr('style');
@@ -473,6 +530,7 @@
             behavior: 'smooth'
         });
     }
+
     function tab_services(event) {
         $(event.target).parents('tr').find('td').removeAttr('style');
         $(event.target).css({ 'color': 'green' });
@@ -480,6 +538,7 @@
             behavior: 'smooth'
         });
     }
+
     function tab_about(event) {
         $(event.target).parents('tr').find('td').removeAttr('style');
         $(event.target).css({ 'color': 'green' });
@@ -487,6 +546,7 @@
             behavior: 'smooth'
         });
     }
+
     function tab_contact(event) {
 
         $(event.target).parents('tr').find('td').removeAttr('style');
@@ -495,7 +555,6 @@
             behavior: 'smooth'
         });
     }
-
     function navigation() {
         $('.header-tab').toggleClass('header-tab-resizeheight');
         // $('.mobile-nav').toggleClass('mobile-nav-block');

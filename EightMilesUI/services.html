@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="css/template/header.css">
     <link rel="stylesheet" href="css/template/footer.css">
 
-      <!----------------  Jquery Cookies  --------------->
-      <script src="js/jquery-cookies.js"></script>
-
     <!----------------  FontAwesome   --------------->
     <link rel="stylesheet" href="css/all.min.css">
 
@@ -54,7 +51,7 @@
                                 <td onclick="tab_home(event)">HOME</td>
                                 <td onclick="tab_destination(event)">DESTINATION</td>
                                 <td onclick="tab_partners(event)">PARTNERS</td>
-                                <td class="tab_services" onclick="tab_services(event)">SERVICES</td>
+                                <td onclick="tab_services(event)">SERVICES</td>
                                 <td onclick="tab_about(event)">ABOUT</td>
                                 <td onclick="tab_contact(event)">CONTACT</td>
                             </tr>
@@ -371,8 +368,6 @@
 
 <script>
     //-------------------   Mounted   --------------------------
-    $('.tab_services').css({ 'color': 'green' });
-         
     jQuery(document).ready(function ($) {
         $('.featuredPostSlider').slick({
             slidesToShow: 1,
@@ -430,32 +425,6 @@
         }
     });
     //-------------------   Methods   --------------------------
-    function tab_home()
-    {
-        $.cookie("tab", "tab_home");
-        window.location.href = "/";
-    }
-    function tab_destination()
-    {
-        $.cookie("tab", "tab_destination");
-        window.location.href = "/";
-    }
-    function tab_partners()
-    {
-        $.cookie("tab", "tab_partners");
-        window.location.href = "/";
-    }
-    
-    function tab_about()
-    {
-        $.cookie("tab", "tab_about");
-        window.location.href = "/";
-    }
-    function tab_contact()
-    {
-        $.cookie("tab", "tab_contact");
-        window.location.href = "/";
-    }
     function navigation() {
         $('.header-tab').toggleClass('header-tab-resizeheight');
     }
