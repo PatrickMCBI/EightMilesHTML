@@ -65,20 +65,22 @@
     .destination_image div{
         overflow: hidden;  
     }
-    .destination_image div .thumbnail{
-        border: 0px solid red;
-        position: absolute; 
+    .destination_image div .thumbnail {
+        background-color: yellow;
+        color: black !important;
+        position: absolute;
         text-align: center;
         margin-top: 3.5em;
-        transition: all ease 1s;  
+        transition: all ease 1s;
         font-size: 2em;
         font-weight: 900;
         opacity: 0;
         width: 10.3em;
-      
     }
     .destination_image div img {
         transition: all ease 0.5s;
+        height:15em;
+        width:21em;
     }
      .destination_mouseover{
         opacity: 0.3;
@@ -382,18 +384,18 @@
         .getintouchdetails div {
             text-align: center;
         }
-        /* .destination_image div #thumbnail{
-            border: 0px solid red;
-            position: absolute; 
-            width: 69%;
-            padding-top: 3.5em;
+        .destination_image div .thumbnail {
+            background-color: yellow;
+            color: black !important;
+            position: absolute;
+            text-align: center;
+            margin-top: 3.5em;
+            transition: all ease 1s;
             font-size: 2em;
             font-weight: 900;
-            opacity: 1;
-            height: 50%;
-            opacity:0;
-            z-index: -1;
-        } */
+            opacity: 0;
+            width: 10.4em;
+        }
       
     }
     

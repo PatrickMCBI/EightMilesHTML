@@ -6,20 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8MilesTravel</title>
     <link rel="stylesheet" href="css/custom/index.css">
-    <script src="js/jquery-3.4.min.js"></script>
-
     <!----------------  Header And Footer  --------------->
     <link rel="stylesheet" href="css/template/header.css">
     <link rel="stylesheet" href="css/template/footer.css">
-
-    <!----------------  Jquery Cookies  --------------->
-    <script src="js/jquery-cookies.js"></script>
-
     <!----------------  FontAwesome   --------------->
     <link rel="stylesheet" href="css/all.min.css">
 
     <!----------------  Magnetic Popup  --------------->
-    <script src="js/magnificPopup.js"></script>
     <link rel="stylesheet" href="css/template/magnificPopup.css">
 </head>
 
@@ -202,8 +195,6 @@
                     </div>
                 </div>
             </div>
-
-
             <!----------------   Footer Partners   --------------->
             <div class="footerpartners">
                 <div class="mycontainer">
@@ -216,15 +207,10 @@
                     </div>
                 </div>
             </div>
-
-
-
             <!----------------   Return To Top   --------------->
             <div onclick="returntotop()" class="returntotop">
                 <i class="fas fa-chevron-up"></i>
             </div>
-
-
             <!----------------   Chat   --------------->
             <div id="fb-widget" class="fb-widget">
                 <div class="ctrlq fb-close" onclick="chat()" style="transition: all ease 4s;">X</div>
@@ -253,6 +239,11 @@
 
 
 </body>
+<script src="js/jquery-3.4.min.js"></script>
+<!----------------  Jquery Cookies  --------------->
+<script src="js/jquery-cookies.js"></script>
+<!----------------  Magnetic Popup  --------------->
+<script src="js/magnificPopup.js"></script>
 
 <script>
     //-------------------   Mounted   --------------------------
@@ -262,31 +253,8 @@
     services_airlines();
     aboutus();
     logincookies();
-    tabs_option();
-    // windows size
-    $(window).resize(function () {
-        var windowsize = $(window).width();
-        console.log(windowsize);
-        if (windowsize > "1030") {
-
-            console.log("windows: " + windowsize);
-        } else { }
-    });
-
-    // scroll show nav
-    window.addEventListener("scroll", function () {
-        if (document.documentElement.scrollTop > 100) {
-            $('.header').addClass('sticky-top');
-            $('.returntotop').css('display', 'block');
-            $('.chat').css('margin-right', '2.3em');
-            $('.fb-widget').css('margin-right', '3em');
-        } else {
-            $('.header').removeClass('sticky-top');
-            $('.returntotop').css('display', 'none');
-            $('.chat').css('margin-right', '0em');
-            $('.fb-widget').css('margin-right', '0em');
-        }
-    });
+    tabs_options();
+    scrollwindowsAndNavbar();
     // Magnefic Popup
     // $('.destination_image img').magnificPopup({
     //     type: 'image',
@@ -294,11 +262,34 @@
     //         enabled: true
     //     }
     // });
-
-
-
     //-------------------   methods   --------------------------
-    function tabs_option()
+    function scrollwindowsAndNavbar(){
+        // windows size
+        $(window).resize(function () {
+                var windowsize = $(window).width();
+                console.log(windowsize);
+                if (windowsize > "1030") {
+
+                    console.log("windows: " + windowsize);
+                } else { }
+            });
+
+            // scroll show nav
+            window.addEventListener("scroll", function () {
+                if (document.documentElement.scrollTop > 100) {
+                    $('.header').addClass('sticky-top');
+                    $('.returntotop').css('display', 'block');
+                    $('.chat').css('margin-right', '2.3em');
+                    $('.fb-widget').css('margin-right', '3em');
+                } else {
+                    $('.header').removeClass('sticky-top');
+                    $('.returntotop').css('display', 'none');
+                    $('.chat').css('margin-right', '0em');
+                    $('.fb-widget').css('margin-right', '0em');
+                }
+            });
+    }
+    function tabs_options()
     {
 
         var tabname = $.cookie("tab");
@@ -308,7 +299,7 @@
             document.querySelector('body').scrollIntoView({
             behavior: 'smooth'
              });
-            // $.removeCookie('tab');
+            $.removeCookie('tab');
         }
         else if(tabname == "tab_destination")
         {
@@ -392,25 +383,25 @@
             else if (i == 3) {
                 var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
                 var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
-                var imgEL = '<div ID="divimg'+ i +'"><div  id="thumbnailimg'+ i +'" class="thumbnail" >Palawan</div><img id="img'+ i +'" src="' + imageLink + '" class="img-fluid" href="' + imageLink + '" onclick="destinationpage(event)" onmouseover="destination_mouseover(event)" onmouseout="destination_mouseout()"></div>';
+                var imgEL = '<div ID="divimg'+ i +'"><div  id="thumbnailimg'+ i +'" class="thumbnail" >Bohol</div><img id="img'+ i +'" src="' + imageLink + '" class="img-fluid" href="' + imageLink + '" onclick="destinationpage(event)" onmouseover="destination_mouseover(event)" onmouseout="destination_mouseout()"></div>';
                 $('.destination_image').append(imgEL)
             }
             else if (i == 4) {
                 var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
                 var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
-                var imgEL = '<div ID="divimg'+ i +'"><div  id="thumbnailimg'+ i +'" class="thumbnail" >Boracay</div><img id="img'+ i +'" src="' + imageLink + '" class="img-fluid" href="' + imageLink + '" onclick="destinationpage(event)" onmouseover="destination_mouseover(event)" onmouseout="destination_mouseout()"></div>';
+                var imgEL = '<div ID="divimg'+ i +'"><div  id="thumbnailimg'+ i +'" class="thumbnail" >Palawan</div><img id="img'+ i +'" src="' + imageLink + '" class="img-fluid" href="' + imageLink + '" onclick="destinationpage(event)" onmouseover="destination_mouseover(event)" onmouseout="destination_mouseout()"></div>';
                 $('.destination_image').append(imgEL)
             }
             else if (i == 5) {
                 var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
                 var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
-                var imgEL = '<div ID="divimg'+ i +'"><div  id="thumbnailimg'+ i +'" class="thumbnail" >Manila</div><img id="img'+ i +'" src="' + imageLink + '" class="img-fluid" href="' + imageLink + '" onclick="destinationpage(event)" onmouseover="destination_mouseover(event)" onmouseout="destination_mouseout()"></div>';
+                var imgEL = '<div ID="divimg'+ i +'"><div  id="thumbnailimg'+ i +'" class="thumbnail" >Boracay</div><img id="img'+ i +'" src="' + imageLink + '" class="img-fluid" href="' + imageLink + '" onclick="destinationpage(event)" onmouseover="destination_mouseover(event)" onmouseout="destination_mouseout()"></div>';
                 $('.destination_image').append(imgEL)
             }
             else if (i == 6) {
                 var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
                 var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
-                var imgEL = '<div ID="divimg'+ i +'"><div  id="thumbnailimg'+ i +'" class="thumbnail" >Cebu</div><img id="img'+ i +'" src="' + imageLink + '" class="img-fluid" href="' + imageLink + '" onclick="destinationpage(event)" onmouseover="destination_mouseover(event)" onmouseout="destination_mouseout()"></div>';
+                var imgEL = '<div ID="divimg'+ i +'"><div  id="thumbnailimg'+ i +'" class="thumbnail" >Cordillera Region</div><img id="img'+ i +'" src="' + imageLink + '" class="img-fluid" href="' + imageLink + '" onclick="destinationpage(event)" onmouseover="destination_mouseover(event)" onmouseout="destination_mouseout()"></div>';
                 $('.destination_image').append(imgEL)
             }
             
