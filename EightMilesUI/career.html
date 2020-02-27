@@ -82,9 +82,19 @@
                         <div class="applynowform">
                             <h1>APPLY NOW!</h1>
                             <form action="">
-                                <input type="text" class="input-text" placeholder="Fullname">
-                                <input type="text" class="input-text" placeholder="Email">
-                                <input type="text" class="input-text" placeholder="Position & Job Title">
+                                <div class="form-group searchformfld">
+                                    <input type="text" class="form-control" placeholder=" " />
+                                    <label style="color:#636363;">Fullname</label>
+                                </div>
+                                <div class="form-group searchformfld">
+                                    <input type="text" class="form-control" placeholder=" " />
+                                    <label style="color:#636363;">Email</label>
+                                </div>
+                                <div class="form-group searchformfld">
+                                    <input type="text" class="form-control" placeholder=" " />
+                                    <label style="color:#636363;">Posiiton & Job Title</label>
+                                </div>
+                             
                                 <input type="file" class="input-text">
                                 <input type="submit" value="SUBMIT" class="input-submit-green btn">
                             </form>
@@ -213,7 +223,7 @@ function getselecteddetails(event){
     function Bindhiring() {
         for (var i = 1; i <= 26; i++) {
 
-            var imgEL2 = '<div class="' + i + '" onclick="getselecteddetails(event)"><Input type="checkbox"" class="' + i + '" onclick="getselecteddetails(event)"></Input> Web Develop</div><div onclick="getselecteddetails(event)" class="' + i + '">Feb. ' + i + ', 2020</div><div class="' + i + '" onclick="getselecteddetails(event)">Cebu City, Cebu9 th Floor </div>';
+            var imgEL2 = '<div style="padding-top:0.5em;" class="' + i + '" onclick="getselecteddetails(event)"><Input type="checkbox"" class="' + i + '" onclick="getselecteddetails(event)"></Input> Web Develop</div><div style="padding-top:0.5em;" onclick="getselecteddetails(event)" class="' + i + '">Feb. ' + i + ', 2020</div><div style="padding-top:0.5em;" class="' + i + '" onclick="getselecteddetails(event)">Cebu City, Cebu9 th Floor </div>';
             $('.joblist').append(imgEL2)
 
         }
