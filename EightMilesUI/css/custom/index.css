@@ -64,6 +64,10 @@
     }
     .destination_image div{
         overflow: hidden;  
+        margin: auto;
+        position: relative;
+        transition: all 1s ease 0s;
+        background-color: white;
     }
     .destination_image div .thumbnail {
         background-color: yellow;
@@ -75,7 +79,7 @@
         font-size: 2em;
         font-weight: 900;
         opacity: 0;
-        width: 10.3em;
+        width: 100%;
     }
     .destination_image div img {
         transition: all ease 0.5s;
@@ -383,18 +387,6 @@
         }
         .getintouchdetails div {
             text-align: center;
-        }
-        .destination_image div .thumbnail {
-            background-color: yellow;
-            color: black !important;
-            position: absolute;
-            text-align: center;
-            margin-top: 3.5em;
-            transition: all ease 1s;
-            font-size: 2em;
-            font-weight: 900;
-            opacity: 0;
-            width: 10.4em;
         }
       
     }
