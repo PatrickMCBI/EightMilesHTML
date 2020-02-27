@@ -202,11 +202,18 @@
         window.location.href = "/";
     }
 
+function getselecteddetails(event){
+    var classid = event.target.getAttribute('class');
+    $('.joblist div').css('background-color', 'white');
+    $( '.joblist div input').prop( "checked", false );
 
+    $( '.joblist .'+classid+'').prop( "checked", true );
+    $('.joblist .'+classid+'').css('background-color', '#4CAF50');
+}
     function Bindhiring() {
         for (var i = 1; i <= 26; i++) {
 
-            var imgEL2 = '<div><Input type="checkbox""></Input> Web Develop</div><div >Feb. ' + i + ', 2020</div><div >Cebu City, Cebu9 th Floor </div>';
+            var imgEL2 = '<div class="' + i + '" onclick="getselecteddetails(event)"><Input type="checkbox"" class="' + i + '" onclick="getselecteddetails(event)"></Input> Web Develop</div><div onclick="getselecteddetails(event)" class="' + i + '">Feb. ' + i + ', 2020</div><div class="' + i + '" onclick="getselecteddetails(event)">Cebu City, Cebu9 th Floor </div>';
             $('.joblist').append(imgEL2)
 
         }
