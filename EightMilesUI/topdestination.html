@@ -114,9 +114,11 @@
                             <div class="grid-body"></div>
                             <div class="grid-footer">
                                 <div class="mobileslider">
+                                    <div class="grid_details_arrowPrev" onclick="grid_details_arrowNext()"><i class="fas fa-arrow-left"></i></div>
                                     <div class="ImgSlides">
 
                                     </div>
+                                    <div class="grid_details_arrowNext" onclick="grid_details_arrowPrev()"><i class="fas fa-arrow-right"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -169,7 +171,6 @@
                     </div>
                 </div>
             </div>
-
             <!----------------   Footer Partners   --------------->
             <div class="footerpartners">
                 <div class="mycontainer">
@@ -182,14 +183,10 @@
                     </div>
                 </div>
             </div>
-
-
             <!----------------   Return To Top   --------------->
             <div onclick="returntotop()" class="returntotop">
                 <i class="fas fa-chevron-up"></i>
             </div>
-
-
             <!----------------   Chat   --------------->
             <div id="fb-widget" class="fb-widget">
                 <div class="ctrlq fb-close" onclick="chat()" style="transition: all ease 4s;">X</div>
@@ -209,8 +206,6 @@
             <div onclick="chat()" class="chat">
                 <i class="fab fa-facebook-messenger"></i>
             </div>
-
-
 
         </div>
     </div>
@@ -322,12 +317,16 @@
     function click_img(event) {
         // console.log(event.target);
         $('.grid-details .grid .grid-body img').remove();
+        $('.grid-details .grid .grid-footer .mobileslider .ImgSlides img').css('opacity', '0.5');
+
         $('.myslide .imgrightimg').css('background-color', 'white');
         var target = event.target.getAttribute('src');
         var targetID = event.target.getAttribute('ID');
         var imgEL2 = '<img src="' + target + '"  class="img-fluid">';
         $('.grid-details .grid .grid-body').append(imgEL2)
-        $('.myslide #' + targetID + '').css('background-color', '#333333');
+        $('.myslide #' + targetID + '').css('background-color', '#F5DEB3');
+        $('.grid-details .grid .grid-footer .mobileslider .ImgSlides #' + targetID + '').css('opacity', '1');
+ 
     }
     function BindRightImage() {
         for (var i = 1; i <= 6; i++) {
@@ -402,4 +401,38 @@
     function chat() {
         $('.fb-widget').slideToggle();
     }
+    
+    const grid_details_carouselSlide = document.querySelector('.ImgSlides');
+    const grid_details_carouselImages = document.querySelectorAll('.ImgSlides img');
+
+    //Counter
+    let grid_details_counter = 0;
+    const grid_details_size = "65";
+
+    grid_details_carouselSlide.style.transform = 'translateX(' + (-grid_details_size * counter) + 'px)';
+
+    // Button Listeners
+    function grid_details_arrowNext(){
+                if (grid_details_carouselImages[grid_details_counter].id === 'footerslide'+'6') {
+                    grid_details_carouselSlide.style.transition = "transition: all ease 2s;";
+                    grid_details_counter = -1;
+                    grid_details_carouselSlide.style.transform = 'translateX(' + (- grid_details_size * grid_details_counter) + 'px)';
+                }   
+                grid_details_carouselSlide.style.transition = "transition: all ease 2s;";
+                grid_details_counter++;
+        grid_details_carouselSlide.style.transform = 'translateX(' + (-grid_details_size * grid_details_counter) + 'px)';
+      
+    }
+    function grid_details_arrowPrev() {
+        if (grid_details_carouselImages[grid_details_counter].id === 'footerslide'+'1') {
+            grid_details_carouselSlide.style.transition = "transition: all ease 2s;";
+            grid_details_counter = grid_details_carouselImages.length ;
+            grid_details_carouselSlide.style.transform = 'translateX(' + (- grid_details_size * grid_details_counter) + 'px)';
+        }
+        grid_details_carouselSlide.style.transition = "transition: all ease 2s;";
+        grid_details_counter--;
+        grid_details_carouselSlide.style.transform = 'translateX(' + (-grid_details_size * grid_details_counter) + 'px)';
+        
+    }
+
 </script>
