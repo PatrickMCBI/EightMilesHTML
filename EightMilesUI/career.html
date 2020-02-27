@@ -4,94 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8MilesTravel</title>
-    <script src="js/jquery-3.4.min.js"></script>
+    <title>8MilesTravel-Career</title>
+    <link rel="stylesheet" href="css/custom/career.css">
 
     <!----------------  Header And Footer  --------------->
     <link rel="stylesheet" href="css/template/header.css">
     <link rel="stylesheet" href="css/template/footer.css">
     <!----------------  FontAwesome   --------------->
     <link rel="stylesheet" href="css/all.min.css">
-    <!----------------  Magnetic Popup   --------------->
-    <script src="js/magnificPopup.js"></script>
-    <link rel="stylesheet" href="css/custom/magnificPopup.css">
-    <link rel="stylesheet" href="css/custom/career.css">
-
 </head>
 
 <body>
 
-
-    <!----------------  header  --------------->
-    <div class="header">
-        <div class="mycontainer">
-            <div class="header-content">
-                <div class="header-left"><img src="img/8mileslogo.png" alt="" width="160"></div>
-                <div class="header-right">
-                    <div class="loginmenu">
-                        <div style="display:none;">
-                            <input class="input_uname" type="text" placeholder="Username">
-                            <input class="input_pwd" type="text" placeholder="Password">
-                            <label class="forgotpwd"><a href="facebook.com" target="_blank">Forgot Password?</a>
+    <div class="wrapper">
+        <!----------------  header  --------------->
+        <div class="header">
+            <div class="mycontainer">
+                <div class="header-content">
+                    <div class="header-left"><img src="img/8mileslogo.png" alt="" width="160"></div>
+                    <div class="header-right">
+                        <div class="loginmenu">
+                            <div style="display:none;">
+                                <input class="input_uname" type="text" placeholder="Username">
+                                <input class="input_pwd" type="text" placeholder="Password">
+                                <label class="forgotpwd"><a href="facebook.com" target="_blank">Forgot Password?</a>
                             </label>
-                            <label><a href="newuser.html" target="_blank">New User?</a> </label>
+                                <label><a href="newuser.html" target="_blank">New User?</a> </label>
+                            </div>
                         </div>
+                        <table>
+                            <tr>
+                                <td onclick="tab_home(event)">HOME</td>
+                                <td class="tab_destination">DESTINATION</td>
+                                <td onclick="tab_partners(event)">PARTNERS</td>
+                                <td onclick="tab_services(event)">SERVICES</td>
+                                <td onclick="tab_about(event)">ABOUT</td>
+                                <td onclick="tab_contact(event)">CONTACT</td>
+                            </tr>
+                        </table>
                     </div>
+                    <div class="loginbutton">
+                        <label onclick="btnlogin()">LOGIN</label>
+                    </div>
+                    <div class="header-navigation" onclick="navigation()"> <i class="fas fa-bars"></i></div>
+                </div>
+                <!----------------  Mobile Navbar  --------------->
+                <div class="mobile-nav">
                     <table>
                         <tr>
-                            <td onclick="tab_home(event)">HOME</td>
-                            <td class="tab_destination">DESTINATION</td>
-                            <td onclick="tab_partners(event)">PARTNERS</td>
-                            <td onclick="tab_services(event)">SERVICES</td>
-                            <td onclick="tab_about(event)">ABOUT</td>
-                            <td onclick="tab_contact(event)">CONTACT</td>
+                            <td class="header-tab" onclick="tab_home(event)">HOME</td>
+                            <td class="header-tab" onclick="tab_destination(event)">DESTINATION</td>
+                            <td class="header-tab" onclick="tab_partners(event)">PARTNERS</td>
+                            <td class="header-tab" onclick="tab_services(event)">SERVICES</td>
+                            <td class="header-tab" onclick="tab_about(event)">ABOUT</td>
+                            <td class="header-tab" onclick="tab_contact(event)">CONTACT</td>
                         </tr>
                     </table>
                 </div>
-                <div class="loginbutton">
-                    <label onclick="btnlogin()">LOGIN</label>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="mycontainer">
+                <div class="career">
+                    <div class="left">
+                        <h1>Details</h1>
+                        <div class="joblist">
+
+                            <div class="textheader"> POSITION</div>
+                            <div class="textheader">DATE POSTED</div>
+                            <div class="textheader">LOCATION</div>
+
+                        </div>
+                    </div>
+
+                    <div class="right">
+                        <div class="applynowform">
+                            <h1>APPLY NOW!</h1>
+                            <form action="">
+                                <input type="text" class="input-text" placeholder="Fullname">
+                                <input type="text" class="input-text" placeholder="Email">
+                                <input type="text" class="input-text" placeholder="Position & Job Title">
+                                <input type="file" class="input-text">
+                                <input type="submit" value="SUBMIT" class="input-submit-green btn">
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="header-navigation" onclick="navigation()"> <i class="fas fa-bars"></i></div>
             </div>
-
-            <!----------------  Mobile Navbar  --------------->
-            <div class="mobile-nav">
-                <table>
-                    <tr>
-                        <td class="header-tab" onclick="tab_home(event)">HOME</td>
-                        <td class="header-tab" onclick="tab_destination(event)">DESTINATION</td>
-                        <td class="header-tab" onclick="tab_partners(event)">PARTNERS</td>
-                        <td class="header-tab" onclick="tab_services(event)">SERVICES</td>
-                        <td class="header-tab" onclick="tab_about(event)">ABOUT</td>
-                        <td class="header-tab" onclick="tab_contact(event)">CONTACT</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="content">
-        <div class="grid-details">
-            <ul class="ul-cs">
-                <li>
-                    <span style="font-size: 34px;"> Job Title 1 </span>
-                    <span style="float: right; padding-right: 50px; font-size: 15px;">Date Posted: February
-                        25,2020</span>
-                </li>
-                <p style="font-size: 20px;">Details</p>
-
-            </ul>
-        </div>
-        <div class="grid-sidebar" style="padding:20px;">
-            <Label style="font-size: 30px;">APPLY NOW!</Label>
-            <form action="" style="width: 100%; padding: 20px 40px 20px 40px;">
-                <input type="text" class="input-text" placeholder="Fullname">
-                <input type="text" class="input-text" placeholder="Email">
-                <input type="text" class="input-text" placeholder="Position & Job Title">
-                <input type="file" class="input-text">
-
-                <input type="submit" value="SUBMIT" class="input-submit-green">
-
-            </form>
         </div>
     </div>
 
@@ -100,9 +100,7 @@
         <div class="mycontainer">
             <div class="footerdetails">
                 <div>
-                    <h3>About 8 miles Travel Corp. 8-Miles Travel Corp.</h3> 8-Miles Travel Corp. is a legit Travel
-                    Company that caters all Airline ticketing (Domestic & International flights), Tour Packages, Car
-                    Rental Services, Passporting, Tourist Visas
+                    <h3>About 8 miles Travel Corp. 8-Miles Travel Corp.</h3> 8-Miles Travel Corp. is a legit Travel Company that caters all Airline ticketing (Domestic & International flights), Tour Packages, Car Rental Services, Passporting, Tourist Visas
                     etc.
                 </div>
                 <div>
@@ -127,35 +125,25 @@
             </div>
         </div>
     </div>
-
-
     <!----------------   Footer Partners   --------------->
     <div class="footerpartners">
         <div class="mycontainer">
             <div class="footerpartnersdetails">
-                <a href="https://x-mediagraphicsinc.com/" target="_blank">X-Media Graphics Inc.</a> | MCBI-Trade
-                Corporation | MCBI-Land Corporation |
+                <a href="https://x-mediagraphicsinc.com/" target="_blank">X-Media Graphics Inc.</a> | MCBI-Trade Corporation | MCBI-Land Corporation |
                 <a href="https://mcbi-equipments.com/" target="_blank">MCBI-Equipments Inc.</a>
                 <div>
                 </div>
             </div>
         </div>
     </div>
-
-
     <!----------------   Return To Top   --------------->
     <div onclick="returntotop()" class="returntotop">
         <i class="fas fa-chevron-up"></i>
     </div>
-
-
     <!----------------   Chat   --------------->
     <div id="fb-widget" class="fb-widget">
         <div class="ctrlq fb-close" onclick="chat()" style="transition: all ease 4s;">X</div>
-        <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/eightmilestravel/"
-            data-tabs="messages" data-width="360" data-height="400" data-small-header="true" data-hide-cover="true"
-            data-show-facepile="false" fb-xfbml-state="rendered"
-            fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;height=400&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Feightmilestravel%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=messages&amp;width=360">
+        <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/eightmilestravel/" data-tabs="messages" data-width="360" data-height="400" data-small-header="true" data-hide-cover="true" data-show-facepile="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;height=400&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Feightmilestravel%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=messages&amp;width=360">
             <span style="vertical-align: bottom; width: 360px; height: 400px;"><iframe name="f37bbcb1982089c"
                     width="360px" height="400px" title="fb:page Facebook Social Plugin" frameborder="0"
                     allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
@@ -171,154 +159,61 @@
 
 </body>
 
+<script src="js/jquery-3.4.min.js"></script>
 
 <script>
     //-------------------   Mounted   --------------------------
-    destination();
-    Partners();
-    Services();
-    Services_Airlines();
+    scrollwindowsAndNavbar();
+    Bindhiring();
 
-    // windows size
-    $(window).resize(function () {
-        var windowsize = $(window).width();
-        console.log(windowsize);
-        if (windowsize > "1030") {
-            console.log("windows: " + windowsize);
-        } else { }
-    });
+    //-------------------   Methods   --------------------------
+    function Bindhiring() {
+        for (var i = 1; i <= 26; i++) {
 
-    // scroll show nav
-    window.addEventListener("scroll", function () {
-        if (document.documentElement.scrollTop > 100) {
-            $('.header_boxshadow').addClass('sticky-top');
-            $('.returntotop').css('display', 'block');
-            $('.chat').css('margin-right', '2.3em');
-            $('.fb-widget').css('margin-right', '3em');
+            var imgEL2 = '<div><Input type="checkbox""></Input> Web Develop</div><div >Feb. ' + i + ', 2020</div><div >Cebu City, Cebu9 th Floor </div>';
+            $('.joblist').append(imgEL2)
 
-
-
-        } else {
-            $('.header_boxshadow').removeClass('sticky-top');
-            $('.returntotop').css('display', 'none');
-            $('.chat').css('margin-right', '0em');
-            $('.fb-widget').css('margin-right', '0em');
-        }
-    });
-
-    // Magnefic Popup
-    $('.destination_image img').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true
-        }
-    });
-
-
-    //-------------------   methods   --------------------------
-    function destination() {
-        for (var i = 1; i <= 6; i++) {
-            var imageLink = ("img/TopDestination/" + i + ".jpg");
-            var imgEL = '<div><img src="' + imageLink + '" class="img-fluid" href="' + imageLink + '"></div>';
-            $('.destination_image').append(imgEL)
         }
     }
 
-    function Partners() {
-        for (var i = 1; i <= 4; i++) {
-            if (i == 1) {
-                var imageLink = ("img/Partners/" + i + ".png");
-                var imgEL = '<div><a href="https://mcbi-equipments.com/" target="_blank"><img src="' + imageLink + '" class="img-fluid" title="MCBI EQUIPMENT" style="margin-top:2.5em"></a></div>';
-                $('.partners_image').append(imgEL)
-            } else if (i == 2) {
-                var imageLink = ("img/Partners/" + i + ".png");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"></div>';
-                $('.partners_image').append(imgEL)
-            } else if (i == 3) {
-                var imageLink = ("img/Partners/" + i + ".png");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid" style="margin-top:2.5em"></div>';
-                $('.partners_image').append(imgEL)
-            } else if (i == 4) {
-                var imageLink = ("img/Partners/" + i + ".png");
-                var imgEL = '<div><a href="https://x-mediagraphicsinc.com/" target="_blank"><img src="' + imageLink + '" class="img-fluid"  title="X-MEDIA GRAPHICS INC." style="margin-top:2.5em"></a></div>';
-                $('.partners_image').append(imgEL)
+    function scrollwindowsAndNavbar() {
+        // scroll show nav
+        window.addEventListener("scroll", function() {
+            if (document.documentElement.scrollTop > 100) {
+                $('.header').addClass('sticky-top');
+                $('.returntotop').css('display', 'block');
+                $('.chat').css('margin-right', '2.3em');
+                $('.fb-widget').css('margin-right', '3em');
             } else {
-                var imageLink = ("img/Partners/" + i + ".png");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"></div>';
-                $('.partners_image').append(imgEL)
+                $('.header').removeClass('sticky-top');
+                $('.returntotop').css('display', 'none');
+                $('.chat').css('margin-right', '0em');
+                $('.fb-widget').css('margin-right', '0em');
             }
-
-        }
-    }
-
-    function Services() {
-        for (var i = 1; i <= 8; i++) {
-            if (i == 1) {
-                var imageLink = ("img/Services/" + i + ".jpg");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Domestic International Ticket Issuance</p></div>';
-                $('.servicesimage').append(imgEL)
-            } else if (i == 2) {
-                var imageLink = ("img/Services/" + i + ".jpg");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Accomodation</p></div>';
-                $('.servicesimage').append(imgEL)
-            } else if (i == 3) {
-                var imageLink = ("img/Services/" + i + ".jpg");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>International Tour Packages</p></div>';
-                $('.servicesimage').append(imgEL)
-            } else if (i == 4) {
-                var imageLink = ("img/Services/" + i + ".jpg");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Local Tour Packages</p></div>';
-                $('.servicesimage').append(imgEL)
-            } else if (i == 5) {
-                var imageLink = ("img/Services/" + i + ".jpg");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Visa Assistance</p></div>';
-                $('.servicesimage').append(imgEL)
-            } else if (i == 6) {
-                var imageLink = ("img/Services/" + i + ".jpg");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Car Rentals</p></div>';
-                $('.servicesimage').append(imgEL)
-            } else if (i == 7) {
-                var imageLink = ("img/Services/" + i + ".jpg");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Shipping Ticket Issuance</p></div>';
-                $('.servicesimage').append(imgEL)
-            } else if (i == 8) {
-                var imageLink = ("img/Services/" + i + ".jpg");
-                var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"><p>Travel Insurance</p></div>';
-                $('.servicesimage').append(imgEL)
-            }
-
-        }
-    }
-
-    function Services_Airlines() {
-        for (var i = 1; i <= 9; i++) {
-
-            var imageLink = ("img/Services/" + i + ".png");
-            var imgEL = '<div><img src="' + imageLink + '" class="img-fluid"></div>';
-            $('.servicesimage_airlines').append(imgEL)
-        }
-    }
-
-    function Services_Airlines() {
-        for (var i = 1; i <= 3; i++) {
-            if (i == 1) {
-                var imgEL = '<div><h3>Who are We</h3> 8-Miles Travel Corp is newly formed travel company, duly-organized and registered corporation with the Securities & Exchange Commission (SEC) on May 16, 2019 with Registration No. CS20196195 to serve the growing needs of travel and hospitality industry in the Philippines with the goal to provide travelers, their passion to explore our local tourist destination in the Philippines and abroad.</div>';
-                $('.aboutusdetails').append(imgEL)
-            } else if (i == 2) {
-                var imgEL = '<div><h3>Mission</h3>To serve our clients with enchanced travel experience by providing quality services that address their travel needs, through the most efficient arrangements so that customer loyalty, superior financial results and excellent customer satisfaction can be achieved.</div>';
-                $('.aboutusdetails').append(imgEL)
-            } else if (i == 3) {
-                var imgEL = '<div><h3>Vission</h3>To be one of the most trusted and respected travel company recognized by our clients for delivering excellence. To become the leading provider of travel solutions across Philippines and to constinuously create new opportunities for growth in our strategic business.</div>';
-                $('.aboutusdetails').append(imgEL)
-            }
-        }
+        });
     }
 
     function navigation() {
-        // $('#table').slideToggle('slow');
-        $('.loginmenu').toggleClass('slidewidth');
-        $('#table').slideToggle('slow');
-        $('.loginmenu div').slideToggle('slow')
+        $('.header-tab').toggleClass('header-tab-resizeheight');
+    }
+
+    function logincookies() {
+        var Uname = $.cookie("Uname");
+        if (typeof Uname === "undefined") {} else {
+            window.location.href = "editUI.html";
+        }
+    }
+
+    function btnlogin() {
+        var uname = $('.input_uname').val();
+        if (uname === '') {
+            $('.loginmenu').toggleClass('slidewidth');
+            $('.header-right table').slideToggle('slow');
+            $('.loginmenu div').slideToggle('slow')
+        } else {
+            $.cookie("Uname", uname);
+            window.location.href = "editUI.html";
+        }
     }
 
     function returntotop() {
@@ -327,52 +222,8 @@
         });
     }
 
-    function tab_home() {
-        document.querySelector('body').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-
-    function tab_destination() {
-        document.querySelector('.destination').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-
-    function tab_partners() {
-        document.querySelector('.partners').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-
-    function tab_services() {
-        document.querySelector('.services').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-
-    function tab_about() {
-        document.querySelector('.aboutus').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-
-    function tab_contact() {
-        document.querySelector('.getintouch').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-
-    function btnlogin() {
-        $('.loginmenu').toggleClass('slidewidth');
-        $('#table').slideToggle('slow');
-        $('.loginmenu div').slideToggle('slow')
-    }
-
     function chat() {
-        //    $('.fb-widget').css('display','block');
         $('.fb-widget').slideToggle();
-
     }
 </script>
 

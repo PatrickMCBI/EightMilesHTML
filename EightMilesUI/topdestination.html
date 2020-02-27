@@ -144,10 +144,8 @@
                 <div class="mycontainer">
                     <div class="footerdetails">
                         <div>
-                            <h3>About 8 miles Travel Corp. 8-Miles Travel Corp.</h3> 8-Miles Travel Corp. is a legit
-                            Travel Company that caters all Airline ticketing (Domestic & International flights), Tour
-                            Packages, Car Rental Services, Passporting, Tourist Visas
-                            etc.
+                            <h3>About 8 miles Travel Corp. 8-Miles Travel Corp.</h3> 8-Miles Travel Corp. is a legit Travel Company that caters all Airline ticketing (Domestic & International flights), Tour Packages, Car Rental Services, Passporting, Tourist
+                            Visas etc.
                         </div>
                         <div>
                             <h3>Quick Links</h3>
@@ -175,8 +173,7 @@
             <div class="footerpartners">
                 <div class="mycontainer">
                     <div class="footerpartnersdetails">
-                        <a href="https://x-mediagraphicsinc.com/" target="_blank">X-Media Graphics Inc.</a> | MCBI-Trade
-                        Corporation | MCBI-Land Corporation |
+                        <a href="https://x-mediagraphicsinc.com/" target="_blank">X-Media Graphics Inc.</a> | MCBI-Trade Corporation | MCBI-Land Corporation |
                         <a href="https://mcbi-equipments.com/" target="_blank">MCBI-Equipments Inc.</a>
                         <div>
                         </div>
@@ -190,10 +187,7 @@
             <!----------------   Chat   --------------->
             <div id="fb-widget" class="fb-widget">
                 <div class="ctrlq fb-close" onclick="chat()" style="transition: all ease 4s;">X</div>
-                <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/eightmilestravel/"
-                    data-tabs="messages" data-width="360" data-height="400" data-small-header="true"
-                    data-hide-cover="true" data-show-facepile="false" fb-xfbml-state="rendered"
-                    fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;height=400&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Feightmilestravel%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=messages&amp;width=360">
+                <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/eightmilestravel/" data-tabs="messages" data-width="360" data-height="400" data-small-header="true" data-hide-cover="true" data-show-facepile="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;height=400&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Feightmilestravel%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=messages&amp;width=360">
                     <span style="vertical-align: bottom; width: 360px; height: 400px;"><iframe name="f37bbcb1982089c"
                             width="360px" height="400px" title="fb:page Facebook Social Plugin" frameborder="0"
                             allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
@@ -224,7 +218,9 @@
 
 <script>
     //-------------------   Mounted   --------------------------
-    $('.tab_destination').css({ 'color': 'green' });
+    $('.tab_destination').css({
+        'color': 'green'
+    });
     BindRightImage();
     Accordion();
     scrollwindowsAndNavbar();
@@ -232,7 +228,7 @@
     //-------------------   Methods   --------------------------
     function scrollwindowsAndNavbar() {
         // scroll show nav
-        window.addEventListener("scroll", function () {
+        window.addEventListener("scroll", function() {
             if (document.documentElement.scrollTop > 100) {
                 $('.header').addClass('sticky-top');
                 $('.returntotop').css('display', 'block');
@@ -246,32 +242,38 @@
             }
         });
     }
+
     function tab_home() {
         $.cookie("tab", "tab_home");
         window.location.href = "/";
     }
+
     function tab_partners() {
         $.cookie("tab", "tab_partners");
         window.location.href = "/";
     }
+
     function tab_services() {
         $.cookie("tab", "tab_services");
         window.location.href = "/";
     }
+
     function tab_about() {
         $.cookie("tab", "tab_about");
         window.location.href = "/";
     }
+
     function tab_contact() {
         $.cookie("tab", "tab_contact");
         window.location.href = "/";
     }
+
     function Accordion() {
         var acc = document.getElementsByClassName("accordion");
         var i;
 
         for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
+            acc[i].addEventListener("click", function() {
                 this.classList.toggle("active");
                 var panel = this.nextElementSibling;
                 if (panel.style.maxHeight) {
@@ -296,24 +298,26 @@
         if (carouselImages[counter].id === imglength.toString()) {
             carouselSlide.style.transition = "transition: all ease 0s;";
             counter = -1;
-            carouselSlide.style.transform = 'translateY(' + (- size * counter) + 'px)';
+            carouselSlide.style.transform = 'translateY(' + (-size * counter) + 'px)';
         }
         carouselSlide.style.transition = "transition: all ease 10s;";
         counter++;
         carouselSlide.style.transform = 'translateY(' + (-size * counter) + 'px)';
 
     }
+
     function prevBtn() {
         if (carouselImages[counter].id === '1') {
             carouselSlide.style.transition = "transition: all ease 0s;";
             counter = carouselImages.length;
-            carouselSlide.style.transform = 'translateY(' + (- size * counter) + 'px)';
+            carouselSlide.style.transform = 'translateY(' + (-size * counter) + 'px)';
         }
         carouselSlide.style.transition = "transition: all ease 10s;";
         counter--;
         carouselSlide.style.transform = 'translateY(' + (-size * counter) + 'px)';
 
     }
+
     function click_img(event) {
         // console.log(event.target);
         $('.grid-details .grid .grid-body img').remove();
@@ -326,8 +330,9 @@
         $('.grid-details .grid .grid-body').append(imgEL2)
         $('.myslide #' + targetID + '').css('background-color', '#F5DEB3');
         $('.grid-details .grid .grid-footer .mobileslider .ImgSlides #' + targetID + '').css('opacity', '1');
- 
+
     }
+
     function BindRightImage() {
         for (var i = 1; i <= 6; i++) {
             var imageLink = ("img/TopDestination/Featured Image/" + i + ".jpg");
@@ -349,6 +354,7 @@
             $('.grid-details .grid .grid-footer .mobileslider .ImgSlides').append(footerslide)
         }
     }
+
     function panel_ManilaZoo() {
         $('.container_carousel .myslide img').remove();
         $('.grid-details .grid .grid-footer .mobileslider .ImgSlides img').remove()
@@ -360,6 +366,7 @@
             $('.grid-details .grid .grid-footer .mobileslider .ImgSlides').append(footerslide)
         }
     }
+
     function panel_ManilaBay() {
         $('.container_carousel .myslide img').remove();
         $('.grid-details .grid .grid-footer .mobileslider .ImgSlides img').remove()
@@ -371,37 +378,40 @@
             $('.grid-details .grid .grid-footer .mobileslider .ImgSlides').append(footerslide)
         }
     }
+
     function navigation() {
         $('.header-tab').toggleClass('header-tab-resizeheight');
     }
+
     function logincookies() {
         var Uname = $.cookie("Uname");
-        if (typeof Uname === "undefined") {
-        } else {
+        if (typeof Uname === "undefined") {} else {
             window.location.href = "editUI.html";
         }
     }
+
     function btnlogin() {
         var uname = $('.input_uname').val();
         if (uname === '') {
             $('.loginmenu').toggleClass('slidewidth');
             $('.header-right table').slideToggle('slow');
             $('.loginmenu div').slideToggle('slow')
-        }
-        else {
+        } else {
             $.cookie("Uname", uname);
             window.location.href = "editUI.html";
         }
     }
+
     function returntotop() {
         document.querySelector('body').scrollIntoView({
             behavior: 'smooth'
         });
     }
+
     function chat() {
         $('.fb-widget').slideToggle();
     }
-    
+
     const grid_details_carouselSlide = document.querySelector('.ImgSlides');
     const grid_details_carouselImages = document.querySelectorAll('.ImgSlides img');
 
@@ -412,27 +422,27 @@
     grid_details_carouselSlide.style.transform = 'translateX(' + (-grid_details_size * counter) + 'px)';
 
     // Button Listeners
-    function grid_details_arrowNext(){
-                if (grid_details_carouselImages[grid_details_counter].id === 'footerslide'+'6') {
-                    grid_details_carouselSlide.style.transition = "transition: all ease 2s;";
-                    grid_details_counter = -1;
-                    grid_details_carouselSlide.style.transform = 'translateX(' + (- grid_details_size * grid_details_counter) + 'px)';
-                }   
-                grid_details_carouselSlide.style.transition = "transition: all ease 2s;";
-                grid_details_counter++;
-        grid_details_carouselSlide.style.transform = 'translateX(' + (-grid_details_size * grid_details_counter) + 'px)';
-      
-    }
-    function grid_details_arrowPrev() {
-        if (grid_details_carouselImages[grid_details_counter].id === 'footerslide'+'1') {
+    function grid_details_arrowNext() {
+        if (grid_details_carouselImages[grid_details_counter].id === 'footerslide' + '6') {
             grid_details_carouselSlide.style.transition = "transition: all ease 2s;";
-            grid_details_counter = grid_details_carouselImages.length ;
-            grid_details_carouselSlide.style.transform = 'translateX(' + (- grid_details_size * grid_details_counter) + 'px)';
+            grid_details_counter = -1;
+            grid_details_carouselSlide.style.transform = 'translateX(' + (-grid_details_size * grid_details_counter) + 'px)';
+        }
+        grid_details_carouselSlide.style.transition = "transition: all ease 2s;";
+        grid_details_counter++;
+        grid_details_carouselSlide.style.transform = 'translateX(' + (-grid_details_size * grid_details_counter) + 'px)';
+
+    }
+
+    function grid_details_arrowPrev() {
+        if (grid_details_carouselImages[grid_details_counter].id === 'footerslide' + '1') {
+            grid_details_carouselSlide.style.transition = "transition: all ease 2s;";
+            grid_details_counter = grid_details_carouselImages.length;
+            grid_details_carouselSlide.style.transform = 'translateX(' + (-grid_details_size * grid_details_counter) + 'px)';
         }
         grid_details_carouselSlide.style.transition = "transition: all ease 2s;";
         grid_details_counter--;
         grid_details_carouselSlide.style.transform = 'translateX(' + (-grid_details_size * grid_details_counter) + 'px)';
-        
-    }
 
+    }
 </script>

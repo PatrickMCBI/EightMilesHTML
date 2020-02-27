@@ -1,48 +1,145 @@
-.wrapper {
-    display: grid;
-    grid-template-areas: "header" "content" "footer";
-    grid-template-rows: 20vh 60vh 20vh;
-}
-
-.content {
-    grid-area: content;
-    display: grid;
-    grid-template-areas: "details sidebar";
-    grid-template-columns: 70% 30%;
-    padding: 20px 0px 10px 20px;
-}
-
-.grid-details {
-    grid-area: details;
-}
-
-.grid-sidebar {
-    grid-area: sidebar;
-}
-
-.input-text {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.input-submit-green {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.ul-cs {
-    list-style-type: none;
-    border-bottom: 2px solid #f1f1f1;
-    padding: 30px;
-}
+        /*--------------------------------------------
+Wrapper
+---------------------------------------------*/
+        
+        .wrapper {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-auto-rows: minmax(0px, max-content);
+            grid-template-areas: "header" "main";
+        }
+        
+        .header {
+            grid-area: header;
+            background-color: #fff;
+            box-shadow: 0px 0px 8px 0px rgb(169, 167, 167);
+        }
+        
+        .btn {
+            display: inline-block;
+            font-weight: 400;
+            color: #212529;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: transparent;
+            border: 1px solid transparent;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        
+        .btn:hover {
+            opacity: 0.8;
+        }
+        /*--------------------------------------------
+Main    
+---------------------------------------------*/
+        
+        ​ .main {
+            grid-area: main;
+            background-color: rgb(124, 235, 140);
+        }
+        
+        .career {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 70% 30%;
+            grid-auto-rows: minmax(0px, max-content);
+            grid-template-areas: "left" "right";
+            /* height: 100em; */
+        }
+        
+        .career div {
+            border: 0px solid red;
+            /* margin-top: 1em; */
+        }
+        
+        ​ .left {
+            grid-area: left;
+            background-color: rgb(124, 235, 140);
+        }
+        
+        ​ .right {
+            grid-area: right;
+            background-color: rgb(124, 235, 140);
+        }
+        /*--------------------------------------------
+Left    
+---------------------------------------------*/
+        
+        .joblist {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 33.3% 33.3% 33.3%;
+            grid-auto-rows: minmax(0px, max-content);
+        }
+        
+        .joblist div {
+            border-bottom: 1.5px solid #f1f1f1;
+            margin-top: 0.5em;
+        }
+        
+        .left h1 {
+            font-weight: 500;
+            font-size: 2em;
+            color: black;
+            /* opacity: 0.5; */
+        }
+        
+        .joblist .textheader {
+            font-weight: 900;
+            height: 2em;
+        }
+        /*--------------------------------------------
+Right    
+---------------------------------------------*/
+        
+        .applynowform {
+            margin-top: 2.5em;
+            padding-left: 40px;
+            padding-right: 40px;
+            border: 0px solid rgba(128, 128, 128, 0.442);
+            width: 100%;
+        }
+        
+        .applynowform h1 {
+            font-weight: 500;
+            color: black;
+            /* text-shadow: 1px 1px 1px black; */
+        }
+        
+        .input-text {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .input-submit-green {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .ul-cs {
+            list-style-type: none;
+            border-bottom: 2px solid #f1f1f1;
+            padding: 30px;
+        }
