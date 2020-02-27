@@ -5,51 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8MilesTravel</title>
-    <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery-3.4.min.js"></script>
 
+    <!----------------  Header And Footer  --------------->
+    <link rel="stylesheet" href="css/template/header.css">
+    <link rel="stylesheet" href="css/template/footer.css">
     <!----------------  FontAwesome   --------------->
     <link rel="stylesheet" href="css/all.min.css">
     <!----------------  Magnetic Popup   --------------->
     <script src="js/magnificPopup.js"></script>
-    <link rel="stylesheet" href="css/magnificPopup.css">
-    <link rel="stylesheet" href="css/career.css">
+    <link rel="stylesheet" href="css/custom/magnificPopup.css">
+    <link rel="stylesheet" href="css/custom/career.css">
 
 </head>
 
 <body>
 
 
-    <!----------------   Header   --------------->
-    <div class="header_boxshadow">
+    <!----------------  header  --------------->
+    <div class="header">
         <div class="mycontainer">
-            <div class="header-wrapper">
+            <div class="header-content">
                 <div class="header-left"><img src="img/8mileslogo.png" alt="" width="160"></div>
                 <div class="header-right">
-                    <div class="header-navigation" onclick="navigation()"> <i class="fas fa-bars"></i></div>
                     <div class="loginmenu">
-                        <div style="display: none;">
-                            <input type="text" placeholder="Username">
-                            <input type="text" placeholder="Password">
-                            <label class="forgotpwd"><a  href="facebook.com" target="_blank">Forgot Password?</a> </label>
+                        <div style="display:none;">
+                            <input class="input_uname" type="text" placeholder="Username">
+                            <input class="input_pwd" type="text" placeholder="Password">
+                            <label class="forgotpwd"><a href="facebook.com" target="_blank">Forgot Password?</a>
+                            </label>
                             <label><a href="newuser.html" target="_blank">New User?</a> </label>
                         </div>
-
                     </div>
-                    <table id="table" style="display: table;">
+                    <table>
                         <tr>
-                            <td onclick="tab_home()">HOME</td>
-                            <td onclick="tab_destination()">DESTINATION</td>
-                            <td onclick="tab_partners()">PARTNERS</td>
-                            <td onclick="tab_services()">SERVICES</td>
-                            <td onclick="tab_about()">ABOUT</td>
-                            <td onclick="tab_contact()">CONTACT</td>
+                            <td onclick="tab_home(event)">HOME</td>
+                            <td class="tab_destination">DESTINATION</td>
+                            <td onclick="tab_partners(event)">PARTNERS</td>
+                            <td onclick="tab_services(event)">SERVICES</td>
+                            <td onclick="tab_about(event)">ABOUT</td>
+                            <td onclick="tab_contact(event)">CONTACT</td>
                         </tr>
                     </table>
                 </div>
                 <div class="loginbutton">
                     <label onclick="btnlogin()">LOGIN</label>
                 </div>
+                <div class="header-navigation" onclick="navigation()"> <i class="fas fa-bars"></i></div>
+            </div>
+
+            <!----------------  Mobile Navbar  --------------->
+            <div class="mobile-nav">
+                <table>
+                    <tr>
+                        <td class="header-tab" onclick="tab_home(event)">HOME</td>
+                        <td class="header-tab" onclick="tab_destination(event)">DESTINATION</td>
+                        <td class="header-tab" onclick="tab_partners(event)">PARTNERS</td>
+                        <td class="header-tab" onclick="tab_services(event)">SERVICES</td>
+                        <td class="header-tab" onclick="tab_about(event)">ABOUT</td>
+                        <td class="header-tab" onclick="tab_contact(event)">CONTACT</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -58,7 +74,8 @@
             <ul class="ul-cs">
                 <li>
                     <span style="font-size: 34px;"> Job Title 1 </span>
-                    <span style="float: right; padding-right: 50px; font-size: 15px;">Date Posted: February 25,2020</span>
+                    <span style="float: right; padding-right: 50px; font-size: 15px;">Date Posted: February
+                        25,2020</span>
                 </li>
                 <p style="font-size: 20px;">Details</p>
 
@@ -83,7 +100,9 @@
         <div class="mycontainer">
             <div class="footerdetails">
                 <div>
-                    <h3>About 8 miles Travel Corp. 8-Miles Travel Corp.</h3> 8-Miles Travel Corp. is a legit Travel Company that caters all Airline ticketing (Domestic & International flights), Tour Packages, Car Rental Services, Passporting, Tourist Visas
+                    <h3>About 8 miles Travel Corp. 8-Miles Travel Corp.</h3> 8-Miles Travel Corp. is a legit Travel
+                    Company that caters all Airline ticketing (Domestic & International flights), Tour Packages, Car
+                    Rental Services, Passporting, Tourist Visas
                     etc.
                 </div>
                 <div>
@@ -114,7 +133,8 @@
     <div class="footerpartners">
         <div class="mycontainer">
             <div class="footerpartnersdetails">
-                <a href="https://x-mediagraphicsinc.com/" target="_blank">X-Media Graphics Inc.</a> | MCBI-Trade Corporation | MCBI-Land Corporation |
+                <a href="https://x-mediagraphicsinc.com/" target="_blank">X-Media Graphics Inc.</a> | MCBI-Trade
+                Corporation | MCBI-Land Corporation |
                 <a href="https://mcbi-equipments.com/" target="_blank">MCBI-Equipments Inc.</a>
                 <div>
                 </div>
@@ -132,7 +152,16 @@
     <!----------------   Chat   --------------->
     <div id="fb-widget" class="fb-widget">
         <div class="ctrlq fb-close" onclick="chat()" style="transition: all ease 4s;">X</div>
-        <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/eightmilestravel/" data-tabs="messages" data-width="360" data-height="400" data-small-header="true" data-hide-cover="true" data-show-facepile="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;height=400&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Feightmilestravel%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=messages&amp;width=360"><span style="vertical-align: bottom; width: 360px; height: 400px;"><iframe name="f37bbcb1982089c" width="360px" height="400px" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.12/plugins/page.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D45%23cb%3Df311e6ef6f7c6d4%26domain%3Deightmilestravel.com%26origin%3Dhttp%253A%252F%252Feightmilestravel.com%252Ff134bcd73988%26relation%3Dparent.parent&amp;container_width=0&amp;height=400&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Feightmilestravel%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=messages&amp;width=360" style="border: none; visibility: visible; width: 360px; height: 400px;" class=""></iframe></span></div>
+        <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/eightmilestravel/"
+            data-tabs="messages" data-width="360" data-height="400" data-small-header="true" data-hide-cover="true"
+            data-show-facepile="false" fb-xfbml-state="rendered"
+            fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;height=400&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Feightmilestravel%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=messages&amp;width=360">
+            <span style="vertical-align: bottom; width: 360px; height: 400px;"><iframe name="f37bbcb1982089c"
+                    width="360px" height="400px" title="fb:page Facebook Social Plugin" frameborder="0"
+                    allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
+                    src="https://www.facebook.com/v2.12/plugins/page.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D45%23cb%3Df311e6ef6f7c6d4%26domain%3Deightmilestravel.com%26origin%3Dhttp%253A%252F%252Feightmilestravel.com%252Ff134bcd73988%26relation%3Dparent.parent&amp;container_width=0&amp;height=400&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Feightmilestravel%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=messages&amp;width=360"
+                    style="border: none; visibility: visible; width: 360px; height: 400px;" class=""></iframe></span>
+        </div>
 
         <div id="fb-root"></div>
     </div>
@@ -151,16 +180,16 @@
     Services_Airlines();
 
     // windows size
-    $(window).resize(function() {
+    $(window).resize(function () {
         var windowsize = $(window).width();
         console.log(windowsize);
         if (windowsize > "1030") {
             console.log("windows: " + windowsize);
-        } else {}
+        } else { }
     });
 
     // scroll show nav
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", function () {
         if (document.documentElement.scrollTop > 100) {
             $('.header_boxshadow').addClass('sticky-top');
             $('.returntotop').css('display', 'block');
