@@ -74,7 +74,7 @@
 
                     </ul>
                     <div class="panel_jobopening tab">
-                        <button onclick="selectjoblist()"><label > All Departments</label> <i class="fa_down fa fa-chevron-down"></i><i style="display: none;" class="fa_up fa fa-chevron-up"></i></button>
+                        <button onclick="btnjoblist()"><label > All Departments</label> <i class="fa_down fa fa-chevron-down"></i><i style="display: none;" class="fa_up fa fa-chevron-up"></i></button>
                         <div style="border: 0px solid red; width: 22.5%; height: 0em; margin: auto;">
                             <ul class="uljoblist">
                                 
@@ -312,7 +312,7 @@
         });
     }
 
-    function selectjoblist() {
+    function btnjoblist() {
         $('.uljoblist').toggleClass('uljoblistborder');
         $('.uljoblist li').toggleClass('uljoblist_toggle');
         $('.panel_jobopening button .fa_down').toggle();
@@ -322,22 +322,30 @@
     function BindJoblist() {
         for (var i = 1; i <= 5; i++) {
             if (i == 1) {
-                var jobname = '<li >IT / Computers</li>';
+                var jobname = '<li onclick="selectjoblist(event)" value="IT / Computers">IT / Computers</li>';
                 $('.panel_jobopening .uljoblist').append(jobname);
             } else if (i == 2) {
-                var jobname = '<li>Airline / Airport</li> ';
+                var jobname = '<li onclick="selectjoblist(event)" value="Airline / Airport">Airline / Airport</li> ';
                 $('.panel_jobopening .uljoblist').append(jobname);
             } else if (i == 3) {
-                var jobname = '<li>Accounting / Finance</li>  ';
+                var jobname = '<li onclick="selectjoblist(event)" value="Accounting / Finance">Accounting / Finance</li>  ';
                 $('.panel_jobopening .uljoblist').append(jobname);
             } else if (i == 4) {
-                var jobname = '<li>Admin / Office / Clerical</li> ';
+                var jobname = '<li onclick="selectjoblist(event)" value="Admin / Office / Clerical">Admin / Office / Clerical</li> ';
                 $('.panel_jobopening .uljoblist').append(jobname);
             } else if (i == 5) {
-                var jobname = '<li>Purchasing / Buyer</li>';
+                var jobname = '<li onclick="selectjoblist(event)" value="Purchasing / Buyer">Purchasing / Buyer</li>';
                 $('.panel_jobopening .uljoblist').append(jobname);
             }
         }
+    }
+    function selectjoblist(event){
+        $('.uljoblist').toggleClass('uljoblistborder');
+        $('.uljoblist li').toggleClass('uljoblist_toggle');
+        $('.panel_jobopening button .fa_down').toggle();
+        $('.panel_jobopening button .fa_up').toggle();
+        console.log(event.target.getAttribute('value'));
+
     }
 </script>
 
