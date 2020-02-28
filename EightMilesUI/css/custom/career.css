@@ -51,153 +51,114 @@ Main
     background-color: rgb(124, 235, 140);
 }
 
-.career {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 70% 30%;
-    grid-auto-rows: minmax(0px, max-content);
-    grid-template-areas: "left" "right";
-    /* height: 100em; */
-}
-
-.career div {
-    border: 0px solid red;
-    /* margin-top: 1em; */
-}
-
-​ .left {
-    grid-area: left;
-    background-color: rgb(124, 235, 140);
-}
-
-​ .right {
-    grid-area: right;
-    background-color: rgb(124, 235, 140);
-}
-
-
-/*--------------------------------------------
-Left    
----------------------------------------------*/
-
-
-/* .joblist {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
-    grid-auto-rows: minmax(0px, max-content);
-}
-
-.joblist div {
-    border-bottom: 1.5px solid #f1f1f1;
-    cursor: pointer;
-    height: 2em;
-} */
-
-.joblist table tr:hover {
-    background-color: #4CAF50;
-    cursor: pointer;
-}
-
-.left h1 {
-    font-weight: 500;
-    font-size: 2em;
-    color: black;
-}
-
-.joblist .textheader {
-    font-weight: 900;
-    height: 2em;
-}
-
-table {
-    border-spacing: 0px !important;
-}
-
-
-/*--------------------------------------------
-Right    
----------------------------------------------*/
-
-.applynowform {
-    margin-top: 2.5em;
-    padding-left: 40px;
-    padding-right: 40px;
-    border: 0px solid rgba(128, 128, 128, 0.442);
-    width: 100%;
-}
-
-.applynowform h1 {
-    font-weight: 500;
-    color: black;
-    /* text-shadow: 1px 1px 1px black; */
-}
-
-.input-text {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+.career .career_ul li {
     display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    border-bottom: 2px solid white;
+    color: gray;
+    font-weight: 500;
+    font-size: 1.3em;
+    margin-right: 2em;
+    opacity: 0.5;
 }
 
-.input-submit-green {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
+.career .career_ul li:hover {
+    color: green;
+    cursor: pointer;
+    border-bottom: 2px solid green;
+    opacity: 1;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+.career ul .li_jobopening {
+    color: green;
+    cursor: pointer;
+    border-bottom: 2px solid green;
+    opacity: 1;
+}
+
+.tab_jobopening {
+    border: 0px solid red;
+    height: 10em;
+    text-align: center;
+}
+
+.tab_lifeatmiles {
+    border: 0px solid red;
+    height: 10em;
+    display: none
+}
+
+.tab_careertalk {
+    border: 0px solid red;
+    height: 10em;
+    display: none
+}
+
+.tab_jobopening {
+    text-align: center;
+}
+
+.tab_jobopening div {
+    border: 1px solid red;
+    height: 1em;
+    width: auto;
+    text-align: center;
+}
+
+.ul_joblist {
+    position: absolute;
+}
+
+.tab_jobopening .ul_joblist li {
+    display: block;
+    color: black !important;
+    border: 1px solid red;
+}
+
+.tab_jobopening .ul_joblist li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.tab_jobopening button label {
+    opacity: 1 !important;
+    color: black !important;
+}
+
+.tab_jobopening button {
+    width: 20em;
+    height: 2.5em;
+    border: 1px solid gray;
+    background-color: white;
+    text-align: left;
+    padding-left: 1.5em;
+    font-size: 1em;
+    opacity: 0.5;
+}
+
+.tab_jobopening button:hover {
     cursor: pointer;
 }
 
-.ul-cs {
-    list-style-type: none;
-    border-bottom: 2px solid #f1f1f1;
-    padding: 30px;
+.tab_jobopening button i {
+    float: right;
 }
 
-.searchformfld input:focus {
-    border: 1px solid #000;
-    outline-color: #000;
-    background-color: #fff !important;
-}
-
-.searchformfld {
-    /* padding: 20.4px; */
-    margin: 15px 0px;
-    position: relative;
+.selectjoblist {
+    width: 20em;
     height: 3em;
 }
 
-.searchformfld input {
-    width: 100%;
-    color: #000 !important;
-    height: 100%;
-    border-radius: 4px;
-    border: 1px solid #d5d3d3;
-}
-
-.searchformfld label,
-.searchformfld input {
-    transition: all 0.2s;
-    transition-timing-function: ease;
-    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-    position: absolute;
-    padding-top: 0.8em;
-    padding-left: 1.5em;
-}
-
-
-/*when txtbox is click*/
-
-.searchformfld input:focus+label,
-.searchformfld input:not(:placeholder-shown)+label {
-    opacity: 1;
-    transform: scale(.9) translateY(-100%) translateX(-10px);
-    color: rgb(43, 203, 49) !important;
-    padding-left: 0.2em;
+.uljoblist li {
+    display: block;
 }
