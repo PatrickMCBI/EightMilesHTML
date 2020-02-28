@@ -161,9 +161,14 @@ ul {
     width: 20em;
     height: 3em;
 }
+.uljoblistborder{
+    border: 1px solid gray !important;
+    }
 .uljoblist{
-    border: 1px solid gray;
+    border: 0px solid gray;
     opacity: 0.5;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 .uljoblist li {
     display: block;
