@@ -70,10 +70,18 @@
                     <div class="left">
                         <h1>Details</h1>
                         <div class="joblist">
+                            <table style="width:100%; ">
+                                <tr>
+                                    <th style="width:10em !important; background-color: white;">POSITION</th>
+                                    <th style="width:1em !important; background-color: white;">DATE POSTED</th>
+                                    <th style="width:10em !important; background-color: white;">LOCATION</th>
+                                </tr>
 
-                            <div class="textheader"> POSITION</div>
+                            </table>
+
+                            <!-- <div class="textheader"> POSITION</div>
                             <div class="textheader">DATE POSTED</div>
-                            <div class="textheader">LOCATION</div>
+                            <div class="textheader">LOCATION</div> -->
 
                         </div>
                     </div>
@@ -94,7 +102,7 @@
                                     <input type="text" class="form-control" placeholder=" " />
                                     <label style="color:#636363;">Posiiton & Job Title</label>
                                 </div>
-                             
+
                                 <input type="file" class="input-text">
                                 <input type="submit" value="SUBMIT" class="input-submit-green btn">
                             </form>
@@ -110,9 +118,7 @@
         <div class="mycontainer">
             <div class="footerdetails">
                 <div>
-                    <h3>About 8 miles Travel Corp. 8-Miles Travel Corp.</h3> 8-Miles Travel Corp. is a legit Travel
-                    Company that caters all Airline ticketing (Domestic & International flights), Tour Packages, Car
-                    Rental Services, Passporting, Tourist Visas
+                    <h3>About 8 miles Travel Corp. 8-Miles Travel Corp.</h3> 8-Miles Travel Corp. is a legit Travel Company that caters all Airline ticketing (Domestic & International flights), Tour Packages, Car Rental Services, Passporting, Tourist Visas
                     etc.
                 </div>
                 <div>
@@ -141,8 +147,7 @@
     <div class="footerpartners">
         <div class="mycontainer">
             <div class="footerpartnersdetails">
-                <a href="https://x-mediagraphicsinc.com/" target="_blank">X-Media Graphics Inc.</a> | MCBI-Trade
-                Corporation | MCBI-Land Corporation |
+                <a href="https://x-mediagraphicsinc.com/" target="_blank">X-Media Graphics Inc.</a> | MCBI-Trade Corporation | MCBI-Land Corporation |
                 <a href="https://mcbi-equipments.com/" target="_blank">MCBI-Equipments Inc.</a>
                 <div>
                 </div>
@@ -156,10 +161,7 @@
     <!----------------   Chat   --------------->
     <div id="fb-widget" class="fb-widget">
         <div class="ctrlq fb-close" onclick="chat()" style="transition: all ease 4s;">X</div>
-        <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/eightmilestravel/"
-            data-tabs="messages" data-width="360" data-height="400" data-small-header="true" data-hide-cover="true"
-            data-show-facepile="false" fb-xfbml-state="rendered"
-            fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;height=400&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Feightmilestravel%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=messages&amp;width=360">
+        <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/eightmilestravel/" data-tabs="messages" data-width="360" data-height="400" data-small-header="true" data-hide-cover="true" data-show-facepile="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;height=400&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Feightmilestravel%2F&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=messages&amp;width=360">
             <span style="vertical-align: bottom; width: 360px; height: 400px;"><iframe name="f37bbcb1982089c"
                     width="360px" height="400px" title="fb:page Facebook Social Plugin" frameborder="0"
                     allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
@@ -212,26 +214,28 @@
         window.location.href = "/";
     }
 
-function getselecteddetails(event){
-    var classid = event.target.getAttribute('class');
-    $('.joblist div').css('background-color', 'white');
-    $( '.joblist div input').prop( "checked", false );
+    function getselecteddetails(event) {
+        var classid = event.target.getAttribute('class');
+        $('.joblist table tr td').css('background-color', 'white');
+        $('.joblist table tr input').prop("checked", false);
 
-    $( '.joblist .'+classid+'').prop( "checked", true );
-    $('.joblist .'+classid+'').css('background-color', '#4CAF50');
-}
+        $('.joblist table tr .' + classid + '').prop("checked", true);
+        $('.joblist .' + classid + '').css('background-color', '#4CAF50');
+    }
+
     function Bindhiring() {
         for (var i = 1; i <= 26; i++) {
-
-            var imgEL2 = '<div style="padding-top:0.5em;" class="' + i + '" onclick="getselecteddetails(event)"><Input type="checkbox"" class="' + i + '" onclick="getselecteddetails(event)"></Input> Web Develop</div><div style="padding-top:0.5em;" onclick="getselecteddetails(event)" class="' + i + '">Feb. ' + i + ', 2020</div><div style="padding-top:0.5em;" class="' + i + '" onclick="getselecteddetails(event)">Cebu City, Cebu9 th Floor </div>';
-            $('.joblist').append(imgEL2)
+            var data = '<tr style="height:2em;" > <td style=" border-bottom: 1.5px solid #f1f1f1;" onclick="getselecteddetails(event)" class="' + i + '"> Web Developer</td> <td style=" border-bottom: 1.5px solid #f1f1f1;" onclick="getselecteddetails(event)" class="' + i + '">Feb. ' + i + ', 2020</td> <td style=" border-bottom: 1.5px solid #f1f1f1;" onclick="getselecteddetails(event)" class="' + i + '">Cebu City, Cebu9 th Floor </td></tr>';
+            $('.joblist table ').append(data)
+                // var imgEL2 = '<div style="padding-top:0.5em;" class="' + i + '" onclick="getselecteddetails(event)"><Input type="checkbox"" class="' + i + '" onclick="getselecteddetails(event)"></Input> Web Develop</div><div style="padding-top:0.5em;" onclick="getselecteddetails(event)" class="' + i + '">Feb. ' + i + ', 2020</div><div style="padding-top:0.5em;" class="' + i + '" onclick="getselecteddetails(event)">Cebu City, Cebu9 th Floor </div>';
+                // $('.joblist').append(imgEL2)
 
         }
     }
 
     function scrollwindowsAndNavbar() {
         // scroll show nav
-        window.addEventListener("scroll", function () {
+        window.addEventListener("scroll", function() {
             if (document.documentElement.scrollTop > 100) {
                 $('.header').addClass('sticky-top');
                 $('.returntotop').css('display', 'block');
@@ -252,7 +256,7 @@ function getselecteddetails(event){
 
     function logincookies() {
         var Uname = $.cookie("Uname");
-        if (typeof Uname === "undefined") { } else {
+        if (typeof Uname === "undefined") {} else {
             window.location.href = "editUI.html";
         }
     }
