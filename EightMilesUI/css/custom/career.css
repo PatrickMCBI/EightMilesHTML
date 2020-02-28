@@ -143,7 +143,7 @@ ul {
     border: 1px solid gray;
     background-color: white;
     text-align: left;
-    padding-left: 1.5em;
+    padding-left: 1em;
     font-size: 1em;
     opacity: 0.5;
 }
@@ -165,10 +165,10 @@ ul {
     }
 .uljoblist{
     border: 0px solid gray;
-    opacity: 0.5;
+    opacity: 0.9;
     margin-left: 1px;
     margin-right: 1px;
-    background-color: red;
+    background-color: white;
 }
 .uljoblist li {
     display: block;
@@ -179,7 +179,8 @@ ul {
     opacity: 0;
     pointer-events: none;
     cursor: pointer;
-  
+    width: 100% !important;
+    padding-left: 1em;
 }
 .uljoblist_toggle{
     height: 2em !important;
@@ -188,10 +189,17 @@ ul {
     opacity: 1 !important;
     pointer-events: fill !important; 
    
+   
 }
-.uljoblist_toggle:hover{text-decoration: underline !important;}
+.uljoblist_toggle:hover{
+    text-decoration: underline !important;  
+    border: 0px solid red;}
 
-.uljoblist li:hover {text-decoration: underline !important; cursor: pointer;}
+.uljoblist li:hover { 
+     pointer-events: fill !important;
+       text-decoration: underline !important; 
+       cursor: pointer;
+   }
 ul {
    
     margin-block-start: 0em !important  ;
@@ -209,7 +217,6 @@ ul {
 }
 .jobdetails div{
     height: 10em;
-    position: relative;
     z-index: -1;
 }
  .jobname{
@@ -225,11 +232,3 @@ ul {
     color: blue;
     font-weight: bolder;
 }
-/* .jobdetails_center{
-    grid-area: jobdetails_center;
-    border: 1px solid red;
-}
-.jobdetails_right{
-    grid-area: jobdetails_right;
-    border: 1px solid red; */
-} 
