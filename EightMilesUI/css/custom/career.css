@@ -87,30 +87,27 @@ ul {
     opacity: 1;
 }
 
-.tab_jobopening {
+.panel_jobopening {
     border: 0px solid red;
     height: 10em;
     text-align: center;
+    margin-top: 5em;
 }
 
-.tab_lifeatmiles {
+.panel_lifeatmiles {
     border: 0px solid red;
     height: 10em;
     display: none
 }
 
-.tab_careertalk {
+.panel_careertalk {
     border: 0px solid red;
     height: 10em;
     display: none
 }
 
-.tab_jobopening {
-    text-align: center;
-    margin-top: 1em;
-}
 
-.tab_jobopening div {
+.panel_jobopening div {
     border: 1px solid red;
     height: 1em;
     width: auto;
@@ -121,24 +118,24 @@ ul {
     position: absolute;
 }
 
-.tab_jobopening .ul_joblist li {
+.panel_jobopening .ul_joblist li {
     display: block;
     color: black !important;
     border: 1px solid red;
 }
 
-.tab_jobopening .ul_joblist li:hover {
+.panel_jobopening .ul_joblist li:hover {
     text-decoration: underline;
     cursor: pointer;
     opacity: 1;
 }
 
-.tab_jobopening button label {
+.panel_jobopening button label {
     opacity: 1 !important;
     color: black !important;
 }
 
-.tab_jobopening button {
+.panel_jobopening button {
     width: 20em;
     height: 2.5em;
     border: 1px solid gray;
@@ -148,12 +145,12 @@ ul {
     font-size: 1em;
     opacity: 0.5;
 }
-.tab_jobopening button:focus {outline:0 !important;}
-.tab_jobopening button:hover {
+.panel_jobopening button:focus {outline:0 !important;}
+.panel_jobopening button:hover {
     cursor: pointer;
 }
 
-.tab_jobopening button i {
+.panel_jobopening button i {
     float: right;
 }
 

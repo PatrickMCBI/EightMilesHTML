@@ -73,7 +73,7 @@
                         <li onclick="li_careertalk(event)">Career talk</li>
 
                     </ul>
-                    <div class="tab_jobopening tab">
+                    <div class="panel_jobopening tab">
                         <button onclick="selectjoblist()"><label > All Departments</label> <i class="fa_down fa fa-chevron-down"></i><i style="display: none;" class="fa_up fa fa-chevron-up"></i></button>
                         <div style="border: 0px solid red; width: 22.5%; height: 0em; margin: auto;">
                             <ul class="uljoblist">
@@ -82,11 +82,11 @@
                         </div>
                       
                     </div>
-                    <div class="tab_lifeatmiles tab">
-                        tab_lifeatmiles
+                    <div class="panel_lifeatmiles tab">
+                        panel_lifeatmiles
                     </div>
-                    <div class="tab_careertalk tab">
-                        tab_careertalk
+                    <div class="panel_careertalk tab">
+                        panel_careertalk
                     </div>
                 </div>
             </div>
@@ -167,154 +167,9 @@
     });
     scrollwindowsAndNavbar();
     BindJoblist();
-    // BindJobCategory();
 
     //-------------------   Methods   --------------------------
-    function tab_home() {
-        $.cookie("tab", "tab_home");
-        window.location.href = "/";
-    }
-
-    function tab_partners() {
-        $.cookie("tab", "tab_partners");
-        window.location.href = "/";
-    }
-
-    function tab_destination() {
-        $.cookie("tab", "tab_destination");
-        window.location.href = "/";
-    }
-
-    function tab_about() {
-        $.cookie("tab", "tab_about");
-        window.location.href = "/";
-    }
-
-    function tab_contact() {
-        $.cookie("tab", "tab_contact");
-        window.location.href = "/";
-    }
-
-    function li_jobopening(event) {
-        $('.career ul li').css({
-            'opacity': '0.5',
-            'color': 'gray',
-            'border-bottom': '2px solid white'
-        });
-        $('.career .tab').css({
-            'display': 'none'
-        });
-        $('.uljoblist li').css({
-            'opacity': '0.0'
-           
-        });
-
-        $(event.target).css({
-            'opacity': '1',
-            'color': 'green',
-            'border-bottom': '2px solid green'
-        });
-        $('.tab_jobopening').css({
-            'display': 'block'
-        });
-    }
-
-    function li_lifeatmiles(event) {
-        $('.career ul li').css({
-            'opacity': '0.5',
-            'color': 'gray',
-            'border-bottom': '2px solid white'
-        });
-        $('.career .tab').css({
-            'display': 'none'
-        });
-
-
-        $(event.target).css({
-            'opacity': '1',
-            'color': 'green',
-            'border-bottom': '2px solid green'
-        });
-        $('.tab_lifeatmiles').css({
-            'display': 'block'
-        });
-
-    }
-
-    function li_careertalk(event) {
-        $('.career ul li').css({
-            'opacity': '0.5',
-            'color': 'gray',
-            'border-bottom': '2px solid white'
-        });
-        $('.career .tab').css({
-            'display': 'none'
-        });
-
-
-        $(event.target).css({
-            'opacity': '1',
-            'color': 'green',
-            'border-bottom': '2px solid green'
-        });
-        $('.tab_careertalk').css({
-            'display': 'block'
-        });
-    }
-
-    function getselecteddetails(event) {
-        var classid = event.target.getAttribute('class');
-        $('.joblist table tr td').css('background-color', 'white');
-        $('.joblist table tr input').prop("checked", false);
-
-        $('.joblist table tr .' + classid + '').prop("checked", true);
-        $('.joblist .' + classid + '').css('background-color', '#4CAF50');
-    }
-
-    function getjobname(event) {
-        var classid = event.target.getAttribute('class');
-        $('.left .jobcategory li .' + classid + '').slideToggle('');
-    }
-
-    function selectjoblist() {
-        // $('.tab_jobopening button i').remove();
-        // var jobname = ' <i class="fa fa-chevron-up"></i>';
-        $('.uljoblist').toggleClass('uljoblistborder');
-        $('.uljoblist li').toggleClass('uljoblist_toggle');
-        $('.tab_jobopening button .fa_down').toggle();
-        $('.tab_jobopening button .fa_up').toggle();
-    }
-
-    function BindJoblist() {
-        for (var i = 1; i <= 5; i++) {
-            if (i == 1) {
-                var jobname = '<li>IT / Computers</li>';
-                $('.tab_jobopening .uljoblist').append(jobname);
-            } else if (i == 2) {
-                var jobname = '<li>Airline / Airport</li> ';
-                $('.tab_jobopening .uljoblist').append(jobname);
-            } else if (i == 3) {
-                var jobname = '<li>Accounting / Finance</li>  ';
-                $('.tab_jobopening .uljoblist').append(jobname);
-            } else if (i == 4) {
-                var jobname = '<li>Admin / Office / Clerical</li> ';
-                $('.tab_jobopening .uljoblist').append(jobname);
-            } else if (i == 5) {
-                var jobname = '<li>Purchasing / Buyer</li>';
-                $('.tab_jobopening .uljoblist').append(jobname);
-            }
-        }
-    }
-
-    function Bindhiring() {
-        for (var i = 1; i <= 26; i++) {
-            var data = '<tr style="height:2em;" > <td style=" border-bottom: 1.5px solid #f1f1f1;" onclick="getselecteddetails(event)" class="' + i + '"> Web Developer</td> <td style=" border-bottom: 1.5px solid #f1f1f1;" onclick="getselecteddetails(event)" class="' + i + '">8 Miles</td> <td style=" border-bottom: 1.5px solid #f1f1f1;" onclick="getselecteddetails(event)" class="' + i + '">Cebu City, Cebu9 th Floor </td> <td style=" border-bottom: 1.5px solid #f1f1f1;" onclick="getselecteddetails(event)" class="' + i + '">Feb. ' + i + ', 2020</td></tr>';
-            $('.joblist table ').append(data)
-                // var imgEL2 = '<div style="padding-top:0.5em;" class="' + i + '" onclick="getselecteddetails(event)"><Input type="checkbox"" class="' + i + '" onclick="getselecteddetails(event)"></Input> Web Develop</div><div style="padding-top:0.5em;" onclick="getselecteddetails(event)" class="' + i + '">Feb. ' + i + ', 2020</div><div style="padding-top:0.5em;" class="' + i + '" onclick="getselecteddetails(event)">Cebu City, Cebu9 th Floor </div>';
-                // $('.joblist').append(imgEL2)
-        }
-    }
-
+ //-----   START HEADER AND FOOTER   -----
     function scrollwindowsAndNavbar() {
         // scroll show nav
         window.addEventListener("scroll", function() {
@@ -363,6 +218,126 @@
 
     function chat() {
         $('.fb-widget').slideToggle();
+    }
+   //-----   END HEADER AND FOOTER   -----
+    function tab_home() {
+        $.cookie("tab", "tab_home");
+        window.location.href = "/";
+    }
+
+    function tab_partners() {
+        $.cookie("tab", "tab_partners");
+        window.location.href = "/";
+    }
+
+    function tab_destination() {
+        $.cookie("tab", "tab_destination");
+        window.location.href = "/";
+    }
+
+    function tab_about() {
+        $.cookie("tab", "tab_about");
+        window.location.href = "/";
+    }
+
+    function tab_contact() {
+        $.cookie("tab", "tab_contact");
+        window.location.href = "/";
+    }
+
+    function li_jobopening(event) {
+        $('.career ul li').css({
+            'opacity': '0.5',
+            'color': 'gray',
+            'border-bottom': '2px solid white'
+        });
+        $('.career .tab').css({
+            'display': 'none'
+        });
+        $('.uljoblist li').css({
+            'opacity': '0.0'
+           
+        });
+
+        $(event.target).css({
+            'opacity': '1',
+            'color': 'green',
+            'border-bottom': '2px solid green'
+        });
+        $('.panel_jobopening').css({
+            'display': 'block'
+        });
+    }
+
+    function li_lifeatmiles(event) {
+        $('.career ul li').css({
+            'opacity': '0.5',
+            'color': 'gray',
+            'border-bottom': '2px solid white'
+        });
+        $('.career .tab').css({
+            'display': 'none'
+        });
+
+
+        $(event.target).css({
+            'opacity': '1',
+            'color': 'green',
+            'border-bottom': '2px solid green'
+        });
+        $('.panel_lifeatmiles').css({
+            'display': 'block'
+        });
+
+    }
+
+    function li_careertalk(event) {
+        $('.career ul li').css({
+            'opacity': '0.5',
+            'color': 'gray',
+            'border-bottom': '2px solid white'
+        });
+        $('.career .tab').css({
+            'display': 'none'
+        });
+
+
+        $(event.target).css({
+            'opacity': '1',
+            'color': 'green',
+            'border-bottom': '2px solid green'
+        });
+        $('.panel_careertalk').css({
+            'display': 'block'
+        });
+    }
+
+    function selectjoblist() {
+        $('.uljoblist').toggleClass('uljoblistborder');
+        $('.uljoblist li').toggleClass('uljoblist_toggle');
+        $('.panel_jobopening button .fa_down').toggle();
+        $('.panel_jobopening button .fa_up').toggle();
+    }
+
+    function BindJoblist() {
+        for (var i = 1; i <= 5; i++) {
+            if (i == 1) {
+                var jobname = '<li >IT / Computers</li>';
+                $('.panel_jobopening .uljoblist').append(jobname);
+            } else if (i == 2) {
+                var jobname = '<li>Airline / Airport</li> ';
+                $('.panel_jobopening .uljoblist').append(jobname);
+            } else if (i == 3) {
+                var jobname = '<li>Accounting / Finance</li>  ';
+                $('.panel_jobopening .uljoblist').append(jobname);
+            } else if (i == 4) {
+                var jobname = '<li>Admin / Office / Clerical</li> ';
+                $('.panel_jobopening .uljoblist').append(jobname);
+            } else if (i == 5) {
+                var jobname = '<li>Purchasing / Buyer</li>';
+                $('.panel_jobopening .uljoblist').append(jobname);
+            }
+        }
     }
 </script>
 
