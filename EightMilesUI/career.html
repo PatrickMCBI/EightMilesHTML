@@ -80,6 +80,8 @@
                                 
                             </ul>
                         </div>
+                        <div class="jobdetails">
+                        </div>
                       
                     </div>
                     <div class="panel_lifeatmiles tab">
@@ -90,8 +92,9 @@
                     </div>
                 </div>
             </div>
+          
         </div>
-    </div>
+
 
     <!----------------   Footer   --------------->
     <div class="footer">
@@ -154,7 +157,7 @@
     <div onclick="chat()" class="chat">
         <i class="fab fa-facebook-messenger"></i>
     </div>
-
+</div>  
 </body>
 
 <script src="js/jquery-3.4.min.js"></script>
@@ -345,8 +348,17 @@
         $('.panel_jobopening button .fa_down').toggle();
         $('.panel_jobopening button .fa_up').toggle();
         console.log(event.target.getAttribute('value'));
-
     }
+    BindJobdetails();
+    function BindJobdetails() {
+        for (var i = 1; i <= 5; i++) {
+            {
+                var jobname = '<div><h1 class="jobname">Data Scientist</h1><br><label class="jobdesctiption">Software development</label>   // <label class="joblocation">Cebu City,Phillipines</label></div>';
+                $('.jobdetails').append(jobname);
+            } 
+        }
+    }
+                             
 </script>
 
 </html>
