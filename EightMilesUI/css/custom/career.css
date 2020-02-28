@@ -148,7 +148,7 @@ ul {
     font-size: 1em;
     opacity: 0.5;
 }
-
+.tab_jobopening button:focus {outline:0 !important;}
 .tab_jobopening button:hover {
     cursor: pointer;
 }
@@ -168,7 +168,7 @@ ul {
 .uljoblist li {
     display: block;
     border: 0px solid red;
-    transition: all ease 0.5s;
+    transition: all ease 0.3s;
     height: 0em;
     text-align: left;
     opacity: 0;
@@ -178,7 +178,7 @@ ul {
 .uljoblist_toggle{
     height: 2em !important;
     padding-top: 0.5em;
-    transition: all ease 0.5s;
+    transition: all ease 0.3s;
     opacity: 1 !important;
     pointer-events: fill !important;  
 }
