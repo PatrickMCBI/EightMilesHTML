@@ -132,26 +132,40 @@ Destination
 }
 
 .destination_image .top .album {
-    height: 2em;
+    height: 3em;
     border: 0px solid red;
+   
 }
 
+.destination_image .top div h2 {
+    color: #4267b2  ;
+    border: 0px solid red;
+    height: 0em;
+}
 .destination_image .top div h5 {
     color: gray;
     border: 0px solid red;
     height: 0em;
+    font-weight: 600;
 }
-
 h5 {
     display: block;
     font-size: 0.83em;
-    margin-block-start: 0.5em;
-    margin-block-end: 1.67em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
 }
-
+h2 {
+    display: block;
+    font-size: 1.3em;
+    margin-block-start: 0em;
+    margin-block-end: 1.2em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
 
 /*------------------------------------------------
 Partners

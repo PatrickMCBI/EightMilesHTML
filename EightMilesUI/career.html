@@ -74,7 +74,7 @@
 
                     </ul>
                     <div class="panel_jobopening tab">
-                        <button onclick="btnjoblist()"><label > All Departments</label> <i class="fa_down fa fa-chevron-down"></i><i style="display: none;" class="fa_up fa fa-chevron-up"></i></button>
+                        <button onclick="btnjoblist()"><label > All Departments</label> <i class="fa_down fa fa-chevron-down"></i></button>
                         <div style="border: 0px solid red; width: 22.5%; height: 0em; margin: auto;">
                             <ul class="uljoblist">
                                 
@@ -318,8 +318,8 @@
     function btnjoblist() {
         $('.uljoblist').toggleClass('uljoblistborder');
         $('.uljoblist li').toggleClass('uljoblist_toggle');
-        $('.panel_jobopening button .fa_down').toggle();
-        $('.panel_jobopening button .fa_up').toggle();
+       $('.panel_jobopening button .fa_down').toggleClass('fa_downrotate');
+      
     }
 
     function BindJoblist() {
@@ -345,8 +345,7 @@
     function selectjoblist(event){
         $('.uljoblist').toggleClass('uljoblistborder');
         $('.uljoblist li').toggleClass('uljoblist_toggle');
-        $('.panel_jobopening button .fa_down').toggle();
-        $('.panel_jobopening button .fa_up').toggle();
+        $('.panel_jobopening button .fa_down').toggleClass('fa_downrotate');
         console.log(event.target.getAttribute('value'));
     }
     BindJobdetails();
