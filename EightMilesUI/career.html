@@ -169,7 +169,7 @@
         'color': 'green'
     });
     scrollwindowsAndNavbar();
-    BindJoblist();
+    BindJobCategory();
 
     //-------------------   Methods   --------------------------
  //-----   START HEADER AND FOOTER   -----
@@ -322,7 +322,7 @@
       
     }
 
-    function BindJoblist() {
+    function BindJobCategory() {
         for (var i = 1; i <= 5; i++) {
             if (i == 1) {
                 var jobname = '<li onclick="selectjoblist(event)" value="IT / Computers">IT / Computers</li>';
@@ -345,19 +345,27 @@
     function selectjoblist(event){
         $('.uljoblist').toggleClass('uljoblistborder');
         $('.uljoblist li').toggleClass('uljoblist_toggle');
-        $('.panel_jobopening button .fa_down').toggleClass('fa_downrotate');
+     
+        $('.panel_jobopening button').html(event.target.getAttribute('value'));
         console.log(event.target.getAttribute('value'));
-    }
-    BindJobdetails();
-    function BindJobdetails() {
-        for (var i = 1; i <= 5; i++) {
+        $('.panel_jobopening button').append('<i style="all ease 1s" class="fa_down fa fa-chevron-down"></i>');
+
+
+        //insert joblist
+        $('.jobdetails div').remove();
+        var jobcategory = event.target.getAttribute('value');
+            for (var i = 1; i <= 12; i++) {
             {
-                var jobname = '<div><h1 class="jobname">Data Scientist</h1><br><label class="jobdesctiption">Software development</label>   // <label class="joblocation">Cebu City,Phillipines</label></div>';
+                var jobname = '<div onclick="jobopenings()"><h1 class="jobname">'+jobcategory+' </h1><label class="jobdesctiption">Software development</label>   // <label class="joblocation">Cebu City,Phillipines</label></div>';
                 $('.jobdetails').append(jobname);
             } 
         }
     }
-                             
+       function jobopenings()
+       {
+           alert('hello')
+        window.location.href = "job-openings.html";
+       }                      
 </script>
 
 </html>
