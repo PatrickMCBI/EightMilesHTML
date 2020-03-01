@@ -96,8 +96,8 @@ Page Loader
     display: inline-block;
     -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
     animation: sk-bouncedelay 1s infinite ease-in-out both;
-    -webkit-animation-delay: -0.8s;
-    animation-delay: -0.8s;
+    -webkit-animation-delay: -9s;
+    animation-delay: -9s;
 }
 .bounce-1 {
     animation-name: bounce-1;
