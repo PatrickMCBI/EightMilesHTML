@@ -71,6 +71,9 @@ Page Loader
     display: inline-block;
     -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
     animation: sk-bouncedelay 1s infinite ease-in-out both;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+
 }
 .box2 {
     opacity:1;
@@ -81,25 +84,31 @@ Page Loader
     display: inline-block;
     -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
     animation: sk-bouncedelay 1s infinite ease-in-out both;
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+.box3 {
+    opacity:1;
+    width: 22px;
+    height: 22px;
+    background-color: #fde778;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1s infinite ease-in-out both;
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
 }
 .bounce-1 {
     animation-name: bounce-1;
     animation-timing-function: linear;
 }
-.bounce-2 {
-    animation-name: bounce-2;
-    animation-timing-function: linear;
-}
 @keyframes bounce-1 {
     0%   { transform: translateY(0); }
-    50%  { transform: translateY(-10px); }
+    50%  { transform: translateY(-20px); }
     100% { transform: translateY(0); }
 }
-@keyframes bounce-2 {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
+
 
 
 /*--------------------------------------------
