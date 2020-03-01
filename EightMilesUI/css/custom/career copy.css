@@ -81,13 +81,36 @@ Left
     }
     
     .left h1 {
-        font-weight: 600;
-        font-size: 1.3em;
-        color: black;
-        opacity: 0.8;
+        font-weight: 500;
+        font-size: 1em;
+        color: rgb(43, 211, 82);
+        opacity: 1 !important;
         height: 1em;
     }
-    
+    .left h1 label{
+        font-size: 0.8em;
+    }
+    .left .jobname{
+        color: #393939;
+        font-size: 36px;
+        font-weight: 900;
+    }
+    .left .joblocation{
+        color: #9E9E9E;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .left .jobdescription{
+        color: #6f7172;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .left .jobqualification{
+        color: #9E9E9E;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .left h1:hover {cursor: pointer;   text-decoration-line: underline;}
     .left ul li {
         display: block;
         color: #1e70bf;

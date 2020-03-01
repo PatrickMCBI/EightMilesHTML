@@ -356,15 +356,16 @@
         var jobcategory = event.target.getAttribute('value');
             for (var i = 1; i <= 12; i++) {
             {
-                var jobname = '<div onclick="jobopenings()"><h1 class="jobname">'+jobcategory+' </h1><label class="jobdesctiption">Software development</label>   // <label class="joblocation">Cebu City,Phillipines</label></div>';
+                var jobname = '<div ><h1 onclick="jobopenings(event)" class="jobname" value="'+jobcategory+'">'+jobcategory+' </h1><label class="jobdesctiption">Software development</label>   // <label class="joblocation">Cebu City,Phillipines</label></div>';
                 $('.jobdetails').append(jobname);
             } 
         }
     }
-       function jobopenings()
+       function jobopenings(event)
        {
-           alert('hello')
-        window.location.href = "job-openings.html";
+       var jobname = event.target.getAttribute('value');
+        $.cookie("jobname", jobname);
+         window.location.href = "job-openings.html";
        }                      
 </script>
 

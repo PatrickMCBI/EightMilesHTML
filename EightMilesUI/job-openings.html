@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8MilesTravel-Career</title>
+    <title>8MilesTravel-Job</title>
     <link rel="stylesheet" href="css/custom/career copy.css">
 
     <!----------------  Header And Footer  --------------->
@@ -68,10 +68,14 @@
             <div class="mycontainer">
                 <div class="career">
                     <div class="left">
-                        <h1>Job Category</h1>
-                        <ul class="jobcategory">
-
-                        </ul>
+                        <h1 onclick="backtojoblisting()"> <label><< </label> Back to job listings</h1>
+                       <h2 class="jobname"></h2>
+                     <h2 class="joblocation">Location: Cebu City</h2>
+                     <p class="jobdescription">Working at 8 Miles will give you the opportunity to collaborate with highly skilled developers on various projects that will expose you to cutting-edge technologies. Working with different cultures and learning from of our weekly training activities will accelerate your growth, while our inclusive culture will keep you motivated!
+                        Your contribution is important to us. Arcanys practices a flat management structure that empowers employees to excel and is one of the compelling reasons they love working with us. Other perks include full medical insurance, free lunch daily, summer outings, movie nights, and more! Join us as:</p>
+                   
+                        <h2 class="jobqualification">QUALIFICATION <br</h2>
+                        <h2 class="jobqualification">BENEFITS <br</h2>
                     </div>
                     <div class="right">
                         <div class="applynowform">
@@ -94,48 +98,7 @@
                                 <input type="submit" value="SUBMIT" class="input-submit-green btn">
                             </form>
                         </div>
-                    </div>
-                    <!-- <div class="left">
-                        <h1>Job Category</h1>
-                        <ul class="jobcategory">
-
-                        </ul>
-                    </div>
-                    <div class="right">
-                        <h1>Job Hiring in Cebu City, Cebu</h1>
-                        <div class="joblist">
-                            <table style="width:100%; ">
-                                <tr>
-                                    <th style="width:10em !important; background-color: white; text-align: left;">POSITION</th>
-                                    <th style="width:1em !important; background-color: white; text-align: left;">COMPANY</th>
-                                    <th style="width:10em !important; background-color: white; text-align: left;">LOCATION</th>
-                                    <th style="width:1em !important; background-color: white; text-align: left;">DATE POSTED</th>
-                                </tr>
-
-                            </table>
-
-                        </div>
-                        <div class="applynowform">
-                            <h1>APPLY NOW!</h1>
-                            <form action="">
-                                <div class="form-group searchformfld">
-                                    <input type="text" class="form-control" placeholder=" " />
-                                    <label style="color:#636363;">Fullname</label>
-                                </div>
-                                <div class="form-group searchformfld">
-                                    <input type="text" class="form-control" placeholder=" " />
-                                    <label style="color:#636363;">Email</label>
-                                </div>
-                                <div class="form-group searchformfld">
-                                    <input type="text" class="form-control" placeholder=" " />
-                                    <label style="color:#636363;">Posiiton & Job Title</label>
-                                </div>
-
-                                <input type="file" class="input-text">
-                                <input type="submit" value="SUBMIT" class="input-submit-green btn">
-                            </form>
-                        </div>
-                    </div> -->
+                  
                 </div>
             </div>
         </div>
@@ -213,11 +176,60 @@
     $('.tab_services').css({
         'color': 'green'
     });
+     var jobname = $.cookie("jobname"); 
+     $('.left .jobname').text(jobname);
     scrollwindowsAndNavbar();
     Bindhiring();
-    // BindJobCategory();
-
     //-------------------   Methods   --------------------------
+    function scrollwindowsAndNavbar() {
+        // scroll show nav
+        window.addEventListener("scroll", function() {
+            if (document.documentElement.scrollTop > 100) {
+                $('.header').addClass('sticky-top');
+                $('.returntotop').css('display', 'block');
+                $('.chat').css('margin-right', '2.3em');
+                $('.fb-widget').css('margin-right', '3em');
+            } else {
+                $('.header').removeClass('sticky-top');
+                $('.returntotop').css('display', 'none');
+                $('.chat').css('margin-right', '0em');
+                $('.fb-widget').css('margin-right', '0em');
+            }
+        });
+    }
+
+    function navigation() {
+        $('.header-tab').toggleClass('header-tab-resizeheight');
+    }
+
+    function logincookies() {
+        var Uname = $.cookie("Uname");
+        if (typeof Uname === "undefined") {} else {
+            window.location.href = "editUI.html";
+        }
+    }
+
+    function btnlogin() {
+        var uname = $('.input_uname').val();
+        if (uname === '') {
+            $('.loginmenu').toggleClass('slidewidth');
+            $('.header-right table').slideToggle('slow');
+            $('.loginmenu div').slideToggle('slow')
+        } else {
+            $.cookie("Uname", uname);
+            window.location.href = "editUI.html";
+        }
+    }
+
+    function returntotop() {
+        document.querySelector('body').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    function chat() {
+        $('.fb-widget').slideToggle();
+    }
     function tab_home() {
         $.cookie("tab", "tab_home");
         window.location.href = "/";
@@ -287,55 +299,9 @@
                 // $('.joblist').append(imgEL2)
         }
     }
-
-    function scrollwindowsAndNavbar() {
-        // scroll show nav
-        window.addEventListener("scroll", function() {
-            if (document.documentElement.scrollTop > 100) {
-                $('.header').addClass('sticky-top');
-                $('.returntotop').css('display', 'block');
-                $('.chat').css('margin-right', '2.3em');
-                $('.fb-widget').css('margin-right', '3em');
-            } else {
-                $('.header').removeClass('sticky-top');
-                $('.returntotop').css('display', 'none');
-                $('.chat').css('margin-right', '0em');
-                $('.fb-widget').css('margin-right', '0em');
-            }
-        });
-    }
-
-    function navigation() {
-        $('.header-tab').toggleClass('header-tab-resizeheight');
-    }
-
-    function logincookies() {
-        var Uname = $.cookie("Uname");
-        if (typeof Uname === "undefined") {} else {
-            window.location.href = "editUI.html";
-        }
-    }
-
-    function btnlogin() {
-        var uname = $('.input_uname').val();
-        if (uname === '') {
-            $('.loginmenu').toggleClass('slidewidth');
-            $('.header-right table').slideToggle('slow');
-            $('.loginmenu div').slideToggle('slow')
-        } else {
-            $.cookie("Uname", uname);
-            window.location.href = "editUI.html";
-        }
-    }
-
-    function returntotop() {
-        document.querySelector('body').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
-
-    function chat() {
-        $('.fb-widget').slideToggle();
+    function backtojoblisting()
+    {
+        window.location.href = "career.html";
     }
 </script>
 
