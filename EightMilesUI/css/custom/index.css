@@ -52,15 +52,8 @@ Page Loader
     color: turquoise;
 }
 .spinner > div {
-    opacity:1;
-
-    border-radius: 100%;
     display: inline-block;
-    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
-
-
 .stage {
     border-bottom: 3px solid #444;
     display: flex;
