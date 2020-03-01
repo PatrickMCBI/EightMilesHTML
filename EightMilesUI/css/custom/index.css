@@ -49,6 +49,7 @@ Page Loader
 }
 .spinner .text-muted{
     font-size: 2em;
+    color: turquoise;
 }
 .spinner > div {
     opacity:1;
