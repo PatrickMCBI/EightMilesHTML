@@ -53,9 +53,11 @@ Page Loader
 }
 .spinner > div {
     display: inline-block;
+    width: 10em;
+    
 }
 .stage {
-    border-bottom: 3px solid #444;
+    border-bottom: 0px solid #444;
     display: flex;
     height: 30px;
     width: 100%;
