@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/template/magnificPopup.css">
 </head>
 
-<body>
+<body onload="pageloader()">
     <div id="preloader">
         <div class="spinner">
           <h4 class="text-muted">8 MILES TRAVEL CORP.</h4>
@@ -250,7 +250,7 @@
 
 <script>
     //-------------------   Mounted   --------------------------
-     pageloader();
+    //  pageloader();
     destination();
     partners();
     services();
@@ -263,12 +263,13 @@
     //-------------------   methods   --------------------------
 
     function pageloader(){
-        setTimeout(function() {
-      document.getElementById("preloader").style.opacity = 0.2;
-    }, 1990);
-    setTimeout(function() {
-      document.getElementById("preloader").style.display = "none";
-    }, 2000);
+        document.getElementById("preloader").style.display = "none";
+            //     setTimeout(function() {
+            // document.getElementById("preloader").style.opacity = 0.2;
+            // }, 1990);
+            // setTimeout(function() {
+            // document.getElementById("preloader").style.display = "none";
+            // }, 2000);
     }
     function scrollwindowsAndNavbar() {
         // windows size
