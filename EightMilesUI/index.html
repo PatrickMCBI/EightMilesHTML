@@ -19,23 +19,21 @@
 <body onload="pageloader()">
     <div id="preloader">
         <div class="spinner">
-          <h4 class="text-muted">8 MILES TRAVEL CORP.</h4>
-          <div class="stage">
-            <div class="box1 bounce-1"></div>
-            <div class="box2 bounce-1"></div>
-            <div class="box3 bounce-1"></div>
+            <h4 class="text-muted">8 MILES TRAVEL CORP.</h4>
+            <div class="stage">
+                <div class="box1 bounce-1"></div>
+                <div class="box2 bounce-1"></div>
+                <div class="box3 bounce-1"></div>
+            </div>
         </div>
-        </div>
-      </div>
+    </div>
     <div class="wrapper">
-     
         <!----------------  header  --------------->
         <div class="header">
             <div class="mycontainer">
                 <div class="header-content">
                     <div class="header-left"><img src="img/8mileslogo.png" alt="" width="160"></div>
                     <div class="header-right">
-
                         <div class="loginmenu">
                             <div style="display:none;">
                                 <input class="input_uname" type="text" placeholder="Username">
@@ -85,7 +83,17 @@
             <div style="text-align:center;">
                 <div class="mycontainer">
                     <div class="promo">
-                        <h1>PROMO</h1>
+                        <!-- <h1>PROMO</h1> -->
+                        <div class="slidercontainer">
+                            <i id="prevBtn" onclick="prevBtn()" class="fas fa-chevron-up"></i>
+                            <i id="nextBtn" onclick="nextBtn()" class="fas fa-chevron-down"></i>
+                            <div class="myslide">
+                                <img src="/img/Promo/img_slide1.png" class="img-fluid" id="1" alt="">
+                                <img src="/img/Promo/img_slide2.png" class="img-fluid" id="2" alt="">
+                                <img src="/img/Promo/img_slide3.jpg" class="img-fluid" id="3" alt="">
+                                <img src="/img/Promo/img_slide4.png" class="img-fluid" id="4" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -259,18 +267,18 @@
     logincookies();
     tabs_options();
     scrollwindowsAndNavbar();
-  
-    //-------------------   methods   --------------------------
 
-    function pageloader(){
+    //-------------------   methods   --------------------------
+    function pageloader() {
         document.getElementById("preloader").style.display = "none";
-            //     setTimeout(function() {
-            // document.getElementById("preloader").style.opacity = 0.2;
-            // }, 1990);
-            // setTimeout(function() {
-            // document.getElementById("preloader").style.display = "none";
-            // }, 2000);
+        //     setTimeout(function() {
+        // document.getElementById("preloader").style.opacity = 0.2;
+        // }, 1990);
+        // setTimeout(function() {
+        // document.getElementById("preloader").style.display = "none";
+        // }, 2000);
     }
+
     function scrollwindowsAndNavbar() {
         // windows size
         $(window).resize(function() {
@@ -613,8 +621,42 @@
     function chat() {
         $('.fb-widget').slideToggle();
     }
+
+    const carouselSlide = document.querySelector('.myslide');
+    const carouselImages = document.querySelectorAll('.myslide img');
+    //Counter
+    let counter = 0;
+    const size = "266";
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    // Button Listeners
+    function nextBtn() {
+        if (carouselImages[counter].id === '4') {
+            carouselSlide.style.transition = "all ease 2s";
+            counter = -1;
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        }
+        carouselSlide.style.transition = "all ease 2s";
+        counter++;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+    }
+
+    function prevBtn() {
+        if (carouselImages[counter].id === '1') {
+            carouselSlide.style.transition = "none";
+            counter = carouselImages.length;
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        }
+        carouselSlide.style.transition = "all ease 2s";
+        counter--;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
+
+    setTimeout(function() {
+        nextBtn();
+    }, 1000);
 </script>
-  
+
 <!-- // Magnefic Popup
 // $('.destination_image img').magnificPopup({
 //     type: 'image',
@@ -622,4 +664,5 @@
 //         enabled: true
 //     }
 // }); -->
+
 </html>
