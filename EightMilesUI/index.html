@@ -45,12 +45,12 @@
                         </div>
                         <table>
                             <tr>
-                                <td class="tab_home" onclick="tab_home(event)">HOME</td>
-                                <td class="tab_destination" onclick="tab_destination(event)">DESTINATION</td>
-                                <td class="tab_partners" onclick="tab_partners(event)">PARTNERS</td>
-                                <td class="tab_services" onclick="tab_services(event)">SERVICES</td>
-                                <td class="tab_about" onclick="tab_about(event)">ABOUT</td>
-                                <td class="tab_contact" onclick="tab_contact(event)">CONTACT</td>
+                                <td class="tab_home tab" onclick="tab_home(event)">HOME</td>
+                                <td class="tab_destination tab" onclick="tab_destination(event)">DESTINATION</td>
+                                <td class="tab_partners tab" onclick="tab_partners(event)">PARTNERS</td>
+                                <td class="tab_services tab" onclick="tab_services(event)">SERVICES</td>
+                                <td class="tab_about tab" onclick="tab_about(event)">ABOUT</td>
+                                <td class="tab_contact tab" onclick="tab_contact(event)">CONTACT</td>
                             </tr>
                         </table>
                     </div>
@@ -80,25 +80,21 @@
         <!----------------  main  --------------->
         <div class="main">
             <!----------------  Cover   --------------->
-            <div style="text-align:center;">
-                <div class="mycontainer">
-                    <div class="promo">
-                        <!-- <h1>PROMO</h1> -->
-                        <div class="slidercontainer">
-                            <i id="prevBtn" onclick="prevBtn()" class="fas fa-chevron-up"></i>
-                            <i id="nextBtn" onclick="nextBtn()" class="fas fa-chevron-down"></i>
-                            <div class="myslide">
-                                <img src="/img/Promo/img_slide1.png" class="img-fluid" id="1" alt="">
-                                <img src="/img/Promo/img_slide2.png" class="img-fluid" id="2" alt="">
-                                <img src="/img/Promo/img_slide3.jpg" class="img-fluid" id="3" alt="">
-                                <img src="/img/Promo/img_slide4.png" class="img-fluid" id="4" alt="">
-                            </div>
+
+            <div class="">
+                <div class="cover">
+                    <div> <img src="img/TopDestination/Featured Image/4.jpg" class="img_cover"></div>
+                    <div class="promos" style="">
+                        <i id="prevBtn" onclick="prevBtn()" class="fas fa-chevron-up"></i>
+                        <i id="nextBtn" onclick="nextBtn()" class="fas fa-chevron-down"></i>
+                        <div class="myslide">
+                            <img src="/img/Promo/img_slide1.png" class="img-fluid" id="1" alt="">
+                            <img src="/img/Promo/img_slide2.png" class="img-fluid" id="2" alt="">
+                            <img src="/img/Promo/img_slide3.jpg" class="img-fluid" id="3" alt="">
+                            <img src="/img/Promo/img_slide4.png" class="img-fluid" id="4" alt="">
                         </div>
                     </div>
                 </div>
-
-                <img src="img/TopDestination/Featured Image/4.jpg" class="img_cover">
-
             </div>
 
 
@@ -258,7 +254,6 @@
 
 <script>
     //-------------------   Mounted   --------------------------
-    //  pageloader();
     destination();
     partners();
     services();
@@ -271,12 +266,6 @@
     //-------------------   methods   --------------------------
     function pageloader() {
         document.getElementById("preloader").style.display = "none";
-        //     setTimeout(function() {
-        // document.getElementById("preloader").style.opacity = 0.2;
-        // }, 1990);
-        // setTimeout(function() {
-        // document.getElementById("preloader").style.display = "none";
-        // }, 2000);
     }
 
     function scrollwindowsAndNavbar() {
@@ -297,14 +286,39 @@
                 $('.returntotop').css('display', 'block');
                 $('.chat').css('margin-right', '2.3em');
                 $('.fb-widget').css('margin-right', '3em');
+
             } else {
                 $('.header').removeClass('sticky-top');
                 $('.returntotop').css('display', 'none');
                 $('.chat').css('margin-right', '0em');
                 $('.fb-widget').css('margin-right', '0em');
+                $('.tab').css('color', 'black');
             }
         });
     }
+    // scroll tab class changed
+    window.addEventListener("scroll", function() {
+        if (document.documentElement.scrollTop > 300) {
+            $('.tab').css('color', 'black');
+            $('.tab_destination').css('color', 'green');
+        }
+        if (document.documentElement.scrollTop > 1000) {
+            $('.tab').css('color', 'black');
+            $('.tab_partners').css('color', 'green');
+        }
+        if (document.documentElement.scrollTop > 1500) {
+            $('.tab').css('color', 'black');
+            $('.tab_services').css('color', 'green');
+        }
+        if (document.documentElement.scrollTop > 2200) {
+            $('.tab').css('color', 'black');
+            $('.tab_about').css('color', 'green');
+        }
+        if (document.documentElement.scrollTop > 2700) {
+            $('.tab').css('color', 'black');
+            $('.tab_contact').css('color', 'green');
+        }
+    });
 
     function tabs_options() {
 
@@ -626,7 +640,7 @@
     const carouselImages = document.querySelectorAll('.myslide img');
     //Counter
     let counter = 0;
-    const size = "266";
+    const size = "304";
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
     // Button Listeners
     function nextBtn() {
@@ -652,9 +666,9 @@
         carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
     }
 
-    setTimeout(function() {
+    setInterval(function() {
         nextBtn();
-    }, 1000);
+    }, 5000);
 </script>
 
 <!-- // Magnefic Popup

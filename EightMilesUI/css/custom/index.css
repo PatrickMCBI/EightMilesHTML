@@ -125,10 +125,24 @@ Cover
 ---------------------------------------------*/
 
 .img_cover {
-    width: 50%;
+    width: 100%;
     max-height: 30em;
+    box-shadow: 0px 0px 8px 0px rgb(169, 167, 167);
     /* max-width:100%; 
 max-height: auto; */
+}
+
+.cover {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-auto-rows: minmax(0px, max-content);
+    box-shadow: 0px 0px 8px 0px rgb(10, 7, 7);
+    /* gap: 0.5em; */
+}
+
+.cover div {
+    height: 100%;
+    border: 0px solid red;
 }
 
 
@@ -136,26 +150,19 @@ max-height: auto; */
 Promo
 ---------------------------------------------*/
 
-.promo {
-    border: 0px solid white;
-    height: 50%;
-    width: 25%;
-    position: absolute;
-    /* background-color: black; */
-    /* box-shadow: 0px 0px 8px 0px rgb(169, 167, 167); */
-    float: right !important;
-    right: 0;
-    opacity: 1;
-    color: white;
-    margin: auto;
+.promos {
+    position: relative;
 }
 
-.slidercontainer {
-    width: 70%;
-    margin: auto;
+.cover .promos {
+    border: 0px solid red;
+    display: flex;
     overflow: hidden;
-    position: relative;
-    box-shadow: 0px 0px 8px 0px rgb(169, 167, 167);
+}
+
+.cover .promos img {
+    height: 30em;
+    width: 100%;
 }
 
 .myslide {
@@ -167,7 +174,7 @@ Promo
 
 .myslide img {
     width: 18.5em;
-    height: 33em;
+    /* height: 33em; */
 }
 
 #prevBtn {
@@ -624,5 +631,25 @@ MEDIA QUERIES
     }
     .getintouchdetails div {
         text-align: center;
+    }
+    .cover {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-rows: minmax(0px, max-content);
+        /* gap: 1em; */
+    }
+    .promos {
+        width: 63.2%;
+        height: 80% !important;
+        border: 0px solid red !important;
+        margin: auto;
+    }
+    .cover {
+        box-shadow: 0px 0px 0px 0px rgb(10, 7, 7);
+        gap: 0em;
+    }
+    .cover .promos img {
+        height: auto;
+        width: 100%;
     }
 }
