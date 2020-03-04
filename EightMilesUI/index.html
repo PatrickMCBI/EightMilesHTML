@@ -88,10 +88,10 @@
                         <i id="prevBtn" onclick="prevBtn()" class="fas fa-chevron-up"></i>
                         <i id="nextBtn" onclick="nextBtn()" class="fas fa-chevron-down"></i>
                         <div class="myslide">
-                            <img src="/img/Promo/img_slide1.png" class="img-fluid" id="1" alt="">
+                            <!-- <img src="/img/Promo/img_slide1.png" class="img-fluid" id="1" alt="">
                             <img src="/img/Promo/img_slide2.png" class="img-fluid" id="2" alt="">
                             <img src="/img/Promo/img_slide3.jpg" class="img-fluid" id="3" alt="">
-                            <img src="/img/Promo/img_slide4.png" class="img-fluid" id="4" alt="">
+                            <img src="/img/Promo/img_slide4.png" class="img-fluid" id="4" alt=""> -->
                         </div>
                     </div>
                 </div>
@@ -262,7 +262,7 @@
     logincookies();
     tabs_options();
     scrollwindowsAndNavbar();
-
+    myslide();
     //-------------------   methods   --------------------------
     function pageloader() {
         document.getElementById("preloader").style.display = "none";
@@ -630,6 +630,23 @@
         document.querySelector('body').scrollIntoView({
             behavior: 'smooth'
         });
+    }
+
+    function myslide() {
+        for (var i = 1; i <= 4; i++) {
+            if (i == 3) {
+                var imageLink = ("img/Promo/img_slide" + i + ".jpg");
+                var imgEL = '<img src="' + imageLink + '" class="img-fluid" id="' +
+                    i + '">';
+                $('.myslide').append(imgEL)
+            } else {
+                var imageLink = ("img/Promo/img_slide" + i + ".png");
+                var imgEL = '<img src="' + imageLink + '" class="img-fluid" id="' +
+                    i + '">';
+                $('.myslide').append(imgEL)
+            }
+
+        }
     }
 
     function chat() {
