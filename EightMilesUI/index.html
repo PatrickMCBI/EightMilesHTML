@@ -35,7 +35,7 @@
                     <div class="header-left"><img src="img/8mileslogo.png" alt="" width="160"></div>
                     <div class="header-right">
                         <div class="loginmenu">
-                            <div style="display:none;">
+                            <div >
                                 <input class="input_uname" type="text" placeholder="Username">
                                 <input class="input_pwd" type="text" placeholder="Password">
                                 <label class="forgotpwd"><a href="facebook.com" target="_blank">Forgot Password?</a>
@@ -628,7 +628,7 @@
         if (uname === '') {
             $('.loginmenu').toggleClass('slidewidth');
             $('.header-right table').slideToggle('slow');
-            $('.loginmenu div').slideToggle('slow')
+            // $('.loginmenu div').slideToggle('slow')
         } else {
             $.cookie("Uname", uname);
             window.location.href = "editUI.html";
