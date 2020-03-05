@@ -74,35 +74,35 @@
                     <!-- 1 -->
                     <div>
                         <div class="grid-leftbar" style="padding: 0px 10px 0px 10px;">
-                            <button class="accordion">Manila</button>
-                            <div class="panel">
+                            <button class="accordion btn_manila" onclick="btnmanila_accordion(event)">Manila</button>
+                            <div class="panel panel_manila">
                                 <p onclick="panel_ManilaOceanPark()">Manila Ocean Park</p>
                                 <p onclick="panel_ManilaZoo()"><label>Manila Zoo</label></p>
                                 <p onclick="panel_ManilaBay()"><label>Manila Bay</label></p>
                             </div>
-                            <button class="accordion">Cebu</button>
-                            <div class="panel">
+                            <button class="accordion btn_cebu" onclick="btncebu_accordion(event)">Cebu</button>
+                            <div class="panel panel_cebu">
                                 <p><label>Oslob</label></p>
                                 <p><label>Cebu Safari</label></p>
                                 <p><label>Mactan Newtown</label></p>
                             </div>
-                            <button class="accordion">Bohol</button>
-                            <div class="panel">
+                            <button class="accordion btn_bohol" onclick="btnbohol_accordion(event)">Bohol</button>
+                            <div class="panel panel_bohol">
                                 <p><label>Beach</label></p>
                                 <p><label>Malapasua</label></p>
                             </div>
-                            <button class="accordion">Palawan</button>
-                            <div class="panel">
+                            <button class="accordion btn_palawan" onclick="btnpalawan_accordion(event)">Palawan</button>
+                            <div class="panel panel_palawan">
                                 <p><label>Beach</label></p>
                                 <p><label>Malapasua</label></p>
                             </div>
-                            <button class="accordion">Boracay</button>
-                            <div class="panel">
+                            <button class="accordion btn_boracay" onclick="btnboracay_accordion(event)">Boracay</button>
+                            <div class="panel panel_boracay">
                                 <p><label>Beach</label></p>
                                 <p><label>Malapasua</label></p>
                             </div>
-                            <button class="accordion">Cordiller Region</button>
-                            <div class="panel">
+                            <button class="accordion btn_cordillera" onclick="btncordillera_accordion(event)">Cordiller Region</button>
+                            <div class="panel panel_cordillera">
                                 <p><label>Beach</label></p>
                                 <p><label>Malapasua</label></p>
                             </div>
@@ -218,14 +218,44 @@
 
 <script>
     //-------------------   Mounted   --------------------------
+    accordiontab();
+
+
     $('.tab_destination').css({
         'color': 'green'
     });
     BindRightImage();
-    Accordion();
     scrollwindowsAndNavbar();
 
     //-------------------   Methods   --------------------------
+    function accordiontab() {
+        var AccordionTabName = $.cookie("AccordionTab");
+        var imgpath = $.cookie("imgpath");
+
+        var imgEL2 = '<img src="' + imgpath + '"  class="img-fluid">';
+        $('.grid-details .grid .grid-body').append(imgEL2)
+        if (AccordionTabName == "Manila") {
+            $('.btn_manila').addClass('activebgcolor');
+            $('.panel_manila').addClass('activeheight');
+        } else if (AccordionTabName == "Cebu") {
+
+            $('.btn_cebu').addClass('activebgcolor');
+            $('.panel_cebu').addClass('activeheight');
+        } else if (AccordionTabName == "Bohol") {
+            $('.btn_bohol').addClass('activebgcolor');
+            $('.panel_bohol').addClass('activeheight');
+        } else if (AccordionTabName == "Palawan") {
+            $('.btn_palawan').addClass('activebgcolor');
+            $('.panel_palawan').addClass('activeheight');
+        } else if (AccordionTabName == "Boracay") {
+            $('.btn_boracay').addClass('activebgcolor');
+            $('.panel_boracay').addClass('activeheight');
+        } else if (AccordionTabName == "Cordillera") {
+            $('.btn_cordillera').addClass('activebgcolor');
+            $('.panel_cordillera').addClass('activeheight');
+        }
+    }
+
     function scrollwindowsAndNavbar() {
         // scroll show nav
         window.addEventListener("scroll", function() {
@@ -258,6 +288,7 @@
         window.location.href = "/";
     }
 
+
     function tab_about() {
         $.cookie("tab", "tab_about");
         window.location.href = "/";
@@ -268,22 +299,64 @@
         window.location.href = "/";
     }
 
-    function Accordion() {
-        var acc = document.getElementsByClassName("accordion");
-        var i;
+    function btnmanila_accordion(event) {
 
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            });
-        }
+        $('.panel_manila').toggleClass('activeheight');
+        $('.btn_manila').toggleClass('activebgcolor');
     }
+
+    function btncebu_accordion(event) {
+
+        $('.panel_cebu').toggleClass('activeheight');
+        $('.btn_cebu').toggleClass('activebgcolor');
+    }
+
+    function btnbohol_accordion(event) {
+
+        $('.panel_bohol').toggleClass('activeheight');
+        $('.btn_bohol').toggleClass('activebgcolor');
+    }
+
+    function btnpalawan_accordion(event) {
+
+        $('.panel_palawan').toggleClass('activeheight');
+        $('.btn_palawan').toggleClass('activebgcolor');
+    }
+
+    function btnboracay_accordion(event) {
+
+        $('.panel_boracay').toggleClass('activeheight');
+        $('.btn_boracay').toggleClass('activebgcolor');
+    }
+
+    function btncordillera_accordion(event) {
+
+        $('.panel_cordillera').toggleClass('activeheight');
+        $('.btn_cordillera').toggleClass('activebgcolor');
+    }
+    // function Accordion() {
+    //     var acc = document.getElementsByClassName("accordion");
+    //     var i;
+
+    //     for (i = 0; i < acc.length; i++) {
+    //         acc[i].addEventListener("click", function() {
+
+    //             this.classList.toggle("active");
+    //             var panel = this.nextElementSibling;
+
+
+
+    //             if (panel.style.maxHeight) {
+    //                 panel.style.maxHeight = null;
+    //                 $('.panel').removeClass('activeheight');
+    //                 $('.accordion').removeClass('activebgcolor');
+    //             } else {
+    //                 panel.style.maxHeight = panel.scrollHeight + "px";
+
+    //             }
+    //         });
+    //     }
+    // }
 
     const carouselSlide = document.querySelector('.myslide');
     const carouselImages = document.querySelectorAll('.myslide img');

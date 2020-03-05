@@ -21,6 +21,14 @@ Wrapper
     background-color: rgb(124, 235, 140);
 }
 
+.activeheight {
+    max-height: 150px !important;
+}
+
+.activebgcolor {
+    background-color: #ccc !important;
+}
+
 
 /*--------------------------------------------
 Left Bar
