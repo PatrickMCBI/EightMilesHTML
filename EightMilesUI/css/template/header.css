@@ -38,6 +38,14 @@ body {
     z-index: 1;
 }
 
+.text-default {
+    color: black;
+}
+
+.text-success {
+    color: green;
+}
+
 
 /*------------------------------------------------
      Header

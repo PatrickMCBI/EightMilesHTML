@@ -84,14 +84,10 @@
             <div class="">
                 <div class="cover">
                     <div> <img src="img/TopDestination/Featured Image/4.jpg" class="img_cover"></div>
-                    <div class="promos" style="">
+                    <div class="promos">
                         <i id="prevBtn" onclick="prevBtn()" class="fas fa-chevron-up"></i>
                         <i id="nextBtn" onclick="nextBtn()" class="fas fa-chevron-down"></i>
                         <div class="myslide">
-                            <!-- <img src="/img/Promo/img_slide1.png" class="img-fluid" id="1" alt="">
-                            <img src="/img/Promo/img_slide2.png" class="img-fluid" id="2" alt="">
-                            <img src="/img/Promo/img_slide3.jpg" class="img-fluid" id="3" alt="">
-                            <img src="/img/Promo/img_slide4.png" class="img-fluid" id="4" alt=""> -->
                         </div>
                     </div>
                 </div>
@@ -254,6 +250,7 @@
 
 <script>
     //-------------------   Mounted   --------------------------
+    $('.tab_home').addClass('text-success');
     destination();
     partners();
     services();
@@ -292,31 +289,35 @@
                 $('.returntotop').css('display', 'none');
                 $('.chat').css('margin-right', '0em');
                 $('.fb-widget').css('margin-right', '0em');
-                $('.tab').css('color', 'black');
+                $('.tab').addClass('text-default');
             }
         });
     }
-    // scroll tab class changed
+    //change color of navbar when scrolling windows
     window.addEventListener("scroll", function() {
+        if (document.documentElement.scrollTop > 0) {
+            $('.tab').removeClass('text-success');
+            $('.tab_home').addClass('text-success');
+        }
         if (document.documentElement.scrollTop > 300) {
-            $('.tab').css('color', 'black');
-            $('.tab_destination').css('color', 'green');
+            $('.tab').removeClass('text-success');
+            $('.tab_destination').addClass('text-success');
         }
         if (document.documentElement.scrollTop > 1000) {
-            $('.tab').css('color', 'black');
-            $('.tab_partners').css('color', 'green');
+            $('.tab').removeClass('text-success');
+            $('.tab_partners').addClass('text-success');
         }
         if (document.documentElement.scrollTop > 1500) {
-            $('.tab').css('color', 'black');
-            $('.tab_services').css('color', 'green');
+            $('.tab').removeClass('text-success');
+            $('.tab_services').addClass('text-success');
         }
         if (document.documentElement.scrollTop > 2200) {
-            $('.tab').css('color', 'black');
-            $('.tab_about').css('color', 'green');
+            $('.tab').removeClass('text-success');
+            $('.tab_about').addClass('text-success');
         }
         if (document.documentElement.scrollTop > 2700) {
-            $('.tab').css('color', 'black');
-            $('.tab_contact').css('color', 'green');
+            $('.tab').removeClass('text-success');
+            $('.tab_contact').addClass('text-success');
         }
     });
 
@@ -549,6 +550,7 @@
     }
 
     function tab_destination(event) {
+
         $(event.target).parents('tr').find('td').removeAttr('style');
         $(event.target).css({
             'color': 'green'
